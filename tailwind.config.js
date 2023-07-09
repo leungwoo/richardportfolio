@@ -21,6 +21,7 @@ module.exports = {
           Default: "#F6F6F6",
           light: "#FFFFFF",
           darkDefault: "#15141C",
+          highlight: "#FFBE62",
         },
         text: {
           title: "#151E2C",

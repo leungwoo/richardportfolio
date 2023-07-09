@@ -9,7 +9,7 @@ import { logo, downloadwhite, downloadblack } from "../../assets/images/index";
 const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="bg-primary-Default dark:bg-primary-darkDefault flex flex-row justify-between mx-auto pt-10 pl-20 pr-40 w-full z-50  items-center ">
+    <div className="fixed backdrop-blur-sm backdrop-filter dark:bg-primary-darkDefault flex flex-row justify-between mx-auto pt-10 pl-20 pr-40 w-full z-50  items-center ">
       <div>
         <Link href="/">
           <Image
@@ -25,10 +25,10 @@ const Header = () => {
         <Link href="/" className="hover:text-text-accentBlue">
           Home
         </Link>
-        <Link href="/casestudies" className="hover:text-text-accentBlue">
+        <Link href="/CaseStudies" className="hover:text-text-accentBlue">
           Case Studies
         </Link>
-        <Link href="/contact" className="hover:text-text-accentBlue">
+        <Link href="/Contact" className="hover:text-text-accentBlue">
           Contact
         </Link>
         <Link href="/">
