@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "./components/Header";
+import { Montserrat } from "next/font/google";
+import { Header, Theme } from "./components/index";
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Richard Digital Portfolio",
@@ -16,9 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <Header />
-      <body>{children}</body>
+    <html lang="en" className={`${inter.className}`}>
+      <Theme>
+        <body>
+          <Header />
+          <div className="flex-col  mx-auto overflow-hidden">{children}</div>
+        </body>
+      </Theme>
     </html>
   );
 }

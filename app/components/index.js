@@ -1,4 +1,4 @@
 import Hero from "./Hero.tsx";
 import Header from "./Header.tsx";
-
-export { Header, Hero };
+import Theme from "./Theme.tsx";
+export { Header, Hero, Theme };

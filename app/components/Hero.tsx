@@ -9,7 +9,7 @@ interface HeroCardProps {
 
 export default function Hero({ title, description, imgUrl }: HeroCardProps) {
   return (
-    <div className="h-viewport-height mt-[80px] dark:bg-primary-darkDefault ">
+    <div className="bg-primary-Default dark:bg-primary-darkDefault h-viewport-height pt-5 ">
       <div>
         <h3>Hi my name is Richard Gabriel</h3>
         <h1>{title}</h1>

@@ -26,6 +26,8 @@ module.exports = {
           title: "#151E2C",
           accentBlue: "#0252CD",
           default: "#9D9D9D",
+          navbar: "#6F74A7",
+          dark: "#BEC1D5",
         },
       },
     },
