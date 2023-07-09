@@ -21,7 +21,7 @@ const hero= {
             options: {
               hotspot: true,
             },
-        },
+        }
     ]
     }
     export default hero;
