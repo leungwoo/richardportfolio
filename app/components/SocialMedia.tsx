@@ -7,7 +7,7 @@ const SocialMedia = () => {
       <Link href="https://www.github.com/leungwoo" target="_blank">
         <ImGithub
           size={20}
-          className=" md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-text-accentBlue"
+          className=" md:w-[25px] md:h-[25px] w-[20px] h-[20px] text-[#6F6F6F] hover:text-text-accentBlue"
         />
       </Link>
       <Link
@@ -16,7 +16,7 @@ const SocialMedia = () => {
       >
         <AiOutlineLinkedin
           size={20}
-          className=" md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-text-accentBlue"
+          className=" md:w-[25px] md:h-[25px] w-[20px] h-[20px] text-[#6F6F6F] hover:text-text-accentBlue"
         />
       </Link>
     </div>

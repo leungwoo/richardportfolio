@@ -10,15 +10,25 @@ interface HeroCardProps {
 }
 
 export default function Hero({ title, description, imgUrl }: HeroCardProps) {
+  const titleWords = title.split(" ");
+  const [first, second, third] = titleWords;
   return (
     <div className=" pt-[80px] flex md:flex-row flex-col bg-primary-Default dark:bg-primary-darkDefault h-viewport-height">
       <div className="flex-1 pl-20 pt-20 space-y-5">
         <h3 className="text-text-accentBlue font-bold">
           HI, MY NAME IS RICHARD GABRIEL
         </h3>
+
         <h1 className="text-text-title font-bold text-6xl dark:text-white">
-          {title}
+          {first}
         </h1>
+        <div className="relative inline-block">
+          <h1 className="z-10 relative text-text-title font-bold text-6xl dark:text-white">
+            {second} {third}
+          </h1>
+          <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight h-[25px]"></div>
+        </div>
+
         <h4 className="text-text-default dark:text-text-dark font-medium text-base">
           {description}
         </h4>
