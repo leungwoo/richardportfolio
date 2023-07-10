@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
 
-import { logo, downloadwhite, downloadblack } from "../../assets/images/index";
+import { rlogo, downloadwhite, downloadblack } from "../../assets/images/index";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -13,7 +13,7 @@ const Header = () => {
       <div>
         <Link href="/">
           <Image
-            src={logo}
+            src={rlogo}
             alt="logo"
             width={100}
             height={100}
@@ -22,16 +22,28 @@ const Header = () => {
         </Link>
       </div>
       <div className=" md:flex hidden items-center justify-between gap-6 text-text-navbar dark:text-text-dark font-bold text-base">
-        <Link href="/" className="hover:text-text-accentBlue">
+        <Link
+          href="/"
+          className="hover:text-text-accentBlue hover:duration-500 transition"
+        >
           Home
         </Link>
-        <Link href="/CaseStudies" className="hover:text-text-accentBlue">
+        <Link
+          href="/CaseStudies"
+          className="hover:text-text-accentBlue hover:duration-500 transition"
+        >
           Case Studies
         </Link>
-        <Link href="/Contact" className="hover:text-text-accentBlue">
+        <Link
+          href="/Contact"
+          className="hover:text-text-accentBlue hover:duration-500 transition"
+        >
           Contact
         </Link>
-        <Link href="/">
+        <Link
+          href="https://drive.google.com/file/d/1GEyh_LKR5QQJ6yAoAjSsrVpOsRyyZB1r/view?usp=sharing"
+          target="_blank"
+        >
           <div className="flex flex-row items-center gap-1">
             <Image
               src={theme === "light" ? downloadblack : downloadwhite}
@@ -40,7 +52,7 @@ const Header = () => {
               height={100}
               className="w-5 h-5"
             />
-            <span className="text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue">
+            <span className="text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
               Resume
             </span>
           </div>

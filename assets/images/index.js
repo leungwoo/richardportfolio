@@ -1,6 +1,7 @@
 import logo from "./LOGO.png";
 import rlogo from "./RLOGO.png";
+import rlogo2 from "./RLOGO1.png";
 import downloadwhite from "./downloadwhite.png";
 import downloadblack from "./downloadblack.png";
 
-export { logo, downloadwhite, downloadblack, rlogo };
+export { rlogo2, downloadwhite, downloadblack, rlogo };
