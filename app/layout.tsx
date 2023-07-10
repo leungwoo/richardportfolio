@@ -20,7 +20,7 @@ export default function RootLayout({
       <Theme>
         <body>
           <Header />
-          <div className="flex-col  mx-auto overflow-hidden">{children}</div>
+          <div className="flex-col  mx-auto overflow-auto">{children}</div>
         </body>
       </Theme>
     </html>

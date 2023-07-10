@@ -6,7 +6,7 @@ export default async function Homepage() {
   const { title, description, imgUrl } = heroData[0];
 
   return (
-    <div className="flex flex-col h-viewport-height">
+    <div className="flex flex-col">
       <Hero title={title} description={description} imgUrl={imgUrl} />
     </div>
   );

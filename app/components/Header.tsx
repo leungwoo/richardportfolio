@@ -9,7 +9,7 @@ import { logo, downloadwhite, downloadblack } from "../../assets/images/index";
 const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="fixed backdrop-blur-sm backdrop-filter dark:bg-primary-darkDefault flex flex-row justify-between mx-auto pt-10 pl-20 pr-40 w-full z-50  items-center ">
+    <div className="fixed backdrop-blur-sm backdrop-filter dark:bg-primary-darkDefault flex flex-row justify-between py-4 md:pl-20 px-4  pr-40 w-full z-50  items-center ">
       <div>
         <Link href="/">
           <Image
@@ -21,7 +21,7 @@ const Header = () => {
           />
         </Link>
       </div>
-      <div className="flex items-center justify-between gap-6 text-text-navbar dark:text-text-dark font-bold text-base">
+      <div className=" md:flex hidden items-center justify-between gap-6 text-text-navbar dark:text-text-dark font-bold text-base">
         <Link href="/" className="hover:text-text-accentBlue">
           Home
         </Link>
@@ -59,7 +59,7 @@ const Header = () => {
           ) : (
             <FiSun
               size={15}
-              className="md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-text-accentBlue"
+              className="md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-primary-highlight"
             />
           )}
         </button>
