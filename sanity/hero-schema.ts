@@ -17,11 +17,16 @@ const hero= {
         {
             name:'imgUrl',
             title:'ImgUrl',
-            type: 'image',
-            options: {
-              hotspot: true,
-            },
-        }
+            type: 'array',
+            of:[{
+                    name: 'image',
+                    type: 'image',
+                    title: 'Image',
+                    options: {
+                      hotspot: true,
+                    },
+                }]
+        },
     ]
     }
     export default hero;

@@ -1,5 +1,8 @@
+import { Suspense } from "react";
 import { Hero } from "./components";
 import getHero from "./libs/getHero";
+
+import Loading from "./loading";
 
 export default async function Homepage() {
   const heroData = await getHero();
@@ -7,10 +10,9 @@ export default async function Homepage() {
 
   return (
     <div className="flex flex-col">
-      <Hero title={title} description={description} imgUrl={imgUrl} />
+      <Suspense fallback={<Loading />}>
+        <Hero title={title} description={description} imgUrl={imgUrl} />
+      </Suspense>
     </div>
   );
-}
-
-{
 }

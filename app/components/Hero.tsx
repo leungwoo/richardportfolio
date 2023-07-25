@@ -2,6 +2,8 @@ import Image from "next/image";
 import { urlForImage } from "../../sanity/lib/image";
 import Link from "next/link";
 import { SocialMedia } from "./index";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
 interface HeroCardProps {
   title: string;
@@ -35,7 +37,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
         <div className="flex flex-row mt-4 items-center">
           <Link href="/Contact">
             <button className="hover:opacity-75 border-none bg-text-accentBlue font-bold rounded-full md:w-[186px] w-[120px] md:h-[64px] h-[55px] py-4 px-3 text-white text-sm md:text-base hover:duration-500 transition">
-              Contact Us
+              Contact
             </button>
           </Link>
           <div className="pl-6">
@@ -44,13 +46,16 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
         </div>
       </div>
       <div className="flex-1">
-        <Image
-          src={urlForImage(imgUrl)?.toString()}
-          alt="hero"
-          width={1000}
-          height={1000}
-          className="w-full h-full object-contain"
-        />
+        <Suspense fallback={<Loading />}>
+          <Image
+            src={urlForImage(imgUrl[0])?.url()}
+            alt="hero"
+            width={1000}
+            height={1000}
+            className="w-full h-full object-contain"
+            loading="lazy"
+          />
+        </Suspense>
       </div>
     </div>
   );
