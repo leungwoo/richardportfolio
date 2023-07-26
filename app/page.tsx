@@ -8,30 +8,17 @@ import {
 } from "./components";
 import getHero from "./libs/getHero";
 import getSkills from "./libs/getSkills";
+import getServices from "./libs/getServices";
 
 import Loading from "./loading";
-
-// interface Image {
-//   asset: {
-//     _ref: string;
-//     _type: "image";
-//   };
-//   hotspot?: {
-//     x: number;
-//     y: number;
-//     height: number;
-//     width: number;
-//   };
-// }
-
 interface Skill {
   imgUrl: any;
-  // Add more fields here if needed from the "Skills" Sanity schema
 }
 
 export default async function Homepage() {
   const heroData = await getHero();
   const skillsData = await getSkills();
+  const servicesData = await getServices();
 
   const { title, description, imgUrl } = heroData[0];
 
@@ -45,7 +32,7 @@ export default async function Homepage() {
           <Skills key={index} skillsData={skill as Skill} />
         ))}
       </Suspense>
-      <Services />
+      <Services servicesData={servicesData} />
       <WorkExperience />
       <FeaturedProjects />
     </div>

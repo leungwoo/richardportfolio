@@ -1,4 +1,17 @@
-const Services = () => {
+import ServicesCard from "./ServicesCard";
+interface Service {
+  _id: string;
+  title: string;
+  icon: {
+    _type: string;
+    asset: {
+      url: string;
+    };
+  };
+  description: string;
+}
+
+const Services = ({ servicesData }: { servicesData: Service[] }) => {
   return (
     <div className="flex flex-col justify-center items-center pt-5 px-10">
       <div className="flex flex-row items-center gap-2 ">
@@ -15,7 +28,7 @@ const Services = () => {
           do i provide
         </span>
       </div>
-      <div>ServiceCard</div>
+      <ServicesCard servicesData={servicesData} />
     </div>
   );
 };
