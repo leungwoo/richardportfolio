@@ -36,7 +36,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
         </h4>
         <div className="flex flex-row mt-4 items-center">
           <Link href="/Contact">
-            <button className="hover:opacity-75 border-none bg-text-accentBlue font-bold rounded-full md:w-[186px] w-[120px] md:h-[64px] h-[55px] py-4 px-3 text-white text-sm md:text-base hover:duration-500 transition">
+            <button className="hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[186px] w-[120px] md:h-[64px] h-[55px] py-4 px-3 text-white text-sm md:text-base hover:duration-500 transition">
               Contact
             </button>
           </Link>

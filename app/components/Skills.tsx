@@ -33,7 +33,7 @@ const Skills = ({ skillsData }: { skillsData: Skill }) => {
         </h1>
         <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[20px] h-[15px]"></div>
       </div>
-      <div className="flex flex-row flex-wrap md:max-w-[1220px] w-full justify-center py-4 px-5 gap-8">
+      <div className="flex flex-row flex-wrap md:max-w-[1220px] w-full justify-center py-10 px-5 gap-8">
         {skillsData.imgUrl.map((image: any, index: number) => (
           <div key={index}>
             <Image
