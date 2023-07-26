@@ -1,11 +1,19 @@
 const Services = () => {
   return (
-    <div className="flex flex-col justify-center items-center pt-5 px-5">
-      <div className="relative inline-block">
-        <span className="z-10 relative text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
-          What services do i provide
+    <div className="flex flex-col justify-center items-center pt-5 px-10">
+      <div className="flex flex-row items-center gap-2 ">
+        <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
+          What
         </span>
-        <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[20px] h-[15px]" />
+        <div className="relative inline-block">
+          <span className="z-10 relative text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
+            services
+          </span>{" "}
+          <div className="absolute z-0 inset-x-0 bottom-0 bg-primary-highlight md:h-[20px] h-[15px]"></div>
+        </div>
+        <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
+          do i provide
+        </span>
       </div>
       <div>ServiceCard</div>
     </div>
@@ -13,3 +21,4 @@ const Services = () => {
 };
 
 export default Services;
+<div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[20px] h-[15px]" />;
