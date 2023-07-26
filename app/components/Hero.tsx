@@ -52,7 +52,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
             alt="hero"
             width={1000}
             height={1000}
-            className="w-full h-full object-contain"
+            className="w-full object-contain "
             loading="lazy"
           />
         </Suspense>

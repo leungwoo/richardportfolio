@@ -27,11 +27,11 @@ export default async function Homepage() {
       <Suspense fallback={<Loading />}>
         <Hero title={title} description={description} imgUrl={imgUrl} />
       </Suspense>
-      <Suspense fallback={<Loading />}>
-        {skillsData.map((skill: any, index: number) => (
-          <Skills key={index} skillsData={skill as Skill} />
-        ))}
-      </Suspense>
+
+      {skillsData.map((skill: any, index: number) => (
+        <Skills key={index} skillsData={skill as Skill} />
+      ))}
+
       <Services servicesData={servicesData} />
       <WorkExperience />
       <FeaturedProjects />

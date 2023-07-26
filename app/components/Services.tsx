@@ -13,7 +13,7 @@ interface Service {
 
 const Services = ({ servicesData }: { servicesData: Service[] }) => {
   return (
-    <div className="flex flex-col justify-center items-center pt-5 px-10">
+    <div className="flex flex-col justify-center items-center md:pt-20 pt-10 px-16">
       <div className="flex flex-row items-center gap-2 ">
         <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
           What

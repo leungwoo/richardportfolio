@@ -26,14 +26,14 @@ const Skills = ({ skillsData }: { skillsData: Skill }) => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center pt-5 px-10">
+    <div className="flex flex-col justify-center items-center md:pt-20 pt-10 px-16">
       <div className="relative inline-block">
         <h1 className="z-10 relative text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
           Skills
         </h1>
         <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[20px] h-[15px]"></div>
       </div>
-      <div className="flex flex-row flex-wrap md:max-w-[1220px] w-full justify-center py-10 px-5 gap-8">
+      <div className="flex flex-row flex-wrap md:max-w-[1220px] w-full justify-center py-10 gap-8">
         {skillsData.imgUrl.map((image: any, index: number) => (
           <div key={index}>
             <Image

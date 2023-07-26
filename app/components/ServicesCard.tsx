@@ -14,12 +14,12 @@ interface Service {
 }
 const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center pt-10">
+    <div className="flex flex-wrap gap-5 justify-center pt-10">
       {servicesData.map((service: Service, index: number) => (
         <div
           key={service._id}
           className="flex flex-col justify-between bg-primary-Default hover:bg-primary-accentBlue text-text-navbar dark:text-text-default hover:text-white
-           dark:hover:text-white dark:bg-primary-carddark dark:hover:bg-primary-darkmodeblue rounded-lg p-4 flex-1 max-w-[286px] min-h-[356px]
+           dark:hover:text-white dark:bg-primary-carddark dark:hover:bg-primary-darkmodeblue rounded-lg p-4 flex-1 min-w-[286px] min-h-[356px]
            shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-105"
         >
           <Image
