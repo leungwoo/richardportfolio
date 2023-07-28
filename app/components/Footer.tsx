@@ -11,7 +11,7 @@ const Footer = () => {
           <span className="text-sm sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-title">
             Have a project idea to{" "}
             <div className="relative inline-block">
-              <span className="z-10 relative text-sm sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl text-text-title font-bold dark:text-white">
+              <span className="z-10 relative text-sm sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl text-text-title font-bold">
                 collaborate on?
               </span>
               <div className="absolute z-0 inset-x-0 bottom-0 bg-primary-highlight md:h-[20px] h-[10px]"></div>
@@ -25,13 +25,15 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        <Image
-          src={footer}
-          alt="casestudiesbanner"
-          width={4480}
-          height={1600}
-          className="min-w-[286px] flex-1 rounded-2xl object-cover md:pt-20 md:pb-10 md:px-16 pt-10 pb-5 px-5"
-        />
+        <div className="md:pt-20 md:pb-10 md:px-16 pt-10 pb-5 px-5">
+          <Image
+            src={footer}
+            alt="footerbanner"
+            width={4480}
+            height={1600}
+            className="min-w-[286px] lg:max-h-[427px] rounded-[20px] object-cover "
+          />
+        </div>
       </div>
       <SocialMedia />
     </div>

@@ -33,7 +33,7 @@ export default async function Homepage() {
       ))}
 
       <Services servicesData={servicesData} />
-      <WorkExperience />
+      {/* <WorkExperience /> */}
       <FeaturedProjects />
     </div>
   );
