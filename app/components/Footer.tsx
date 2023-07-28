@@ -30,7 +30,7 @@ const Footer = () => {
           alt="casestudiesbanner"
           width={4480}
           height={1600}
-          className="min-w-[286px] flex-1 rounded-2xl object-cover md:pt-20 md:pb-10 md:px-10 pt-10 pb-5 px-5"
+          className="min-w-[286px] flex-1 rounded-2xl object-cover md:pt-20 md:pb-10 md:px-16 pt-10 pb-5 px-5"
         />
       </div>
       <SocialMedia />
