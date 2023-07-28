@@ -28,7 +28,7 @@ export default async function Homepage() {
         <Hero title={title} description={description} imgUrl={imgUrl} />
       </Suspense>
 
-      {skillsData.map((skill: any, index: number) => (
+      {skillsData.map((skill: Skill, index: number) => (
         <Skills key={index} skillsData={skill as Skill} />
       ))}
 

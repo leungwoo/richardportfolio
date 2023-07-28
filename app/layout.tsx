@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { Header, Theme } from "./components/index";
+import { Footer, Header, Theme } from "./components/index";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -21,6 +21,7 @@ export default function RootLayout({
         <body>
           <Header />
           <div className="flex-col mx-auto overflow-auto">{children}</div>
+          <Footer />
         </body>
       </Theme>
     </html>
