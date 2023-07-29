@@ -28,6 +28,9 @@ module.exports = {
           project1: "#5F9FFE",
           project2: "#56B0B9",
           project3: "#1F1D2B",
+          formdefault: "#312E81",
+          inputdark: "#2E2F3E",
+          inputdefault: "#F0E7F9",
         },
         text: {
           title: "#151E2C",

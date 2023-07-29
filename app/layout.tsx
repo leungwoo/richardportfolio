@@ -11,17 +11,19 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  hideFooter,
   children,
 }: {
   children: React.ReactNode;
+  hideFooter?: boolean;
 }) {
   return (
     <html lang="en" className={`${inter.className}`}>
       <Theme>
         <body>
           <Header />
-          <div className="flex-col mx-auto overflow-auto">{children}</div>
-          <Footer />
+          <div className="flex-col mx-auto pb-20 md:pb-10">{children}</div>
+          {!hideFooter && <Footer />}
         </body>
       </Theme>
     </html>

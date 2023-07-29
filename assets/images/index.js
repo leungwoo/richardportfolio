@@ -8,6 +8,7 @@ import footer from "./footer.png";
 import hipnode from "./hipnodelaptop.png";
 import carrent from "./carrentlaptop.png";
 import filmpire from "./filmpire.png";
+import contactbanner from "./contactbanner.png";
 
 export {
   rlogo2,
@@ -20,4 +21,5 @@ export {
   hipnode,
   carrent,
   filmpire,
+  contactbanner,
 };
