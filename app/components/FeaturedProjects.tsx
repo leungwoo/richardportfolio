@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 import { hipnode, carrent, filmpire } from "../../assets/images/index";
+import { Suspense } from "react";
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
   },
   {
     title: "FilmWorld - A Movie Review Application",
-    technologies: ["React", "TailwindCSS"],
+    technologies: ["React", "Redux"],
     imgUrl: filmpire,
   },
 ];
@@ -43,7 +44,7 @@ const FeaturedProjects = () => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`mt-5 pt-5 pb-5 flex md:flex-row flex-col w-full rounded-lg cursor-pointer ${
+          className={`mt-10 pt-5 pb-5 flex md:flex-row flex-col w-full rounded-lg cursor-pointer ${
             index === 1 ? "md:flex-row-reverse" : "flex-row"
           }`}
           style={{ backgroundColor: colors[index % colors.length] }}
@@ -77,15 +78,18 @@ const FeaturedProjects = () => {
               </Link>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center">
-            <Image
-              src={project.imgUrl}
-              alt={project.title}
-              width={1750}
-              height={1080}
-              className="object-contain md:h-[300px] md:w-[500px] w-[280px] h-[200px] p-4"
-            />
-          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className="flex-1 flex items-center justify-center">
+              <Image
+                src={project.imgUrl}
+                alt={project.title}
+                width={1750}
+                height={1080}
+                loading="eager"
+                className="object-contain md:h-[300px] md:w-[500px] w-[280px] h-[200px] p-4"
+              />
+            </div>
+          </Suspense>
         </div>
       ))}
     </div>

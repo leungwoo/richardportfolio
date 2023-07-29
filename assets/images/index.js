@@ -7,7 +7,7 @@ import CSbanner from "./CSbanner.png";
 import footer from "./footer.png";
 import hipnode from "./hipnodelaptop.png";
 import carrent from "./carrentlaptop.png";
-import filmpire from "./filmpire.png";
+import filmpire from "./FilmworldApp.png";
 import contactbanner from "./contactbanner.png";
 
 export {

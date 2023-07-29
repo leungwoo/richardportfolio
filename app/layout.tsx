@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { Footer, Header, Theme } from "./components/index";
+import { Header, Theme } from "./components/index";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -11,19 +11,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  hideFooter,
   children,
 }: {
   children: React.ReactNode;
-  hideFooter?: boolean;
 }) {
   return (
     <html lang="en" className={`${inter.className}`}>
       <Theme>
         <body>
           <Header />
-          <div className="flex-col mx-auto pb-20 md:pb-10">{children}</div>
-          {!hideFooter && <Footer />}
+          <div className="flex-col mx-auto pb-5 md:pb-5">{children}</div>
         </body>
       </Theme>
     </html>

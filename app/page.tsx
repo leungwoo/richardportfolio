@@ -1,11 +1,5 @@
 import { Suspense } from "react";
-import {
-  FeaturedProjects,
-  Hero,
-  Services,
-  Skills,
-  WorkExperience,
-} from "./components";
+import { FeaturedProjects, Footer, Hero, Services, Skills } from "./components";
 import getHero from "./libs/getHero";
 import getSkills from "./libs/getSkills";
 import getServices from "./libs/getServices";
@@ -34,7 +28,10 @@ export default async function Homepage() {
 
       <Services servicesData={servicesData} />
       {/* <WorkExperience /> */}
-      <FeaturedProjects />
+      <Suspense fallback={<Loading />}>
+        <FeaturedProjects />
+      </Suspense>
+      <Footer />
     </div>
   );
 }

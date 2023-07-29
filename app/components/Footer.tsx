@@ -1,11 +1,15 @@
-import { footer } from "@/assets/images";
 import Image from "next/image";
 import Link from "next/link";
 import SocialMedia from "./SocialMedia";
+import { Suspense } from "react";
+
+import { footer } from "@/assets/images";
+import Loading from "./Loading";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-center pb-10">
+    
+    <div className="flex flex-col items-center justify-center ">
       <div className=" relative w-full">
         <div className=" md:gap-5 gap-3 absolute flex flex-col flex-wrap min-w-[200px] md:top-0 top-2 left-0 right-0 bottom-0 items-center justify-center">
           <span className="text-sm sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-title">
@@ -25,6 +29,7 @@ const Footer = () => {
             Contact
           </Link>
         </div>
+        <Suspense fallback={<div><Loading/></div>}>
         <div className="md:pt-20 md:pb-10 md:px-5 pt-10 pb-5 px-5 w-full">
           <Image
             src={footer}
@@ -34,6 +39,7 @@ const Footer = () => {
             className="min-w-[256px] w-full lg:max-h-[427px] rounded-[20px] object-cover "
           />
         </div>
+        </Suspense>
       </div>
       <SocialMedia />
     </div>

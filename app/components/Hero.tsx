@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { urlForImage } from "../../sanity/lib/image";
 import Link from "next/link";
-import { SocialMedia } from "./index";
 import { Suspense } from "react";
-import Loading from "./Loading";
 
+import Loading from "./Loading";
+import { SocialMedia } from "./index";
 interface HeroCardProps {
   title: string;
   description: string;
@@ -48,12 +48,12 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
       <div className="flex-1">
         <Suspense fallback={<Loading />}>
           <Image
-            src={urlForImage(imgUrl[0])?.url()}
+            src={urlForImage(imgUrl[1])?.url()}
             alt="hero"
             width={1000}
             height={1000}
             className="w-full object-contain "
-            loading="lazy"
+            loading="eager"
           />
         </Suspense>
       </div>

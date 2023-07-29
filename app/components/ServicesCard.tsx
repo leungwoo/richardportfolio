@@ -19,16 +19,18 @@ const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
         <div
           key={service._id}
           className="flex flex-col justify-between bg-primary-Default hover:bg-primary-accentBlue text-text-navbar dark:text-text-default hover:text-white
-           dark:hover:text-white dark:bg-primary-carddark dark:hover:bg-primary-darkmodeblue rounded-lg p-4 flex-1 min-w-[250px] min-h-[356px]
+           dark:hover:text-white dark:bg-primary-carddark dark:hover:bg-primary-darkmodeblue hover:shadow-lg hover:shadow-primary-accentBlue rounded-lg p-4 flex-1 min-w-[250px] min-h-[356px]
            shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-105"
         >
-          <Image
-            src={urlForImage(service.icon.asset).url()}
-            alt={service.title}
-            width={30}
-            height={30}
-            className="left-0 object-contain md:w-[62px] md:h-[62px] w-[40px] h-[40px]  rounded-lg p-2 bg-primary-accentBlue dark:bg-primary-darkmodeblue"
-          />
+          <div>
+            <Image
+              src={urlForImage(service.icon.asset).url()}
+              alt={service.title}
+              width={30}
+              height={30}
+              className="left-0 object-contain md:w-[62px] md:h-[62px] w-[40px] h-[40px]  rounded-lg p-2 bg-primary-accentBlue dark:bg-primary-darkmodeblue shadow-lg shadow-primary-accentBlue"
+            />
+          </div>
           <div className="flex flex-col gap-2">
             <h1 className="font-bold text-[24px] text-text-title dark:text-white">
               {service.title}
