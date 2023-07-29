@@ -25,6 +25,9 @@ module.exports = {
           carddark: "#222330",
           darkmodeblue: "#428DFF",
           accentBlue: "#0252CD",
+          project1: "#5F9FFE",
+          project2: "#56B0B9",
+          project3: "#1F1D2B",
         },
         text: {
           title: "#151E2C",
