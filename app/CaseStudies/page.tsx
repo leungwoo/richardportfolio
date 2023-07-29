@@ -4,7 +4,7 @@ import Image from "next/image";
 function CaseStudies() {
   return (
     <div className="h-viewport-height pt-[80px]">
-      <div className="relative bg-primary-Default dark:bg-primary-carddark  py-[10px]">
+      <div className="relative bg-primary-Default dark:bg-primary-carddark  py-[10px] flex items-center justify-center">
         <div className="absolute flex flex-col flex-wrap md:gap-2 gap-1 top-0 right-0 left-0 bottom-0 text-white items-center justify-center">
           <h1 className=" text-xl  sm:text-4xl  xl:text-5xl font-bold">
             Recent Case Studies
@@ -17,11 +17,11 @@ function CaseStudies() {
             </h3>
           </div>
         </div>
-        <div className=" md:pb-10 md:px-16 pt-10 pb-5 px-5 ">
+        <div className="flex  md:pb-10 md:px-16 pt-10 pb-5 px-5 ">
           <Image
             src={CSbanner}
             alt="casetstudiesbanner"
-            width={4480}
+            width={1000}
             height={500}
             className="min-w-[286px] lg:max-h-[427px] rounded-[20px] object-cover"
           />
