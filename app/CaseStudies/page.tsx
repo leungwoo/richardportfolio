@@ -17,13 +17,13 @@ function CaseStudies() {
             </h3>
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className=" md:pb-10 md:px-16 pt-10 pb-5 px-5 ">
           <Image
             src={CSbanner}
-            alt="casetsudiesbanner"
+            alt="casetstudiesbanner"
             width={4480}
-            height={1600}
-            className="w-full lg:max-h-[427px] rounded-[20px] object-cover md:px-20 sm:px-10 px-8"
+            height={500}
+            className="min-w-[286px] lg:max-h-[427px] rounded-[20px] object-cover"
           />
         </div>
       </div>
