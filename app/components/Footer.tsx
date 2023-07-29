@@ -29,9 +29,9 @@ const Footer = () => {
           <Image
             src={footer}
             alt="footerbanner"
-            width={4480}
-            height={1600}
-            className="min-w-[286px] lg:max-h-[427px] rounded-[20px] object-cover "
+            width={1080}
+            height={500}
+            className="min-w-[256px] lg:max-h-[427px] rounded-[20px] object-cover "
           />
         </div>
       </div>
