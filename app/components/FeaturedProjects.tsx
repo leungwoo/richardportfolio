@@ -44,7 +44,7 @@ const FeaturedProjects = () => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`mt-10 pt-5 pb-5 flex md:flex-row flex-col w-full rounded-lg cursor-pointer ${
+          className={`mt-10 pt-5 pb-5 flex md:flex-row flex-col w-full shadow-lg shadow-slate-500 dark:shadow-slate-400 rounded-lg cursor-pointer ${
             index === 1 ? "md:flex-row-reverse" : "flex-row"
           }`}
           style={{ backgroundColor: colors[index % colors.length] }}
@@ -65,15 +65,10 @@ const FeaturedProjects = () => {
                 </span>
               ))}
             </div>
-
-            <div className="text-center md:text-left md:pt-10">
-              <Link
-                href="/CaseStudies"
-                className=" flex flex-row justify-center md:justify-start items-center gap-4 font-bold md:text-base text-xs hover:text-primary-highlight"
-              >
-                See Project Details{" "}
-                <span>
-                  <BsArrowRight size={30} />
+            <div className="flex justify-center md:justify-start items-center ">
+              <Link href="/CaseStudies">
+                <span className=" justify-between max-w-[220px] mt-10 text-center gap-4 flex flex-row items-center font-bold md:text-base text-xs hover:text-primary-highlight">
+                  See Project Details <BsArrowRight size={30} />
                 </span>
               </Link>
             </div>
@@ -92,6 +87,12 @@ const FeaturedProjects = () => {
           </Suspense>
         </div>
       ))}
+      {/* Button */}
+      <Link href="/CaseStudies">
+        <button className=" flex flex-row items-center justify-between md:mt-16 mt-10 hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[286px] w-[220px] md:h-[64px] h-[55px] py-4 px-4 md:px-6 text-center text-white text-sm md:text-base hover:duration-500 transition">
+          See more Case Studies <BsArrowRight size={30} />
+        </button>
+      </Link>
     </div>
   );
 };

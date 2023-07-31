@@ -21,11 +21,11 @@ export default async function Homepage() {
       <Suspense fallback={<Loading />}>
         <Hero title={title} description={description} imgUrl={imgUrl} />
       </Suspense>
-
-      {skillsData.map((skill: Skill, index: number) => (
-        <Skills key={index} skillsData={skill as Skill} />
-      ))}
-
+      <Suspense fallback={<Loading />}>
+        {skillsData.map((skill: Skill, index: number) => (
+          <Skills key={index} skillsData={skill as Skill} />
+        ))}
+      </Suspense>
       <Services servicesData={servicesData} />
       {/* <WorkExperience /> */}
       <Suspense fallback={<Loading />}>

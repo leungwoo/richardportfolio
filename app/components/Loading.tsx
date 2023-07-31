@@ -3,7 +3,7 @@ import { Dna } from "react-loader-spinner";
 
 const Loading = () => {
   return (
-    <div className="mt-[80px] grow w-full h-full flex items-center justify-center min-h-50vh">
+    <div className="mt-[100px] grow w-full h-full flex items-center justify-center min-h-50vh">
       <Dna
         visible={true}
         height={80}
