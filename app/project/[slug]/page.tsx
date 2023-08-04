@@ -1,25 +1,33 @@
+import { Project } from "@/config/interfaces";
 import { client } from "@/sanity/lib/client";
+
+interface Slug {
+  current: string;
+  _type: string;
+}
 
 interface Props {
   params: {
-    slug: string;
+    slug: Slug;
   };
 }
 
 const ProjectDetails = async ({ params }: Props) => {
-  const product = await client.fetch(
-    `*[_type == "product" && slug.current == "${params.slug}"][0]{
+  const projects = await client.fetch<Project>(
+    `*[_type == "projects" && slug.current == "${params.slug}"][0]{
             title,
             description,          
-            _id,
-            slug,
-            imgUrl,
-            technology,
             link,
+            techstack,
+            imgUrl,
+            _id,
+            technology,
+            problemstatement,
+            learningsAndChallenges,
             featured,
         }`
   );
-  console.log(`Slug:${product}`);
+  console.log("Project:", JSON.stringify(projects, null, 2));
   return <div>ProjectDetails</div>;
 };
 

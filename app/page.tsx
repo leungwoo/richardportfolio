@@ -23,7 +23,7 @@ export default async function Homepage() {
   const projectsData = await getProjects();
 
   const { title, description, imgUrl } = heroData[0];
-  console.log(`ProjectData: ${projectsData}`);
+
   return (
     <div className="flex flex-col">
       <Suspense fallback={<Loading />}>

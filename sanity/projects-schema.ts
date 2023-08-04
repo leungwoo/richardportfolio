@@ -67,18 +67,49 @@ const projects = {
         type:"string",
         description:"What was the problem you were trying to solve?"
       },
-      {
-        name:"learnings",
-        title:"Learnings",
-        type:"string",
-        description:"What did you learn from this project?"
-      },
-      {
-        name:"challenges",
-        title:"Challenges",
-        type:"string",
-        description:"What challenges did you face while working on this project?"
-      }
+    {
+        name: 'learningsAndChallenges',
+        title: 'Learnings and Challenges',
+        type: 'object',
+         fields: [
+    {
+      name: 'learning1',
+      title: 'Learning 1',
+      type: 'text',
+      description: 'What did you learn from this project? (Paragraph 1)',
+    },
+    {
+      name: 'learning2',
+      title: 'Learning 2',
+      type: 'text',
+      description: 'What did you learn from this project? (Paragraph 2)',
+    },
+    {
+      name: 'learning3',
+      title: 'Learning 3',
+      type: 'text',
+      description: 'What did you learn from this project? (Paragraph 3)',
+    },
+    {
+      name: 'challenge1',
+      title: 'Challenge 1',
+      type: 'text',
+      description: 'What challenges did you face while working on this project? (Paragraph 1)',
+    },
+    {
+      name: 'challenge2',
+      title: 'Challenge 2',
+      type: 'text',
+      description: 'What challenges did you face while working on this project? (Paragraph 2)',
+    },
+    {
+      name: 'challenge3',
+      title: 'Challenge 3',
+      type: 'text',
+      description: 'What challenges did you face while working on this project? (Paragraph 3)',
+    },
+  ],
+},
     ],
   };
   export default projects;
