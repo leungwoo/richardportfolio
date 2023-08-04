@@ -29,6 +29,12 @@ const projects = {
         ]
       },
       {
+        name:"techstack",
+        title:"Tech Stack",
+        type:"array",
+        of:[{type:"image"}]
+      },
+      {
         name: 'imgUrl',
         title: 'ImageUrl',
         type: 'array',
@@ -54,6 +60,25 @@ const projects = {
         type: "boolean",
         description: "Check this box if the product is a featured.",
       },
+
+      {
+        name:"problemstatement",
+        title:"Problem Statement",
+        type:"string",
+        description:"What was the problem you were trying to solve?"
+      },
+      {
+        name:"learnings",
+        title:"Learnings",
+        type:"string",
+        description:"What did you learn from this project?"
+      },
+      {
+        name:"challenges",
+        title:"Challenges",
+        type:"string",
+        description:"What challenges did you face while working on this project?"
+      }
     ],
   };
   export default projects;

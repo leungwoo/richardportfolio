@@ -2,23 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
-//import { hipnode, carrent, filmpire } from "../../assets/images/index";
 import { Suspense } from "react";
-import getProjects from "../app/libs/getProjects";
+//import getProjects from "../app/libs/getProjects";
 import { urlForImage } from "@/sanity/lib/image";
+import { Project } from "../config/interfaces";
 
-interface Project {
-  title: string;
-  technology: string[];
-  imgUrl: any;
-  featured: boolean;
-  slug: string;
-  _id: string;
+interface Props {
+  projectsData: Project[];
 }
 
-const FeaturedProjects = async () => {
-  const projects = await getProjects();
-  const featuredprojects = projects.filter(
+const FeaturedProjects = ({ projectsData }: Props) => {
+  const featuredprojects = projectsData.filter(
     (project: Project) => project.featured === true
   );
   const colors = ["#5F9FFE", "#56B0B9", "#1F1D2B"];
@@ -41,7 +35,7 @@ const FeaturedProjects = async () => {
       {featuredprojects.map((project: Project, index: number) => (
         <div
           key={index}
-          className={`mt-10 pt-5 pb-5 flex md:flex-row flex-col w-full shadow-lg shadow-slate-500 dark:shadow-slate-400 rounded-lg cursor-pointer ${
+          className={`mt-10 pt-5 pb-5 flex md:flex-row flex-col w-full shadow-lg shadow-slate-500 dark:shadow-slate-400 rounded-lg ${
             index === 1 ? "md:flex-row-reverse" : "flex-row"
           }`}
           style={{ backgroundColor: colors[index % colors.length] }}
@@ -63,7 +57,7 @@ const FeaturedProjects = async () => {
               ))}
             </div>
             <div className="flex justify-center md:justify-start items-center ">
-              <Link href="/">
+              <Link href={`/project/${project.slug.current}`}>
                 <span className=" justify-between max-w-[220px] mt-10 text-center gap-4 flex flex-row items-center font-bold md:text-base text-xs hover:text-primary-highlight">
                   See Project Details <BsArrowRight size={30} />
                 </span>
@@ -73,7 +67,7 @@ const FeaturedProjects = async () => {
           <Suspense fallback={<div>Loading...</div>}>
             <div className="flex-1 flex items-center justify-center">
               <Image
-                src={urlForImage(project.imgUrl[0])?.toString()}
+                src={urlForImage(project.imgUrl[0].asset).url()}
                 alt={project.title}
                 width={1750}
                 height={1080}

@@ -9,6 +9,7 @@ import {
 import getHero from "./libs/getHero";
 import getSkills from "./libs/getSkills";
 import getServices from "./libs/getServices";
+import getProjects from "./libs/getProjects";
 
 import Loading from "./loading";
 interface Skill {
@@ -19,9 +20,10 @@ export default async function Homepage() {
   const heroData = await getHero();
   const skillsData = await getSkills();
   const servicesData = await getServices();
+  const projectsData = await getProjects();
 
   const { title, description, imgUrl } = heroData[0];
-
+  console.log(`ProjectData: ${projectsData}`);
   return (
     <div className="flex flex-col">
       <Suspense fallback={<Loading />}>
@@ -35,7 +37,7 @@ export default async function Homepage() {
       <Services servicesData={servicesData} />
       {/* <WorkExperience /> */}
       <Suspense fallback={<Loading />}>
-        <FeaturedProjects />
+        <FeaturedProjects projectsData={projectsData} />
       </Suspense>
       <Footer />
     </div>
