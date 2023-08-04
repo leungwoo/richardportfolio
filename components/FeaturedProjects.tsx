@@ -79,7 +79,7 @@ const FeaturedProjects = ({ projectsData }: Props) => {
         </div>
       ))}
       {/* Button */}
-      <Link href="/casestudies">
+      <Link href="/CaseStudies">
         <button className=" flex flex-row items-center justify-between md:mt-16 mt-10 hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[286px] w-[220px] md:h-[64px] h-[55px] py-4 px-4 md:px-6 text-center text-white text-sm md:text-base hover:duration-500 transition">
           See more Case Studies <BsArrowRight size={30} />
         </button>
