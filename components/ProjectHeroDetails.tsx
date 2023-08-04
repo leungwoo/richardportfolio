@@ -8,7 +8,7 @@ import { Project } from "@/config/interfaces";
 interface Props {
   projects: Project;
 }
-export const ProjectHeroDetails = ({ projects }: Props) => {
+const ProjectHeroDetails = ({ projects }: Props) => {
   return (
     <div className=" flex flex-col justify-center items-center px-10 gap-5 ">
       <h3 className="font-bold md:text-[17px] text-xs text-[#203993] dark:text-white ">
@@ -45,3 +45,4 @@ export const ProjectHeroDetails = ({ projects }: Props) => {
     </div>
   );
 };
+export default ProjectHeroDetails;
