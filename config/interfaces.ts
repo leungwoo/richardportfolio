@@ -15,6 +15,9 @@ export interface Project {
     _type: string;
     technology: string[];
     title: string;
+    sourcecode: string;
+    description: string;
+    techstack: ImgUrlObject[]; // Define ImgUrlObject interface if needed
     _updatedAt: string;
     imgUrl: ImgUrlObject[]; // Define ImgUrlObject interface if needed
     link: string;

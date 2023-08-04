@@ -20,6 +20,12 @@ const projects = {
         title: 'Link',
         type: 'url',
       },
+      {
+        link: ' This is the link to the project source code',
+        name: 'sourcecode',
+        title: 'Source Code',
+        type: 'url',
+      },
     
       {
         name: 'technology',
@@ -59,6 +65,21 @@ const projects = {
         title: "Featured",
         type: "boolean",
         description: "Check this box if the product is a featured.",
+      },
+      {
+        name: 'myrole',
+        title: 'My Role',
+        type: 'string',
+      },
+      {
+        name: 'startdate',
+        title: 'Start Date',
+        type: 'date',
+      },
+      {
+        name: 'enddate',
+        title: 'End Date',
+        type: 'date',
       },
 
       {

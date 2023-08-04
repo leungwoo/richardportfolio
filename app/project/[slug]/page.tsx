@@ -1,6 +1,8 @@
 import { Project } from "@/config/interfaces";
 import { client } from "@/sanity/lib/client";
 
+import { ProjectHeroDetails } from "@/components/ProjectHeroDetails";
+
 interface Slug {
   current: string;
   _type: string;
@@ -18,17 +20,21 @@ const ProjectDetails = async ({ params }: Props) => {
             title,
             description,          
             link,
+            sourcecode,
             techstack,
             imgUrl,
             _id,
-            technology,
             problemstatement,
             learningsAndChallenges,
-            featured,
         }`
   );
-  console.log("Project:", JSON.stringify(projects, null, 2));
-  return <div>ProjectDetails</div>;
+  //   console.log("Project:", JSON.stringify(projects, null, 2));
+  return (
+    <div className="pt-[80px] flex flex-col justify-center items-center">
+      <ProjectHeroDetails projects={projects} />
+      TechStackDetails
+    </div>
+  );
 };
 
 export default ProjectDetails;
