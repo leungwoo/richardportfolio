@@ -22,7 +22,7 @@ const Footer = () => {
           </span>
 
           <Link
-            href="/contact"
+            href="/Contact"
             className="flex items-center justify-center hover:opacity-75 border-none bg-white font-bold rounded-full md:w-[186px] w-[90px] md:h-[55px] h-[30px] py-5 px-3 text-text-title text-sm md:text-base hover:duration-500 transition"
           >
             Contact

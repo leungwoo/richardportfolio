@@ -39,7 +39,7 @@ const Header = () => {
           Case Studies
         </Link>
         <Link
-          href="/contact"
+          href="/Contact"
           className="hover:text-text-accentBlue hover:duration-500 transition"
         >
           Contact
@@ -101,7 +101,7 @@ const Header = () => {
               Case Studies
             </Link>
             <Link
-              href="/contact"
+              href="/Contact"
               className="hover:text-text-accentBlue hover:duration-500 transition"
             >
               Contact
