@@ -1,5 +1,11 @@
 import { Suspense } from "react";
-import { FeaturedProjects, Footer, Hero, Services, Skills } from "./components";
+import {
+  FeaturedProjects,
+  Footer,
+  Hero,
+  Services,
+  Skills,
+} from "../components";
 import getHero from "./libs/getHero";
 import getSkills from "./libs/getSkills";
 import getServices from "./libs/getServices";

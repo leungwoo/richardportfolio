@@ -1,8 +1,8 @@
 import { CSbanner } from "@/assets/images";
 import Image from "next/image";
-import { Footer } from "../components";
+import { Footer } from "../../components";
 import { Suspense } from "react";
-import Loading from "../components/Loading";
+import Loading from "../../components/Loading";
 
 function CaseStudies() {
   return (

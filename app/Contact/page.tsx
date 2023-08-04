@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Loading from "../components/Loading";
+import Loading from "../../components/Loading";
 
 import { contactbanner } from "@/assets/images";
 import { Suspense } from "react";

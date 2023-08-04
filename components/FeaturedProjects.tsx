@@ -2,28 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
-import { hipnode, carrent, filmpire } from "../../assets/images/index";
+//import { hipnode, carrent, filmpire } from "../../assets/images/index";
 import { Suspense } from "react";
+import getProjects from "../app/libs/getProjects";
+import { urlForImage } from "@/sanity/lib/image";
 
-const projects = [
-  {
-    title: "Hipnode - Social Media Application",
-    technologies: ["React", "Next.js"],
-    imgUrl: hipnode,
-  },
-  {
-    title: "Morrent - A Car Rental Application",
-    technologies: ["Next.js", "TailwindCSS"],
-    imgUrl: carrent,
-  },
-  {
-    title: "FilmWorld - A Movie Review Application",
-    technologies: ["React", "Redux"],
-    imgUrl: filmpire,
-  },
-];
+interface Project {
+  title: string;
+  technology: string[];
+  imgUrl: any;
+  featured: boolean;
+  slug: string;
+  _id: string;
+}
 
-const FeaturedProjects = () => {
+const FeaturedProjects = async () => {
+  const projects = await getProjects();
+  const featuredprojects = projects.filter(
+    (project: Project) => project.featured === true
+  );
   const colors = ["#5F9FFE", "#56B0B9", "#1F1D2B"];
   return (
     <div className="flex flex-col justify-center items-center mt-20 w-full  px-5 md:px-16">
@@ -41,7 +38,7 @@ const FeaturedProjects = () => {
       </div>
 
       {/* Projects */}
-      {projects.map((project, index) => (
+      {featuredprojects.map((project: Project, index: number) => (
         <div
           key={index}
           className={`mt-10 pt-5 pb-5 flex md:flex-row flex-col w-full shadow-lg shadow-slate-500 dark:shadow-slate-400 rounded-lg cursor-pointer ${
@@ -57,7 +54,7 @@ const FeaturedProjects = () => {
             </div>
 
             <div className="flex gap-4 md:text-left md:justify-start justify-center items-center flex-wrap ">
-              {project.technologies.map((tech, techIndex) => (
+              {project.technology.map((tech: string, techIndex: number) => (
                 <span key={techIndex} className="text-sm font-normal">
                   <h1 className="bg-white bg-opacity-30 py-3 px-4 rounded-lg">
                     {tech}
@@ -66,7 +63,7 @@ const FeaturedProjects = () => {
               ))}
             </div>
             <div className="flex justify-center md:justify-start items-center ">
-              <Link href="/CaseStudies">
+              <Link href="/">
                 <span className=" justify-between max-w-[220px] mt-10 text-center gap-4 flex flex-row items-center font-bold md:text-base text-xs hover:text-primary-highlight">
                   See Project Details <BsArrowRight size={30} />
                 </span>
@@ -76,7 +73,7 @@ const FeaturedProjects = () => {
           <Suspense fallback={<div>Loading...</div>}>
             <div className="flex-1 flex items-center justify-center">
               <Image
-                src={project.imgUrl}
+                src={urlForImage(project.imgUrl[0])?.toString()}
                 alt={project.title}
                 width={1750}
                 height={1080}
@@ -88,7 +85,7 @@ const FeaturedProjects = () => {
         </div>
       ))}
       {/* Button */}
-      <Link href="/CaseStudies">
+      <Link href="/casestudies">
         <button className=" flex flex-row items-center justify-between md:mt-16 mt-10 hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[286px] w-[220px] md:h-[64px] h-[55px] py-4 px-4 md:px-6 text-center text-white text-sm md:text-base hover:duration-500 transition">
           See more Case Studies <BsArrowRight size={30} />
         </button>
