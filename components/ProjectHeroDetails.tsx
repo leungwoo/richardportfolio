@@ -10,20 +10,22 @@ interface Props {
 }
 export const ProjectHeroDetails = ({ projects }: Props) => {
   return (
-    <div className="mt-[40px] flex flex-col justify-center items-center px-10 gap-5 ">
+    <div className=" flex flex-col justify-center items-center px-10 gap-5 ">
       <h3 className="font-bold md:text-[17px] text-xs text-[#203993] dark:text-white ">
         Web dev Project
       </h3>
       <h1 className="font-bold sm:text-3xl xl:text-6xl text-lg md:text-4xl text-center text-text-accentBlue dark:text-text-projectdarkblue">
         {projects.title}
       </h1>
+      <div className="px-40">
       <Image
-        src={urlForImage(projects.imgUrl[1].asset).toString()}
+        src={urlForImage(projects.imgUrl[0].asset).toString()}
         alt={projects.title}
-        width={1000}
-        height={1000}
-        className="object-cover"
+        width={2800}
+        height={1500}
+        className="object-cover min-w-[300px] flex-1"
       />
+        </div>
       <div className="flex flex-row justify-between items-center max-w-[600px] gap-20 text-text-accentBlue">
         <div className="flex justify-center items-center ">
           <Link href={projects.link} target="_blank">

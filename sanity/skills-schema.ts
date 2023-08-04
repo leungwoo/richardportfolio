@@ -8,10 +8,7 @@ const skills ={
             name:'imgUrl',
             title:'ImgUrl',
             type: 'array',
-            of:[{
-                    name: 'image',
-                    type: 'image',
-                    title: 'Image',
+            of:[{ type: 'image',
                     options: {
                       hotspot: true,
                     },

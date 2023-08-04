@@ -7,7 +7,8 @@ import Skills from "./Skills.tsx";
 import Services from "./Services.tsx";
 import WorkExperience from "./WorkExperience.tsx";
 import FeaturedProjects from "./FeaturedProjects.tsx";
-import { ProjectHeroDetails } from "./ProjectHeroDetails.tsx";
+import ProjectHeroDetails from "./ProjectHeroDetails.tsx";
+import CasestudyGallery from "./CasestudyGallery.tsx";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   FeaturedProjects,
   Footer,
   ProjectHeroDetails,
+  CasestudyGallery,
 };

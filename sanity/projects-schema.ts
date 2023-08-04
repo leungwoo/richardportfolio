@@ -15,6 +15,17 @@ const projects = {
         type: 'text',
       },
       {
+        name: 'shorttitle',
+        title: 'ShortTitle',
+        type: 'string',
+      },
+      {
+        descripton: 'This is the description of the project',
+        name: 'shortdescription',
+        title: 'ShortDescription',
+        type: 'text',
+      },
+      {
         link: ' This is the link to the project',
         name: 'link',
         title: 'Link',

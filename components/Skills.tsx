@@ -2,24 +2,22 @@ import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 import Loading from "./Loading";
 
-// interface Image {
-//   asset: {
-//     _ref: string;
-//     _type: "image";
-//   };
-//   hotspot?: {
-//     x: number;
-//     y: number;
-//     height: number;
-//     width: number;
-//   };
-// }
-
-interface Skill {
-  imgUrl: any;
-  // Add more fields here if needed from the "Skills" Sanity schema
-}
-
+export interface Skills {
+    imgUrl: {
+      _type: 'image';
+      asset: {
+        _type: 'reference';
+        _ref: string;
+      };
+      hotspot: {
+        x: number;
+        y: number;
+        height: number;
+        width: number;
+      };
+    }[];
+  }
+  
 const Skills = ({ skillsData }: { skillsData: Skill }) => {
   if (!skillsData || !skillsData.imgUrl || skillsData.imgUrl.length === 0) {
     return <Loading />; // Return early or show a message when there are no skills data

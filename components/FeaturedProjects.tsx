@@ -69,8 +69,8 @@ const FeaturedProjects = ({ projectsData }: Props) => {
               <Image
                 src={urlForImage(project.imgUrl[0].asset).url()}
                 alt={project.title}
-                width={1750}
-                height={1080}
+                width={2800}
+                height={1300}
                 loading="eager"
                 className="object-contain md:h-[300px] md:w-[500px] w-[280px] h-[200px] p-4"
               />

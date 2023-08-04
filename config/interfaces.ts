@@ -1,4 +1,3 @@
-
 interface ImgUrlObject {
     _type: string;
     asset: {
@@ -8,7 +7,18 @@ interface ImgUrlObject {
     };
   }
   
-export interface Project {
+  interface LearningsAndChallenges {
+    learning1: string;
+    learning2: string;
+    learning3: string;
+    challenge1: string;
+    challenge2: string;
+    challenge3: string;
+  }
+  
+  export interface Project {
+    shorttitle: string;
+    shortdescription: string;
     featured: boolean;
     _createdAt: string;
     _rev: string;
@@ -17,13 +27,19 @@ export interface Project {
     title: string;
     sourcecode: string;
     description: string;
-    techstack: ImgUrlObject[]; // Define ImgUrlObject interface if needed
+    techstack: ImgUrlObject[];
     _updatedAt: string;
-    imgUrl: ImgUrlObject[]; // Define ImgUrlObject interface if needed
+    imgUrl: ImgUrlObject[];
     link: string;
     _id: string;
     slug: {
       current: string;
       _type: string;
     };
+    myrole: string;
+    startdate: string;
+    enddate: string;
+    problemstatement: string;
+    learningsAndChallenges: LearningsAndChallenges;
   }
+  

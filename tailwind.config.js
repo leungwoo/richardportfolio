@@ -31,10 +31,9 @@ module.exports = {
           formdefault: "#312E81",
           inputdark: "#2E2F3E",
           inputdefault: "#F0E7F9",
-          
         },
         text: {
-            projectdarkblue:"#1E9AFF",
+          projectdarkblue: "#1E9AFF",
           title: "#151E2C",
           accentBlue: "#0252CD",
           default: "#9D9D9D",
