@@ -15,7 +15,7 @@ const FeaturedProjects = ({ projectsData }: Props) => {
   const featuredprojects = projectsData.filter(
     (project: Project) => project.featured === true
   );
-  const colors = ["#5F9FFE", "#56B0B9", "#1F1D2B"];
+  const colors = ["#FF6934", "#56B0B9", "#5F9FFE"];
   return (
     <div className="flex flex-col justify-center items-center mt-20 w-full  px-5 md:px-16">
       {/* Title */}
