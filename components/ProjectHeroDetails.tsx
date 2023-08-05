@@ -17,7 +17,7 @@ const ProjectHeroDetails = ({ projects }: Props) => {
       <h1 className="font-bold sm:text-3xl xl:text-6xl text-lg md:text-4xl text-center text-text-accentBlue dark:text-text-projectdarkblue">
         {projects.title}
       </h1>
-      <div className="md:px-40">
+      <div className="md:px-40 max-w-[1220px]">
         <Image
           src={urlForImage(projects.imgUrl[0].asset).toString()}
           alt={projects.title}
