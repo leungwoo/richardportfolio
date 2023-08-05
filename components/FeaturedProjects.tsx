@@ -65,22 +65,24 @@ const FeaturedProjects = ({ projectsData }: Props) => {
             </div>
           </div>
           <Suspense fallback={<div>Loading...</div>}>
-            <div className="flex-1 flex items-center justify-center">
-              <Image
-                src={urlForImage(project.imgUrl[0].asset).url()}
-                alt={project.title}
-                width={2800}
-                height={1300}
-                loading="eager"
-                className="object-contain md:h-[300px] md:w-[500px] w-[280px] h-[200px] p-4"
-              />
+            <div className="flex-1 flex items-center justify-center cursor-pointer px-5">
+              <Link href={`/project/${project.slug.current}`}>
+                <Image
+                  src={urlForImage(project.imgUrl[0].asset).url()}
+                  alt={project.title}
+                  width={2800}
+                  height={1300}
+                  loading="eager"
+                  className="object-cover "
+                />
+              </Link>
             </div>
           </Suspense>
         </div>
       ))}
       {/* Button */}
       <Link href="/CaseStudies">
-        <button className=" flex flex-row items-center justify-between md:mt-16 mt-10 hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[286px] w-[220px] md:h-[64px] h-[55px] py-4 px-4 md:px-6 text-center text-white text-sm md:text-base hover:duration-500 transition">
+        <button className=" flex flex-row items-center justify-between md:mt-16 mt-10 hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[286px] w-[260px] md:h-[64px] h-[55px] py-4 px-6 text-center text-white text-sm md:text-base hover:duration-500 transition">
           See more Case Studies <BsArrowRight size={30} />
         </button>
       </Link>
