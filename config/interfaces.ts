@@ -7,7 +7,7 @@ interface ImgUrlObject {
     };
   }
   
-  interface LearningsAndChallenges {
+  export interface LearningsAndChallenges {
     learning1: string;
     learning2: string;
     learning3: string;

@@ -9,6 +9,12 @@ import hipnode from "./hipnodelaptop.png";
 import carrent from "./carrentlaptop.png";
 import filmpire from "./FilmworldApp.png";
 import contactbanner from "./contactbanner.png";
+import definition from "./definition.png";
+import planning from "./planning.png";
+import delivery from "./delivery.png";
+import development from "./development.png";
+import bullseye from "./bullseye.png";
+import tick from "./tick.png";
 
 export {
   rlogo2,
@@ -22,4 +28,10 @@ export {
   carrent,
   filmpire,
   contactbanner,
+  definition,
+  planning,
+  delivery,
+  development,
+  bullseye,
+  tick,
 };

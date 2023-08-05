@@ -3,7 +3,16 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 
 import ProjectHeroDetails from "../../../components/ProjectHeroDetails";
+import { LearningsAndChallenges } from "@/config/interfaces";
 import { urlForImage } from "@/sanity/lib/image";
+import {
+  definition,
+  planning,
+  delivery,
+  development,
+  bullseye,
+  tick,
+} from "../../../assets/images/index";
 
 interface Slug {
   current: string;
@@ -15,6 +24,13 @@ interface Props {
     slug: Slug;
   };
 }
+
+const processImages = [
+  { title: "Definition", img: definition },
+  { title: "Planning", img: planning },
+  { title: "Delivery", img: delivery },
+  { title: "Development", img: development },
+];
 
 const ProjectDetails = async ({ params }: Props) => {
   const projects = await client.fetch<Project>(
@@ -138,11 +154,103 @@ const ProjectDetails = async ({ params }: Props) => {
         />
       </div>
       {/* My Process section*/}
-      <section>My Process</section>
+      <section>
+        <div className="flex flex-col max-w-[1220px] md:pt-20 pt-10 md:px-40 px-10 items-center justify-center">
+          <h1 className=" text-lg md:text-[38px] font-bold text-[#151E2C] dark:text-white">
+            My Process
+          </h1>
+          <div className="flex flex-row justify-between items-center gap-4  md:gap-10 pt-10">
+            {processImages.map((item, index) => (
+              <div key={index} className="flex flex-col items-center gap-1">
+                <Image
+                  src={item.img}
+                  alt="process images"
+                  width={100}
+                  height={100}
+                  className="object-cover w-12 h-12 md:w-24 md:h-24"
+                />
+                <span className="md:text-2xl text-[10px] font-semibold text-[#151E2C] dark:text-white">
+                  {item.title}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* User Flow section*/}
-      <section>User Flow</section>
+      {/* <section>User Flow</section> */}
       {/* Take aways section*/}
-      <section>Take aways</section>
+      <section>
+        <div className=" flex flex-col max-w-[1220px] mx-auto md:px-40 px-10 py-10 gap-4">
+          <div className="flex flex-col gap-1">
+            <h5 className="text-[8px] md:text-[10px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+              LEARNINGS & CHALLENGES
+            </h5>
+            <h1 className="md:text-4xl text-base font-bold">Takeaways</h1>
+          </div>
+          <section>
+            <div className="space-y-4 mt-4 dark:bg-[#222330] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
+              <h1 className="md:text-lg text-base font-bold text-[#47A34B]">
+                Learnings
+              </h1>
+              {Object.keys(projects.learningsAndChallenges).map((key) => {
+                if (key.startsWith("learning")) {
+                  const learningKey = key as keyof LearningsAndChallenges;
+                  return (
+                    <div
+                      key={key}
+                      className="space-y-2 flex flex-row gap-1 items-center"
+                    >
+                      <Image
+                        src={bullseye}
+                        alt="bullet"
+                        width={25}
+                        height={25}
+                        className="object-cover w-4 h-4"
+                      />
+                      <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+                        {projects.learningsAndChallenges[learningKey]}
+                      </p>
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </section>
+
+          <div>
+            <div className="space-y-4 mt-4 dark:bg-[#222330] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
+              <h1 className="md:text-lg text-base font-bold text-[#E15A46]">
+                Challenges
+              </h1>
+              {Object.keys(projects.learningsAndChallenges).map((key) => {
+                if (key.startsWith("challenge")) {
+                  const challengeKey = key as keyof LearningsAndChallenges;
+                  return (
+                    <div
+                      key={key}
+                      className="space-y-2 flex flex-row gap-1 items-center "
+                    >
+                      <Image
+                        src={tick}
+                        alt="bullet"
+                        width={35}
+                        height={35}
+                        className="object-cover w-6 h-6"
+                      />
+                      <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+                        {projects.learningsAndChallenges[challengeKey]}
+                      </p>
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
