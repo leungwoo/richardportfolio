@@ -70,7 +70,7 @@ const ProjectDetails = async ({ params }: Props) => {
       <section className="w-full">
         <div className="md:pt-24 md:pb-24 pt-12 pb-12 md:px-40 px-10 md:max-w-[1220px] mx-auto">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[8px] md:text-[10px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               TECHNOLOGIES USED
             </h5>
             <h1 className="md:text-4xl text-base font-bold">Tech Stack</h1>
@@ -103,7 +103,7 @@ const ProjectDetails = async ({ params }: Props) => {
       <section>
         <div className=" flex flex-col max-w-[1220px] mx-auto md:px-40 px-10 py-10 gap-4">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[8px] md:text-[10px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               PROBLEM
             </h5>
             <h1 className="md:text-4xl text-base font-bold">
