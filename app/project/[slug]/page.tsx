@@ -35,7 +35,7 @@ const ProjectDetails = async ({ params }: Props) => {
   );
 
   return (
-    <div className="pt-[80px] flex flex-col justify-center items-center ">
+    <div className="pt-[80px] flex flex-col justify-center items-center w-full">
       <ProjectHeroDetails projects={projects} />
       {/* project date section*/}
       <section className="bg-primary-Default dark:bg-[#222330] w-full">
@@ -125,6 +125,18 @@ const ProjectDetails = async ({ params }: Props) => {
           </div>
         </div>
       </section>
+      <div className="w-full flex flex-col md:mt-10 mt-5">
+        <span className="w-full justify-center items-center text-center md:py-9 py-4 text-white  bg-primary-accentBlue dark:bg-primary-darkmodeblue md:text-3xl text-lg font-bold">
+          HIGH-FIDELITY FIGMA DESIGN
+        </span>
+        <Image
+          src={urlForImage(projects.imgUrl[3].asset).url()}
+          alt={projects.shorttitle}
+          width={1000}
+          height={1000}
+          className="object-cover w-full"
+        />
+      </div>
       {/* My Process section*/}
       <section>My Process</section>
       {/* User Flow section*/}
