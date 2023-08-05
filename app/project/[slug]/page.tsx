@@ -44,7 +44,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               My Role
             </label>
-            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-2xl">
               {projects.myrole}
             </h1>
           </div>
@@ -52,7 +52,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               Start Date
             </label>
-            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-2xl">
               {projects.startdate}
             </h1>
           </div>
@@ -60,7 +60,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               End Date
             </label>
-            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-2xl">
               {projects.enddate}
             </h1>
           </div>
@@ -83,17 +83,45 @@ const ProjectDetails = async ({ params }: Props) => {
                   alt={projects.shorttitle}
                   width={100}
                   height={100}
-                  className="object-cover w-10 h-10 md:w-24 md:h-24"
+                  className="object-cover w-12 h-12 md:w-24 md:h-24 "
                 />
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section>Description</section>
-      <section>Problem Statement</section>
+      {/* Description section*/}
+      <section className="bg-primary-Default dark:bg-[#222330] w-full ">
+        <div className="md:max-w-[1220px] mx-auto">
+          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] font-normal md:text-2xl text-lg md:px-40 px-10 py-10">
+            {projects.description}
+          </h1>
+        </div>
+      </section>
+
+      {/* ProblemStatement section*/}
+      <section>
+        <div className=" flex flex-col max-w-[1220px] mx-auto md:px-40 px-10 py-10 gap-4">
+          <div className="flex flex-col gap-1">
+            <h5 className="text-[8px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+              PROBLEM
+            </h5>
+            <h1 className="md:text-4xl text-base font-bold">
+              Problem Statement
+            </h1>
+          </div>
+          <div className="">
+            <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] md:text-[22px] text-lg">
+              {projects.problemstatement}
+            </h1>
+          </div>
+        </div>
+      </section>
+      {/* My Process section*/}
       <section>My Process</section>
+      {/* User Flow section*/}
       <section>User Flow</section>
+      {/* Take aways section*/}
       <section>Take aways</section>
     </div>
   );
