@@ -13,6 +13,7 @@ import {
   bullseye,
   tick,
 } from "../../../assets/images/index";
+import { Footer } from "@/components";
 
 interface Slug {
   current: string;
@@ -150,7 +151,7 @@ const ProjectDetails = async ({ params }: Props) => {
           alt={projects.shorttitle}
           width={1000}
           height={1000}
-          className="object-cover w-full"
+          className="object-cover w-full max-h-[700px]"
         />
       </div>
       {/* My Process section*/}
@@ -161,7 +162,7 @@ const ProjectDetails = async ({ params }: Props) => {
           </h1>
           <div className="flex flex-row justify-between items-center gap-4  md:gap-10 pt-10">
             {processImages.map((item, index) => (
-              <div key={index} className="flex flex-col items-center gap-1">
+              <div key={index} className="flex flex-col items-center gap-3">
                 <Image
                   src={item.img}
                   alt="process images"
@@ -251,6 +252,7 @@ const ProjectDetails = async ({ params }: Props) => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
