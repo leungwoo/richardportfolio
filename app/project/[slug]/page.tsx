@@ -110,10 +110,18 @@ const ProjectDetails = async ({ params }: Props) => {
               Problem Statement
             </h1>
           </div>
-          <div className="">
-            <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] md:text-[22px] text-lg">
-              {projects.problemstatement}
-            </h1>
+
+          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] md:text-[22px] text-lg">
+            {projects.problemstatement}
+          </h1>
+          <div className="flex item-center justify-center md:pt-20 pt-10  ">
+            <Image
+              src={urlForImage(projects.imgUrl[2].asset).url()}
+              alt={projects.shorttitle}
+              width={1000}
+              height={1000}
+              className="object-cover  rounded-xl  md:w-[800px] md:h-[400px] w-[280px] h-[150px] "
+            />
           </div>
         </div>
       </section>
