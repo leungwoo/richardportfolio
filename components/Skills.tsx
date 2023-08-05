@@ -18,7 +18,7 @@ export interface Skills {
     }[];
   }
   
-const Skills = ({ skillsData }: { skillsData: Skill }) => {
+const Skills = ({ skillsData }: { skillsData: Skills }) => {
   if (!skillsData || !skillsData.imgUrl || skillsData.imgUrl.length === 0) {
     return <Loading />; // Return early or show a message when there are no skills data
   }
