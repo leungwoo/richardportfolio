@@ -12,7 +12,7 @@ import contactbanner from "./contactbanner.png";
 import definition from "./definition.png";
 import planning from "./planning.png";
 import delivery from "./delivery.png";
-import development from "./developmentdark.png";
+import development from "./development.png";
 import definition2 from "./definitiondark.png";
 import planning2 from "./planningdark.png";
 import delivery2 from "./deliverydark.png";
