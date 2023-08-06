@@ -9,6 +9,7 @@ import WorkExperience from "./WorkExperience.tsx";
 import FeaturedProjects from "./FeaturedProjects.tsx";
 import ProjectHeroDetails from "./ProjectHeroDetails.tsx";
 import CasestudyGallery from "./CasestudyGallery.tsx";
+import Process from "./Process.tsx";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   Footer,
   ProjectHeroDetails,
   CasestudyGallery,
+  Process,
 };
