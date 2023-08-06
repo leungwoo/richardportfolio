@@ -130,7 +130,7 @@ const ProjectDetails = async ({ params }: Props) => {
               alt={projects.shorttitle}
               width={1000}
               height={1000}
-              className="object-cover  rounded-xl  md:w-[800px] md:h-[400px] w-[280px] h-[150px] "
+              className="object-contain  rounded-xl  md:w-[800px] md:h-[400px] w-[280px] h-[150px] "
             />
           </div>
         </div>
