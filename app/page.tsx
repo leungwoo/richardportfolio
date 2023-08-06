@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import {
+  Recommendations,
   FeaturedProjects,
   Footer,
   Hero,
@@ -39,6 +40,7 @@ export default async function Homepage() {
       <Suspense fallback={<Loading />}>
         <FeaturedProjects projectsData={projectsData} />
       </Suspense>
+      <Recommendations />
       <Footer />
     </div>
   );
