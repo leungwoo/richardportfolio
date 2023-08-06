@@ -13,8 +13,6 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        process: "url('https://i.ibb.co/rZj3Mqc/process.png')",
-        processdark: "url('https://i.ibb.co/jDn74Xn/processdark.png')",
       },
 
       height: {

@@ -150,28 +150,6 @@ const ProjectDetails = async ({ params }: Props) => {
       {/* My Process section*/}
       <section>
         <Process />
-        {/* <div className="flex-grow bg-no-repeat bg-process dark:bg-processdark bg-contain bg-center w-screen h-64"></div> */}
-        {/* <div className="flex flex-col max-w-[1220px] md:pt-20 pt-10 md:px-40 px-10 items-center justify-center">
-          <h1 className=" text-lg md:text-[38px] font-bold text-[#151E2C] dark:text-white">
-            My Process
-          </h1>
-          <div className="flex flex-row items-center gap-6  md:gap-10 pt-10">
-            {processImages.map((item, index) => (
-              <div key={index} className="flex flex-col items-center gap-5">
-                <Image
-                  src={projects.darkMode ? item.imgdark : item.img}
-                  alt="process images"
-                  width={100}
-                  height={100}
-                  className="object-cover w-12 h-12 md:w-24 md:h-24"
-                />
-                <span className="md:text-xl text-[10px] font-semibold text-[#151E2C] dark:text-white">
-                  {item.title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </section>
       {/* User Flow section*/}
       {/* <section>User Flow</section> */}
