@@ -30,7 +30,7 @@ const processImages = [
   { title: "Definition", img: definition },
   { title: "Planning", img: planning },
   { title: "Delivery", img: delivery },
-  { title: "Development", img: development },
+  { title: "Develop", img: development },
 ];
 
 const ProjectDetails = async ({ params }: Props) => {
@@ -160,9 +160,9 @@ const ProjectDetails = async ({ params }: Props) => {
           <h1 className=" text-lg md:text-[38px] font-bold text-[#151E2C] dark:text-white">
             My Process
           </h1>
-          <div className="flex flex-row justify-between items-center gap-4  md:gap-10 pt-10">
+          <div className="flex flex-row items-center gap-6  md:gap-10 pt-10">
             {processImages.map((item, index) => (
-              <div key={index} className="flex flex-col items-center gap-3">
+              <div key={index} className="flex flex-col items-center gap-5">
                 <Image
                   src={item.img}
                   alt="process images"
@@ -170,7 +170,7 @@ const ProjectDetails = async ({ params }: Props) => {
                   height={100}
                   className="object-cover w-12 h-12 md:w-24 md:h-24"
                 />
-                <span className="md:text-2xl text-[10px] font-semibold text-[#151E2C] dark:text-white">
+                <span className="md:text-xl text-[10px] font-semibold text-[#151E2C] dark:text-white">
                   {item.title}
                 </span>
               </div>
