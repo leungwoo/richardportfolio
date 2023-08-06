@@ -1,7 +1,16 @@
+"use client";
+
 import Image from "next/image";
+
+import { Recommendation } from "@/config/interfaces";
 import { rlogo } from "@/assets/images";
 
-const Recommendations = () => {
+interface Props {
+  recommendationsData: Recommendation[];
+}
+
+const Recommendations = ({ recommendationsData }: Props) => {
+  console.log(recommendationsData);
   return (
     <section className="flex items-center justify-center bg-recommendations-clear bg-cover bg-no-repeat w-full md:h-[700px] h-[450px] mt-10">
       <div className="flex flex-col gap-8 max-w-[709px] items-center pt-10">
