@@ -12,9 +12,15 @@ import contactbanner from "./contactbanner.png";
 import definition from "./definition.png";
 import planning from "./planning.png";
 import delivery from "./delivery.png";
-import development from "./development.png";
+import development from "./developmentdark.png";
+import definition2 from "./definitiondark.png";
+import planning2 from "./planningdark.png";
+import delivery2 from "./deliverydark.png";
+import developmentdark from "./developmentdark.png";
 import bullseye from "./bullseye.png";
 import tick from "./tick.png";
+import process from "./process.png";
+import processdark from "./processdark.png";
 
 export {
   rlogo2,
@@ -34,4 +40,10 @@ export {
   development,
   bullseye,
   tick,
+  definition2,
+  planning2,
+  delivery2,
+  developmentdark,
+  process,
+  processdark,
 };

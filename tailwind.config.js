@@ -9,14 +9,14 @@ module.exports = {
 
   theme: {
     extend: {
-      boxShadow: {
-        "bottom-white": "0 10px 20px -5px rgba(255, 255, 255, 0.5)",
-      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        process: "url('https://i.ibb.co/rZj3Mqc/process.png')",
+        processdark: "url('https://i.ibb.co/jDn74Xn/processdark.png')",
       },
+
       height: {
         "viewport-height": "calc(min(100vh))",
       },

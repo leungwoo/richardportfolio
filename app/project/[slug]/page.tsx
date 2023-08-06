@@ -5,15 +5,8 @@ import Image from "next/image";
 import ProjectHeroDetails from "../../../components/ProjectHeroDetails";
 import { LearningsAndChallenges } from "@/config/interfaces";
 import { urlForImage } from "@/sanity/lib/image";
-import {
-  definition,
-  planning,
-  delivery,
-  development,
-  bullseye,
-  tick,
-} from "../../../assets/images/index";
-import { Footer } from "@/components";
+import { bullseye, tick } from "../../../assets/images/index";
+import { Footer, Process } from "@/components";
 
 interface Slug {
   current: string;
@@ -26,12 +19,12 @@ interface Props {
   };
 }
 
-const processImages = [
-  { title: "Definition", img: definition },
-  { title: "Planning", img: planning },
-  { title: "Delivery", img: delivery },
-  { title: "Develop", img: development },
-];
+// const processImages = [
+//   { title: "Definition", img: definition ,imgdark: definition2},
+//   { title: "Planning", img: planning ,imgdark: planning2},
+//   { title: "Delivery", img: delivery , imgdark: delivery2},
+//   { title: "Develop", img: development , imgdark: development2},
+// ];
 
 const ProjectDetails = async ({ params }: Props) => {
   const projects = await client.fetch<Project>(
@@ -156,7 +149,9 @@ const ProjectDetails = async ({ params }: Props) => {
       </div>
       {/* My Process section*/}
       <section>
-        <div className="flex flex-col max-w-[1220px] md:pt-20 pt-10 md:px-40 px-10 items-center justify-center">
+        <Process />
+        {/* <div className="flex-grow bg-no-repeat bg-process dark:bg-processdark bg-contain bg-center w-screen h-64"></div> */}
+        {/* <div className="flex flex-col max-w-[1220px] md:pt-20 pt-10 md:px-40 px-10 items-center justify-center">
           <h1 className=" text-lg md:text-[38px] font-bold text-[#151E2C] dark:text-white">
             My Process
           </h1>
@@ -164,7 +159,7 @@ const ProjectDetails = async ({ params }: Props) => {
             {processImages.map((item, index) => (
               <div key={index} className="flex flex-col items-center gap-5">
                 <Image
-                  src={item.img}
+                  src={projects.darkMode ? item.imgdark : item.img}
                   alt="process images"
                   width={100}
                   height={100}
@@ -176,7 +171,7 @@ const ProjectDetails = async ({ params }: Props) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
       {/* User Flow section*/}
       {/* <section>User Flow</section> */}
