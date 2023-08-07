@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import {
+  Recommendations,
   FeaturedProjects,
   Footer,
   Hero,
@@ -10,6 +11,7 @@ import getHero from "./libs/getHero";
 import getSkills from "./libs/getSkills";
 import getServices from "./libs/getServices";
 import getProjects from "./libs/getProjects";
+import getRecommendations from "./libs/getRecommendations";
 
 import Loading from "./loading";
 interface Skill {
@@ -21,6 +23,7 @@ export default async function Homepage() {
   const skillsData = await getSkills();
   const servicesData = await getServices();
   const projectsData = await getProjects();
+  const recommendationsData = await getRecommendations();
 
   const { title, description, imgUrl } = heroData[0];
 
@@ -38,6 +41,9 @@ export default async function Homepage() {
       {/* <WorkExperience /> */}
       <Suspense fallback={<Loading />}>
         <FeaturedProjects projectsData={projectsData} />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Recommendations recommendationsData={recommendationsData} />
       </Suspense>
       <Footer />
     </div>

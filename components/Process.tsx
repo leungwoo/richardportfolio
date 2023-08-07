@@ -26,7 +26,7 @@ const Process = () => {
       <h1 className=" text-lg md:text-[38px] font-bold text-[#151E2C] dark:text-white">
         My Process
       </h1>
-      <div className="flex flex-row items-center gap-6  md:gap-10 pt-10">
+      <div className="flex flex-row items-center gap-6  md:gap-10 pt-10 transition duration-500 ease-in-out transform">
         {processImages.map((item, index) => (
           <div key={index} className="flex flex-col items-center gap-5">
             <Image

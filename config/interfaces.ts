@@ -1,3 +1,14 @@
+export interface Recommendation {
+    name: string;
+    title: string;
+    recommendations: string;
+    img: {
+      asset: {
+        _ref: string;
+      };
+    };
+  }
+
 interface ImgUrlObject {
     _type: string;
     asset: {
