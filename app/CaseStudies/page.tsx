@@ -8,7 +8,7 @@ import getProjects from "../libs/getProjects";
 
 export default async function CaseStudies() {
   const projectsData = await getProjects();
-
+  console.log(projectsData);
   return (
     <div className="h-viewport-height pt-[80px]">
       <div className="relative bg-primary-Default dark:bg-primary-carddark  py-[10px] flex items-center justify-center">

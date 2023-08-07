@@ -4,13 +4,13 @@ const recommendations = {
     type: 'document',
     fields: [
         {
-            name: 'name',
-            title: 'Name',
+            name: 'title',
+            title: 'Title',
             type: 'string',
         },
         {
-            name: 'title',
-            title: 'Title',
+            name: 'description',
+            title: 'Description',
             type: 'string',
         },
         {
