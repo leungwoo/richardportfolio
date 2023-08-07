@@ -5,6 +5,7 @@ interface Props {
 }
 
 import { CarouselPage } from "../components/index";
+import TestCar from "./TestCar";
 
 const Recommendations = ({ recommendationsData }: Props) => {
   return (
@@ -24,8 +25,9 @@ const Recommendations = ({ recommendationsData }: Props) => {
             about me
           </span>
         </div>
-        <div className=" md:pt-10 flex-wrap justify-center items-center ">
-          <CarouselPage recommendationsData={recommendationsData} />
+        <div className=" md:pt-10 flex-wrap justify-center items-center  ">
+          {/* <CarouselPage recommendationsData={recommendationsData} /> */}
+          <TestCar recommendationsData={recommendationsData} />
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
   const titleWords = title.split(" ");
   const [first, second, third] = titleWords;
   return (
-    <div className=" md:pt-[80px]  flex md:flex-row flex-col bg-primary-Default dark:bg-primary-darkDefault min-h-screen">
+    <div className=" md:pt-[80px]  flex md:flex-row flex-col bg-primary-Default dark:bg-primary-darkDefault ">
       <div className="flex-1 md:pl-20 px-4 pt-20 space-y-5">
         <h3 className="text-sm md:text-base text-text-accentBlue font-bold">
           HI, MY NAME IS RICHARD GABRIEL

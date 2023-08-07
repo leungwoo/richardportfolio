@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center ">
       <div className=" relative w-full">
-        <div className=" md:gap-5 gap-3 absolute flex flex-col flex-wrap min-w-[200px] md:top-0 top-2 left-0 right-0 bottom-0 items-center justify-center">
+        <div className=" md:gap-8 gap-3 absolute flex flex-col flex-wrap min-w-[200px] md:top-0 top-2 left-0 right-0 bottom-0 items-center justify-center">
           <span className="text-sm sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-title">
             Have a project idea to{" "}
             <div className="relative inline-block">
@@ -28,23 +28,16 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        <Suspense
-          fallback={
-            <div>
-              <Loading />
-            </div>
-          }
-        >
-          <div className="md:pt-20 md:pb-10 md:px-5 pt-10 pb-5 px-5 w-full">
-            <Image
-              src={footer}
-              alt="footerbanner"
-              width={1080}
-              height={500}
-              className="min-w-[256px] w-full lg:max-h-[427px] rounded-[20px] object-cover "
-            />
-          </div>
-        </Suspense>
+
+        <div className="md:pt-20 md:pb-10 md:px-5 pt-10 pb-5 px-5 w-full">
+          <Image
+            src={footer}
+            alt="footerbanner"
+            width={1080}
+            height={500}
+            className="min-w-[256px] w-full lg:max-h-[427px] rounded-[20px] object-cover "
+          />
+        </div>
       </div>
       <SocialMedia />
     </div>

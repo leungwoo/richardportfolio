@@ -54,7 +54,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               My Role
             </label>
-            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-2xl">
+            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-[22px]">
               {projects.myrole}
             </h1>
           </div>
@@ -62,7 +62,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               Start Date
             </label>
-            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-2xl">
+            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-[22px]">
               {projects.startdate}
             </h1>
           </div>
@@ -70,7 +70,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               End Date
             </label>
-            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-2xl">
+            <h1 className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-[22px]">
               {projects.enddate}
             </h1>
           </div>
@@ -103,7 +103,7 @@ const ProjectDetails = async ({ params }: Props) => {
       {/* Description section*/}
       <section className="bg-primary-Default dark:bg-[#222330] w-full ">
         <div className="md:max-w-[1220px] mx-auto">
-          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] font-normal md:text-2xl text-lg md:px-40 px-10 py-10">
+          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] font-normal md:text-[22px] text-lg md:px-40 px-10 py-10">
             {projects.description}
           </h1>
         </div>
@@ -183,7 +183,7 @@ const ProjectDetails = async ({ params }: Props) => {
                         height={25}
                         className="object-cover w-4 h-4"
                       />
-                      <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+                      <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-lg">
                         {projects.learningsAndChallenges[learningKey]}
                       </p>
                     </div>
@@ -214,7 +214,7 @@ const ProjectDetails = async ({ params }: Props) => {
                         height={35}
                         className="object-cover w-6 h-6"
                       />
-                      <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-sm">
+                      <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-lg">
                         {projects.learningsAndChallenges[challengeKey]}
                       </p>
                     </div>
