@@ -4,13 +4,7 @@ const nextConfig = {
   //     appDir: true,
   //   },
   images: {
-    domains: [
-      "cdn.sanity.io",
-      "images.unsplash.com",
-      "i.ibb.co",
-      "api.dicebear.com",
-      "via.placeholder.com",
-    ],
+    domains: ["cdn.sanity.io", "images.unsplash.com"],
   },
   webpack(config) {
     config.experiments = {

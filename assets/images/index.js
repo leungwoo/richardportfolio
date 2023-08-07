@@ -21,7 +21,6 @@ import bullseye from "./bullseye.png";
 import tick from "./tick.png";
 import process from "./process.png";
 import processdark from "./processdark.png";
-import recommendations from "./recommendationsclear.png";
 
 export {
   rlogo2,
@@ -47,5 +46,4 @@ export {
   developmentdark,
   process,
   processdark,
-  recommendations,
 };
