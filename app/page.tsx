@@ -42,7 +42,9 @@ export default async function Homepage() {
       <Suspense fallback={<Loading />}>
         <FeaturedProjects projectsData={projectsData} />
       </Suspense>
-      <Recommendations recommendationsData={recommendationsData}/>
+      <Suspense fallback={<Loading />}>
+        <Recommendations recommendationsData={recommendationsData} />
+      </Suspense>
       <Footer />
     </div>
   );
