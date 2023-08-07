@@ -174,14 +174,14 @@ const ProjectDetails = async ({ params }: Props) => {
                   return (
                     <div
                       key={key}
-                      className="space-y-2 flex flex-row gap-1 items-center"
+                      className="space-y-2 flex flex-row gap-2 items-center"
                     >
                       <Image
                         src={bullseye}
                         alt="bullet"
                         width={25}
                         height={25}
-                        className="object-cover w-4 h-4"
+                        className="object-cover w-6 h-6"
                       />
                       <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-lg">
                         {projects.learningsAndChallenges[learningKey]}
@@ -205,14 +205,14 @@ const ProjectDetails = async ({ params }: Props) => {
                   return (
                     <div
                       key={key}
-                      className="space-y-2 flex flex-row gap-1 items-center "
+                      className="space-y-2 flex flex-row gap-2 items-center "
                     >
                       <Image
                         src={tick}
                         alt="bullet"
                         width={35}
                         height={35}
-                        className="object-cover w-6 h-6"
+                        className="object-cover w-8 h-8"
                       />
                       <p className="text-[#9191BC] dark:text-[#BEC1D5] text-xs md:text-lg">
                         {projects.learningsAndChallenges[challengeKey]}

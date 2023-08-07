@@ -14,10 +14,6 @@ const CarouselPage = ({ recommendationsData }: Props) => {
   const [selectedRecommendationIndex, setSelectedRecommendationIndex] =
     useState<number | null>(null);
 
-  const handleIndicatorClick = (index: number) => {
-    setSelectedRecommendationIndex(index);
-  };
-
   return (
     <Carousel
       autoPlay
@@ -46,14 +42,7 @@ const CarouselPage = ({ recommendationsData }: Props) => {
             </div>
           </div>
           <div className="indicator  p-2">
-            <div
-              className="inline-flex justify-between items-center transition-all ease-in-out duration-200"
-              onClick={() => handleIndicatorClick(index)}
-              onKeyDown={() => handleIndicatorClick(index)}
-              role="button"
-              tabIndex={0}
-              aria-label={`${recommendation.name} ${index + 1}`}
-            >
+            <div className="inline-flex justify-between items-center transition-all ease-in-out duration-200">
               <Image
                 src={urlForImage(recommendation.img.asset).url()}
                 alt="profile"

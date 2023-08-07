@@ -18,13 +18,13 @@ const CarouselPage = ({ recommendationsData }: Props) => {
   };
   return (
     <Carousel
-      className="w-[300px] md:w-full"
+      autoPlay
+      className="w-[350px] md:w-full "
+      centerSlidePercentage={100} // Center the slide completely
+      centerMode
+      showThumbs={false}
       showStatus={false}
       swipeable={true}
-      showArrows={true}
-      showThumbs={false}
-      centerSlidePercentage={100} // Center the slide completely
-      centerMode={true} // Set the center slide position
       //   renderIndicator={(onClickHandler, isSelected, index, label) => {
       //     const defStyle = {
       //       marginLeft: 10,
@@ -70,7 +70,7 @@ const CarouselPage = ({ recommendationsData }: Props) => {
                 {recommendation.recommendations}
               </p>
               <div className="flex flex-col gap-1 items-center mt-4">
-                <h3 className="text-[#151E2C] dark:text-[#BEC1D5] md:text-base text-base font-bold">
+                <h3 className="text-[#151E2C] dark:text-[#BEC1D5] md:text-base text-sm font-bold">
                   {recommendation.name}
                 </h3>
                 <h4 className="text-[#B9B9B9] dark:text-[#BEC1D5] text-[10px] md:text-sm font-medium">
@@ -80,13 +80,20 @@ const CarouselPage = ({ recommendationsData }: Props) => {
             </div>
           </div>
           <div className="indicator  p-2">
-            <div className="inline-flex justify-between items-center transition-all ease-in-out duration-200">
+            <div
+              className="inline-flex justify-between items-center transition-all ease-in-out duration-200"
+              onClick={() => handleIndicatorClick(index)}
+              onKeyDown={() => handleIndicatorClick(index)}
+              role="button"
+              tabIndex={0}
+              aria-label={`${recommendation.name} ${index + 1}`}
+            >
               <Image
                 src={urlForImage(recommendation.img.asset).url()}
                 alt="profile"
                 width={50}
                 height={50}
-                className="rounded-full object-cover md:w-8 md:h-8 w-5 h-5"
+                className="rounded-full object-cover md:w-16 md:h-16 w-8 h-8"
               />
             </div>
           </div>
