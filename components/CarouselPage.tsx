@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import { Recommendation } from "@/config/interfaces";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { urlForImage } from "@/sanity/lib/image";
 import { useState } from "react";
 
@@ -13,9 +14,6 @@ const CarouselPage = ({ recommendationsData }: Props) => {
   const [selectedRecommendationIndex, setSelectedRecommendationIndex] =
     useState<number | null>(null);
 
-  const handleIndicatorClick = (index: number) => {
-    setSelectedRecommendationIndex(index);
-  };
   return (
     <Carousel
       autoPlay
@@ -25,42 +23,6 @@ const CarouselPage = ({ recommendationsData }: Props) => {
       showThumbs={false}
       showStatus={false}
       swipeable={true}
-      //   renderIndicator={(onClickHandler, isSelected, index, label) => {
-      //     const defStyle = {
-      //       marginLeft: 10,
-      //       marginRight: 10,
-      //       color: "white",
-      //       cursor: "pointer",
-      //     };
-      //     const style = isSelected
-      //       ? { ...defStyle, opacity: 1, color: "black", transform: "scale(2)" }
-      //       : {
-      //           ...defStyle,
-      //           opacity: 0.5,
-      //           color: "black",
-      //           transform: "scale(1)",
-      //         };
-      //     return (
-      //       <div
-      //         className=" inline-flex justify-between items-center transition-all ease-in-out duration-200"
-      //         style={style}
-      //         onClick={onClickHandler}
-      //         onKeyDown={onClickHandler}
-      //         key={index}
-      //         role="button"
-      //         tabIndex={0}
-      //         aria-label={`${label} ${index + 1}`}
-      //       >
-      //         <Image
-      //           src={urlForImage(recommendationsData[index].img.asset).url()}
-      //           alt="profile"
-      //           width={50}
-      //           height={50}
-      //           className="rounded-full object-cover md:w-8 md:h-8 w-5 h-5"
-      //         />
-      //       </div>
-      //     );
-      //   }}
     >
       {recommendationsData.map((recommendation, index) => (
         <div key={index} className="slide-container">
@@ -80,14 +42,7 @@ const CarouselPage = ({ recommendationsData }: Props) => {
             </div>
           </div>
           <div className="indicator  p-2">
-            <div
-              className="inline-flex justify-between items-center transition-all ease-in-out duration-200"
-              onClick={() => handleIndicatorClick(index)}
-              onKeyDown={() => handleIndicatorClick(index)}
-              role="button"
-              tabIndex={0}
-              aria-label={`${recommendation.name} ${index + 1}`}
-            >
+            <div className="inline-flex justify-between items-center transition-all ease-in-out duration-200">
               <Image
                 src={urlForImage(recommendation.img.asset).url()}
                 alt="profile"
