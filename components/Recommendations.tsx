@@ -1,7 +1,4 @@
-import Image from "next/image";
-
 import { Recommendation } from "@/config/interfaces";
-// import { rlogo } from "@/assets/images";
 
 interface Props {
   recommendationsData: Recommendation[];
@@ -11,8 +8,8 @@ import { CarouselPage } from "../components/index";
 
 const Recommendations = ({ recommendationsData }: Props) => {
   return (
-    <section className="flex items-center justify-center bg-recommendations-clear bg-cover bg-no-repeat w-full md:h-[700px] h-[450px] mt-10">
-      <div className="flex flex-col gap-8 max-w-[709px] items-center pt-10">
+    <section className="flex items-center justify-center bg-recommendations-clear bg-cover bg-no-repeat w-full md:h-[700px] h-[500px] md:mt-20 mt-10 pb-4">
+      <div className="flex flex-col flex-wrap gap-5 max-w-[709px] items-center pt-32 md:pt-0 ">
         <div className="flex flex-row items-center gap-2 ">
           <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
             What
@@ -27,7 +24,9 @@ const Recommendations = ({ recommendationsData }: Props) => {
             about me
           </span>
         </div>
-        <CarouselPage recommendationsData={recommendationsData} />
+        <div className=" md:pt-10 flex-wrap justify-center items-center ">
+          <CarouselPage recommendationsData={recommendationsData} />
+        </div>
       </div>
     </section>
   );
