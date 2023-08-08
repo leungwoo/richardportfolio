@@ -19,13 +19,6 @@ interface Props {
   };
 }
 
-// const processImages = [
-//   { title: "Definition", img: definition ,imgdark: definition2},
-//   { title: "Planning", img: planning ,imgdark: planning2},
-//   { title: "Delivery", img: delivery , imgdark: delivery2},
-//   { title: "Develop", img: development , imgdark: development2},
-// ];
-
 const ProjectDetails = async ({ params }: Props) => {
   const projects = await client.fetch<Project>(
     `*[_type == "projects" && slug.current == "${params.slug}"][0]{

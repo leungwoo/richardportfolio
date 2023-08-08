@@ -1,11 +1,11 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
-import { Carousel } from "react-responsive-carousel";
-import { Recommendation } from "@/config/interfaces";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { urlForImage } from "@/sanity/lib/image";
-import { useState } from "react";
 
+import { Carousel } from "react-responsive-carousel";
+import { Recommendation } from "@/config/interfaces";
 interface Props {
   recommendationsData: Recommendation[];
 }
@@ -28,7 +28,7 @@ const CarouselPage = ({ recommendationsData }: Props) => {
         <div key={index} className="slide-container">
           <div className="content p-4">
             <div>
-              <p className="text-[#151E2C80] dark:text-[#BEC1D5] text-xs md:text-base font-medium text-center max-h-[200px] overflow-auto">
+              <p className="text-[#151E2C80] dark:text-[#BEC1D5] text-xs md:text-lg font-medium text-center max-h-[200px] overflow-auto">
                 {recommendation.recommendations}
               </p>
               <div className="flex flex-col gap-1 items-center mt-4">

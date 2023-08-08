@@ -8,8 +8,8 @@ interface ImgUrlObject {
   }
   export interface Recommendation {
     _type: 'recommendations';
-    title: string;
-    description: string;
+    name: string;
+    title:string;
     recommendations: string;
     img: ImgUrlObject; // Adjust the type based on your actual image schema
   }

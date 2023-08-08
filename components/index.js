@@ -10,6 +10,8 @@ import FeaturedProjects from "./FeaturedProjects.tsx";
 import ProjectHeroDetails from "./ProjectHeroDetails.tsx";
 import CasestudyGallery from "./CasestudyGallery.tsx";
 import Process from "./Process.tsx";
+import CarouselPage from "./CarouselPage.tsx";
+import Recommendations from "./Recommendations.tsx";
 
 export {
   Header,
@@ -24,4 +26,6 @@ export {
   ProjectHeroDetails,
   CasestudyGallery,
   Process,
+  CarouselPage,
+  Recommendations,
 };
