@@ -12,6 +12,7 @@ import CasestudyGallery from "./CasestudyGallery.tsx";
 import Process from "./Process.tsx";
 import CarouselPage from "./CarouselPage.tsx";
 import Recommendations from "./Recommendations.tsx";
+import Sidebar from "./Sidebar.tsx";
 
 export {
   Header,
@@ -28,4 +29,5 @@ export {
   Process,
   CarouselPage,
   Recommendations,
+  Sidebar,
 };
