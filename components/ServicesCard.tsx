@@ -15,7 +15,7 @@ interface Service {
 const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
   return (
     <div className="flex flex-wrap gap-5 justify-center pt-10">
-      {servicesData.map((service: Service, index: number) => (
+      {servicesData.map((service: Service) => (
         <div
           key={service._id}
           className="flex flex-col justify-between bg-primary-Default hover:bg-primary-accentBlue text-text-navbar dark:text-text-default hover:text-white
@@ -32,7 +32,7 @@ const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <h1 className="font-bold text-[24px] text-text-title dark:text-white">
+            <h1 className="font-bold text-[24px] dark:text-white ">
               {service.title}
             </h1>
             <p className="font-medium text-[12px] 2">{service.description}</p>
