@@ -123,21 +123,25 @@ function Sidebar({ setToggle, toggle }: any) {
               </span>
             </div>
           </Link>
-          <div className="flex flex-row gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                setTheme(theme === "light" ? "dark" : "light");
-              }}
-            >
-              {theme === "light" ? (
+
+          <button
+            type="button"
+            onClick={() => {
+              setTheme(theme === "light" ? "dark" : "light");
+            }}
+          >
+            {theme === "light" ? (
+              <div className="flex flex-row gap-2">
                 <FiMoon size={25} className=" hover:text-text-accentBlue" />
-              ) : (
-                <FiSun size={25} className=" hover:text-primary-highlight" />
-              )}{" "}
-            </button>
-            Mode
-          </div>
+                <span>Mode</span>
+              </div>
+            ) : (
+              <div className="flex flex-row gap-2">
+                <FiSun size={25} className=" hover:text-text-accentBlue" />
+                <span>Mode</span>
+              </div>
+            )}{" "}
+          </button>
         </motion.ul>
       </motion.div>
     </AnimatePresence>
