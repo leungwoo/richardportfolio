@@ -73,7 +73,7 @@ const ProjectDetails = async ({ params }: Props) => {
       <section className="w-full">
         <div className="md:pt-24 md:pb-24 pt-12 pb-12 md:px-40 px-10 md:max-w-[1220px] mx-auto">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] md:text-[10px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               TECHNOLOGIES USED
             </h5>
             <h1 className="md:text-4xl text-base font-bold">Tech Stack</h1>
@@ -96,7 +96,7 @@ const ProjectDetails = async ({ params }: Props) => {
       {/* Description section*/}
       <section className="bg-primary-Default dark:bg-[#222330] w-full ">
         <div className="md:max-w-[1220px] mx-auto">
-          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] font-normal md:text-[22px] text-lg md:px-40 px-10 py-10">
+          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] font-normal md:text-[22px] text-base md:px-40 px-10 py-10">
             {projects.description}
           </h1>
         </div>
@@ -106,7 +106,7 @@ const ProjectDetails = async ({ params }: Props) => {
       <section>
         <div className=" flex flex-col max-w-[1220px] mx-auto md:px-40 px-10 py-10 gap-4">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] md:text-[10px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               PROBLEM
             </h5>
             <h1 className="md:text-4xl text-base font-bold">
@@ -151,7 +151,7 @@ const ProjectDetails = async ({ params }: Props) => {
       <section>
         <div className=" flex flex-col max-w-[1220px] md:mt-20  mx-auto md:px-40 px-10 py-10 gap-4">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] md:text-[10px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               LEARNINGS & CHALLENGES
             </h5>
             <h1 className="md:text-4xl text-base font-bold">Takeaways</h1>
