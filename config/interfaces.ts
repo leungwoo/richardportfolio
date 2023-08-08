@@ -6,6 +6,13 @@ interface ImgUrlObject {
       // Add other properties if needed
     };
   }
+  export interface Recommendation {
+    _type: 'recommendations';
+    title: string;
+    description: string;
+    recommendations: string;
+    img: ImgUrlObject; // Adjust the type based on your actual image schema
+  }
   
   export interface LearningsAndChallenges {
     learning1: string;
