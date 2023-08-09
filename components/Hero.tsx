@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import { urlForImage } from "../sanity/lib/image";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import { SocialMedia } from "./index";
 interface HeroCardProps {
@@ -14,7 +16,11 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
   const titleWords = title.split(" ");
   const [first, second, third] = titleWords;
   return (
-    <div className="pt-[80px] flex flex-col bg-primary-Default dark:bg-primary-darkDefault min-h-screen items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: [0, 1] }}
+      className="pt-[80px] flex flex-col bg-primary-Default dark:bg-primary-darkDefault min-h-screen items-center justify-center"
+    >
       <div className="flex md:flex-row flex-col">
         <div className="flex-1 grow md:pl-20 px-4  space-y-5 items-center justify-center">
           <h3 className="text-sm md:text-base text-text-accentBlue font-bold">
@@ -59,6 +65,6 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
       <div>
         <FaChevronDown className="dark:text-white text-primary-darkDefault text-4xl animate-pulse" />
       </div>
-    </div>
+    </motion.div>
   );
 }

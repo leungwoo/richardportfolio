@@ -1,9 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 import { Suspense } from "react";
-//import getProjects from "../app/libs/getProjects";
 import { urlForImage } from "@/sanity/lib/image";
 import { Project } from "../config/interfaces";
 

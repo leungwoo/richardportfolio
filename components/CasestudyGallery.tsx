@@ -1,11 +1,30 @@
+"use client";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 import { Project } from "../config/interfaces";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface Props {
   projectsData: Project[];
 }
+
+const fadeIn = {
+  hidden: {
+    opacity: 0,
+    y: -100,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 2,
+      ease: "linear",
+    },
+  },
+};
+
 function CasestudyGallery({ projectsData }: Props) {
   const colors = [
     "#FFEDFE",
@@ -16,7 +35,7 @@ function CasestudyGallery({ projectsData }: Props) {
     "#D4F1EB",
   ];
   return (
-    <div>
+    <motion.div variants={fadeIn} animate="show" initial="hidden">
       <div className="flex flex-wrap gap-5 p-5 md:py-10 md:px-20 items-center max-w-[1120px] justify-center mx-auto">
         {projectsData.map((project: Project, index: number) => (
           <div
@@ -49,7 +68,7 @@ function CasestudyGallery({ projectsData }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
