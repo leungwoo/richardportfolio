@@ -7,6 +7,8 @@ import { LearningsAndChallenges } from "@/config/interfaces";
 import { urlForImage } from "@/sanity/lib/image";
 import { bullseye, tick } from "../../../assets/images/index";
 import { Footer, Process } from "@/components";
+import getProjects from "../../libs/getProjects";
+import CasestudyCard from "@/components/CasestudyCard";
 
 interface Slug {
   current: string;
@@ -19,7 +21,12 @@ interface Props {
   };
 }
 
+interface ProjectProps {
+  projectData: Project[];
+}
+
 const ProjectDetails = async ({ params }: Props) => {
+  const projectData = await getProjects();
   const projects = await client.fetch<Project>(
     `*[_type == "projects" && slug.current == "${params.slug}"][0]{
             title,
@@ -114,7 +121,7 @@ const ProjectDetails = async ({ params }: Props) => {
             </h1>
           </div>
 
-          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] md:text-[22px] text-lg">
+          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] md:text-[22px] text-base">
             {projects.problemstatement}
           </h1>
           <div className="flex item-center justify-center md:pt-20 pt-10  ">
@@ -214,6 +221,30 @@ const ProjectDetails = async ({ params }: Props) => {
                   );
                 }
                 return null;
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Other CaseStudies section*/}
+      <section>
+        <div className="bg-primary-Default dark:bg-primary-carddark w-screen">
+          <div className="flex flex-col mx-auto px-4 max-w-[1102px] md:px-10  justify-center h-[600px]">
+            <div className="flex flex-col gap-1 pt-5">
+              <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+                PROJECTS
+              </h5>
+              <h1 className="md:text-4xl text-base font-bold">
+                Other Case Studies
+              </h1>
+            </div>
+            <div className="flex mx-auto justify-start w-full gap-4 overflow-x-auto pt-10">
+              {projectData.map((casestudy: any, index: number) => {
+                return (
+                  <div key={index} className="flex-1 min-w-[280px]">
+                    <CasestudyCard casestudy={casestudy} />
+                  </div>
+                );
               })}
             </div>
           </div>

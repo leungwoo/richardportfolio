@@ -13,6 +13,7 @@ import Process from "./Process.tsx";
 import CarouselPage from "./CarouselPage.tsx";
 import Recommendations from "./Recommendations.tsx";
 import Sidebar from "./Sidebar.tsx";
+import CaseStudies from "./CasestudyCard.tsx";
 
 export {
   Header,
@@ -30,4 +31,5 @@ export {
   CarouselPage,
   Recommendations,
   Sidebar,
+  CaseStudies,
 };

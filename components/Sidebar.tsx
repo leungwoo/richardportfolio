@@ -132,12 +132,12 @@ function Sidebar({ setToggle, toggle }: any) {
           >
             {theme === "light" ? (
               <div className="flex flex-row gap-2">
-                <FiMoon size={25} className=" hover:text-text-accentBlue" />
+                <FiMoon size={25} className="text-text-accentBlue" />
                 <span>Mode</span>
               </div>
             ) : (
               <div className="flex flex-row gap-2">
-                <FiSun size={25} className=" hover:text-text-accentBlue" />
+                <FiSun size={25} className="text-primary-highlight" />
                 <span>Mode</span>
               </div>
             )}{" "}
