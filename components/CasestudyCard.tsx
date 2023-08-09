@@ -12,6 +12,7 @@ const CasestudyCard = ({ casestudy }: any) => {
           width={400}
           height={200}
           className="object-cover rounded-t-xl w-[280px] h-[200px]"
+          loading="eager"
         />
       </div>
       <div className="flex flex-col gap-2 p-5 dark:bg-[#303245] ">

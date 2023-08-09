@@ -9,6 +9,8 @@ import { bullseye, tick } from "../../../assets/images/index";
 import { Footer, Process } from "@/components";
 import getProjects from "../../libs/getProjects";
 import CasestudyCard from "@/components/CasestudyCard";
+import Loading from "@/components/Loading";
+import { Suspense } from "react";
 
 interface Slug {
   current: string;
@@ -238,15 +240,17 @@ const ProjectDetails = async ({ params }: Props) => {
                 Other Case Studies
               </h1>
             </div>
-            <div className="flex mx-auto justify-start w-full gap-4 overflow-x-auto pt-10">
-              {projectData.map((casestudy: any, index: number) => {
-                return (
-                  <div key={index} className="flex-1 min-w-[280px]">
-                    <CasestudyCard casestudy={casestudy} />
-                  </div>
-                );
-              })}
-            </div>
+            <Suspense fallback={<Loading />}>
+              <div className="flex mx-auto justify-start w-full gap-4 overflow-x-auto pt-10">
+                {projectData.map((casestudy: any, index: number) => {
+                  return (
+                    <div key={index} className="flex-1 min-w-[280px]">
+                      <CasestudyCard casestudy={casestudy} />
+                    </div>
+                  );
+                })}
+              </div>
+            </Suspense>
           </div>
         </div>
       </section>
