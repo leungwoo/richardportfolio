@@ -67,10 +67,10 @@ const Contact = () => {
     emailjs
       .sendForm(
         //@ts-ignore
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        "service_bkpc7ag",
+        "template_ophm5cg",
         form.current!,
-        process.env.EMAILJS_USER_ID
+        "qbFMLvC8bIjmsP9iB"
       )
       .then(() => {
         notify("Email sent successfully", false);
