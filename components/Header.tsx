@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { useState } from "react";
 import { AiOutlineCloudDownload, AiOutlineMenu } from "react-icons/ai";
 
-import { rlogo, downloadwhite, downloadblack } from "../assets/images/index";
+import { rglogo } from "../assets/images/index";
 import { Sidebar } from "./index";
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
       <div>
         <Link href="/">
           <Image
-            src={rlogo}
+            src={rglogo}
             alt="logo"
             width={100}
             height={100}
