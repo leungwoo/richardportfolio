@@ -87,7 +87,7 @@ const Header = () => {
           className="text-primary-accentBlue dark:text-primary-darkmodeblue w-[70%] h-[70%] "
           onClick={() => setToggle(true)}
         />
-        <Sidebar setToggle={setToggle} toggle={toggle} theme={theme} />
+        <Sidebar setToggle={setToggle} toggle={toggle} />
       </div>
     </div>
   );

@@ -138,7 +138,7 @@ const Contact = () => {
             />
             <label
               htmlFor="email"
-              className="mb-2 text-text-navbar dark:text-text-dark"
+              className="mb-2 text-text-navbar dark:text-text-dark "
             >
               Your email:
             </label>
