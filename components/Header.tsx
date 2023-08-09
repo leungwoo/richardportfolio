@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
 import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineCloudDownload, AiOutlineMenu } from "react-icons/ai";
 
 import { rlogo, downloadwhite, downloadblack } from "../assets/images/index";
 import { Sidebar } from "./index";
@@ -49,34 +49,26 @@ const Header = () => {
           href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
           target="_blank"
         >
-          <div className="flex flex-row items-center gap-1">
-            <Image
-              src={theme === "light" ? downloadblack : downloadwhite}
-              alt="download"
-              width={100}
-              height={100}
-              className="w-5 h-5"
-            />
-            <span className="text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
-              Resume
-            </span>
+          <div className="flex flex-row items-center gap-2 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
+            <AiOutlineCloudDownload className="w-[20px] h-[20px] inline-block" />{" "}
+            Resume
           </div>
         </Link>
         <button
           type="button"
           onClick={() => {
-            setTheme(theme === "light" ? "dark" : "light");
+            setTheme(theme === "dark" ? "light" : "dark");
           }}
         >
-          {theme === "light" ? (
-            <FiMoon
-              size={15}
-              className=" md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-text-accentBlue"
+          {theme === "dark" ? (
+            <FiSun
+              size={20}
+              className="md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-primary-highlight"
             />
           ) : (
-            <FiSun
-              size={15}
-              className="md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-primary-highlight"
+            <FiMoon
+              size={20}
+              className=" md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-text-accentBlue"
             />
           )}
         </button>

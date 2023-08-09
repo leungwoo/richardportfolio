@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HiHome, HiOutlineMail, HiX } from "react-icons/hi";
 import Link from "next/link";
 import Image from "next/image";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineCloudDownload } from "react-icons/ai";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
 import { downloadwhite, downloadblack } from "../assets/images/index";
@@ -109,38 +109,29 @@ function Sidebar({ setToggle, toggle }: any) {
             href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
             target="_blank"
           >
-            <div className="flex flex-row items-center gap-1">
-              <Image
-                src={theme === "light" ? downloadblack : downloadwhite}
-                alt="download"
-                width={100}
-                height={100}
-                className="w-5 h-5"
-                onClick={() => setToggle(false)}
-              />
-              <span className="text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
-                Resume
-              </span>
+            <div className="flex flex-row items-center gap-2 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
+              <AiOutlineCloudDownload className="w-[20px] h-[20px] inline-block" />{" "}
+              Resume
             </div>
           </Link>
 
           <button
             type="button"
             onClick={() => {
-              setTheme(theme === "light" ? "dark" : "light");
+              setTheme(theme === "dark" ? "light" : "dark");
             }}
           >
-            {theme === "light" ? (
-              <div className="flex flex-row gap-2">
-                <FiMoon size={25} />
-                <span>Mode</span>
-              </div>
-            ) : (
+            {theme === "dark" ? (
               <div className="flex flex-row gap-2">
                 <FiSun size={25} />
                 <span>Mode</span>
               </div>
-            )}{" "}
+            ) : (
+              <div className="flex flex-row gap-2">
+                <FiMoon size={25} />
+                <span>Mode</span>
+              </div>
+            )}
           </button>
         </motion.ul>
       </motion.div>
