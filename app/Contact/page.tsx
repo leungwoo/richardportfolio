@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { contactbanner } from "@/assets/images";
+import { SocialMedia } from "@/components";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -91,9 +92,9 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-viewport-height pt-[80px] "
+      className=" flex flex-col items-center justify-between h-viewport-height pb-6 pt-[80px] "
     >
-      <div className="flex md:flex-row flex-col gap-5 pb-10">
+      <div className="flex md:flex-row flex-col gap-5 pb-10 ">
         <div className="flex-1  ">
           <div className="ml-10 flex flex-col gap-1">
             <span className="font-bold text-md bg-gradient-to-r from-[#4768DB] to-[#FFFFFF] bg-clip-text text-transparent">
@@ -175,6 +176,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <SocialMedia />
     </motion.div>
   );
 };

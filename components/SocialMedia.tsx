@@ -3,7 +3,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import Link from "next/link";
 const SocialMedia = () => {
   return (
-    <div className="flex flex-row gap-6">
+    <div className="flex flex-row gap-6 mb-6">
       <Link href="https://www.github.com/leungwoo" target="_blank">
         <ImGithub
           size={20}

@@ -4,7 +4,6 @@ import SocialMedia from "./SocialMedia";
 import { Suspense } from "react";
 
 import { footer } from "@/assets/images";
-import Loading from "./Loading";
 
 const Footer = () => {
   return (

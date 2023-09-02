@@ -53,7 +53,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
         </div>
         <div className="flex-1  ">
           <Image
-            src={urlForImage(imgUrl[1])?.url()}
+            src={urlForImage(imgUrl[0])?.url()}
             alt="hero"
             width={1000}
             height={1000}

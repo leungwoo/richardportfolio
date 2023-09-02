@@ -23,10 +23,6 @@ interface Props {
   };
 }
 
-interface ProjectProps {
-  projectData: Project[];
-}
-
 const ProjectDetails = async ({ params }: Props) => {
   const projectData = await getProjects();
   const projects = await client.fetch<Project>(
