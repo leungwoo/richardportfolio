@@ -35,7 +35,7 @@ const FeaturedProjects = ({ projectsData }: Props) => {
       {featuredprojects.map((project: Project, index: number) => (
         <div
           key={index}
-          className={`mt-10 md:pt-10 md:pb-10 pb-2 flex md:flex-row flex-col w-full shadow-lg shadow-slate-500 dark:shadow-slate-400 rounded-lg ${
+          className={`mt-10 md:pt-10 md:pb-10 pb-2 flex md:flex-row flex-col w-full  rounded-lg ${
             index === 1 ? "md:flex-row-reverse" : "flex-row"
           }`}
           style={{ backgroundColor: colors[index % colors.length] }}

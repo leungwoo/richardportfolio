@@ -49,7 +49,7 @@ const Header = () => {
           href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
           target="_blank"
         >
-          <div className="flex flex-row items-center gap-2 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
+          <div className="flex flex-row items-center gap-2 text-text-accentBlue dark:text-text-accentBlue dark:hover:text-text-projectdarkblue hover:text-text-projectdarkblue hover:duration-500 transition">
             <AiOutlineCloudDownload className="w-[20px] h-[20px] inline-block" />{" "}
             Resume
           </div>
