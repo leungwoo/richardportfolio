@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CasestudyCard = ({ casestudy }: any) => {
   return (
-    <div className="card flex shadow-lg shadow-[#DADAFF80] rounded-xl flex-col item-center justify-center w-[280px] ">
+    <div className="card flex shadow-lg dark:shadow-lg dark:shadow-[#3A3B4A99] shadow-[#DADAFF80] rounded-xl flex-col item-center justify-center w-[280px] mb-5">
       <div className="">
         <Image
           src={urlForImage(casestudy.imgUrl[4].asset).url()}
@@ -19,7 +19,7 @@ const CasestudyCard = ({ casestudy }: any) => {
         <h1 className="text-xl font-bold text-text-accentBlue dark:text-text-projectdarkblue">
           {casestudy.shorttitle}
         </h1>
-        <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] text-sm font-normal  h-[123px]">
+        <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] text-sm font-normal leading-5  h-[123px]">
           {casestudy.description.split(" ").slice(0, 20).join(" ")}
           {casestudy.description.split(" ").length > 20 ? "..." : ""}
         </h1>
