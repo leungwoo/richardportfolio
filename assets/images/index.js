@@ -22,6 +22,14 @@ import tick from "./tick.png";
 import process from "./process.png";
 import processdark from "./processdark.png";
 import rglogo from "./Logo (1).png";
+import twitter from "./twitter.png";
+import twitterdark from "./twitterdark.png";
+import instagram from "./instagram.png";
+import instagramdark from "./instagramdark.png";
+import github from "./github.png";
+import githubdark from "./githubdark.png";
+import linkedin from "./linkedin.png";
+import linkedindark from "./linkedindark.png";
 
 export {
   rlogo2,
@@ -48,4 +56,12 @@ export {
   process,
   processdark,
   rglogo,
+  twitter,
+  twitterdark,
+  instagram,
+  instagramdark,
+  github,
+  githubdark,
+  linkedin,
+  linkedindark,
 };

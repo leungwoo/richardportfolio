@@ -1,22 +1,61 @@
 "use client";
 import { useState, useRef, FormEvent, ChangeEvent } from "react";
+
+import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { contactbanner } from "@/assets/images";
+import {
+  twitter,
+  instagram,
+  linkedin,
+  github,
+  twitterdark,
+  instagramdark,
+  linkedindark,
+  githubdark,
+} from "@/assets/images";
 import { SocialMedia } from "@/components";
+
+const socials = [
+  {
+    image: twitter,
+    imagedark: twitterdark,
+    link: "https://twitter.com/leungwoo",
+    alt: "twitter",
+  },
+  {
+    image: linkedin,
+    imagedark: linkedindark,
+    link: "https://linkedin.com/in/richardleungwoogabriel",
+    alt: "linkedin",
+  },
+  {
+    image: github,
+    imagedark: githubdark,
+    link: "https://github.com/leungwoo",
+    alt: "github",
+  },
+  {
+    image: instagram,
+    imagedark: instagramdark,
+    link: "https://instagram.com/leungwoo",
+    alt: "instagram",
+  },
+];
 
 const Contact = () => {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    message: "",
+    message1: "",
+    message2: "",
   });
 
-  const { name, email, message } = formState;
+  const { name, email, message1, message2 } = formState;
 
   const form = useRef<HTMLFormElement | null>(null);
 
@@ -79,7 +118,8 @@ const Contact = () => {
         setFormState({
           name: "",
           email: "",
-          message: "",
+          message1: "",
+          message2: "",
         });
       })
       .catch(() => {
@@ -97,36 +137,32 @@ const Contact = () => {
       <div className="flex md:flex-row flex-col gap-5 pb-10 ">
         <div className="flex-1  ">
           <div className="ml-10 flex flex-col gap-1">
-            <span className="font-bold text-md bg-gradient-to-r from-[#4768DB] to-[#FFFFFF] bg-clip-text text-transparent">
-              Contact
-            </span>
-            <h1 className="font-bold md:text-[38px]">Get In Touch</h1>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-2xl font-normal">My Socials</h3>
+              <div>
+                {socials.map((social, index) => (
+                  <Link href={social.link} key={index} className="">
+                    <Image
+                      src={social.image}
+                      alt={social.alt}
+                      width={30}
+                      height={30}
+                      className="hover:opacity-75"
+                    />
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
-
-          <Image
-            src={contactbanner}
-            alt="casestudiesbanner"
-            width={1924}
-            height={1724}
-            loading="eager"
-            className="min-w-[286px] h-[450px] rounded-[20px] object-contain"
-          />
         </div>
         {/*form*/}
-        <div className="flex-1 mx-auto items-center justify-center my-auto md:px-4 p-2">
-          <form
-            onSubmit={sendEmail}
-            ref={form}
-            className="flex flex-col max-w-[500px] h-[450px] mx-auto p-5 bg-white dark:bg-primary-carddark shadow-lg shadow-[#ADCDFF80] rounded-[10px] "
-          >
-            <h1 className="text-2xl font-bold mb-4 text-[#312E81] dark:text-white">
-              Send Me a Message
-            </h1>
+        <div className="flex  mx-auto items-center justify-center my-auto md:px-4 px-6 py-12">
+          <form onSubmit={sendEmail} ref={form} className="flex flex-col ">
             <label
               htmlFor="name"
-              className="mb-2 text-text-navbar dark:text-text-dark"
+              className="mb-2 text-text-contact dark:text-text-contactdark"
             >
-              Your name:
+              What&apos;s your name?
             </label>
             <input
               type="text"
@@ -135,13 +171,13 @@ const Contact = () => {
               onChange={handleChange}
               name="name"
               required
-              className=" p-2 mb-4 rounded-lg bg-primary-inputdefault dark:bg-primary-inputdark border border-[#F0E7F9] dark:border-[#47495F]"
+              className=" p-2 mb-4 rounded-lg  bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
             />
             <label
               htmlFor="email"
-              className="mb-2 text-text-navbar dark:text-text-dark "
+              className="mb-2  text-text-contact dark:text-text-contactdark"
             >
-              Your email:
+              What &apos;s your email?
             </label>
             <input
               type="email"
@@ -150,27 +186,41 @@ const Contact = () => {
               onChange={handleChange}
               name="email"
               required
-              className="p-2 mb-4 rounded-lg bg-primary-inputdefault dark:bg-primary-inputdark border border-[#F0E7F9] dark:border-[#47495F]"
+              className="p-2 mb-4 rounded-lg  bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
             />
             <label
-              htmlFor="message"
-              className="mb-2 text-text-navbar dark:text-text-dark "
+              htmlFor="message1"
+              className="mb-2  text-text-contact dark:text-text-contactdark"
             >
-              Your message:
+              Write something about your project goals and timeframe
             </label>
             <textarea
-              id="message"
-              name="message"
-              value={message}
+              id="message1"
+              name="message1"
+              value={message1}
               onChange={handleChange}
               required
-              className="p-2 mb-4 rounded-lg bg-primary-inputdefault dark:bg-primary-inputdark border border-[#F0E7F9] dark:border-[#47495F]"
+              className="p-2 mb-4 rounded-lg min-h-[190px] bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
+            ></textarea>
+            <label htmlFor="message2" className="mb-2 ">
+              <span className=" text-text-contact dark:text-text-contactdark">
+                How to reach out back to you?
+              </span>
+              <span className="text-[#778295]"> eg. phone number or email</span>
+            </label>
+            <textarea
+              id="message2"
+              name="message2"
+              value={message2}
+              onChange={handleChange}
+              required
+              className="p-2 mb-4 rounded-lg  min-h-[60px]  bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
             ></textarea>
             <button
               type="submit"
               className="bg-primary-accentBlue dark:bg-primary-darkmodeblue hover:bg-opacity-75 dark:hover:bg-opacity-75 text-white py-2 px-4 rounded-md hover:bg-blue-600"
             >
-              {!loading ? "Send Message" : "Sending...."}
+              {!loading ? "Send" : "Sending...."}
             </button>
             <ToastContainer />
           </form>

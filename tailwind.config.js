@@ -36,6 +36,8 @@ module.exports = {
           formdefault: "#312E81",
           inputdark: "#2E2F3E",
           inputdefault: "#F0E7F9",
+          inputdefaultnew: "#F3F8FF",
+          inputdefaultnewdark: "#192333",
         },
         text: {
           projectdarkblue: "#1E9AFF",
@@ -44,6 +46,8 @@ module.exports = {
           default: "#9D9D9D",
           navbar: "#6F74A7",
           dark: "#BEC1D5",
+          contact: "#192333",
+          contactdark: "#FFFFFF",
         },
       },
     },
