@@ -23,7 +23,6 @@ import {
   message,
   messagedark,
 } from "@/assets/images";
-import { SocialMedia } from "@/components";
 
 const socials = [
   {
@@ -138,7 +137,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className=" flex flex-col items-center justify-between  pt-[70px]  xl:max-w-[1440px] "
+      className=" flex flex-col items-center justify-between max-h-[1600px] pt-[70px]  xl:max-w-[1440px] "
     >
       <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
         <div className="flex flex-col gap-5  py-12">
@@ -153,10 +152,12 @@ const Contact = () => {
           </span>
         </div>
       </div>
-      <div className="flex md:flex-row md:gap-52 flex-col-reverse md:px-16  pb-10 dark:bg-[#151E2C] max-w-[1440px] w-screen ">
+      <div className="flex md:flex-row md:gap-52 flex-col-reverse md:px-16  pb-10 dark:bg-[#151E2C] max-w-[1440px] w-screen h-full ">
         <div className="flex flex-col px-6 md:px-0 py-12 md:space-y-[80px] space-y-9">
           <div className="flex flex-col gap-4">
-            <h3 className="sm:text-2xl text-xl font-normal">My Socials</h3>
+            <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
+              My Socials
+            </h3>
             <div className="flex flex-row gap-4">
               {socials.map((social, index) => (
                 <Link
@@ -177,29 +178,37 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex flex-col gap-5">
-            <h3 className="sm:text-2xl text-xl font-normal">Phone Number</h3>
+            <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
+              Phone Number
+            </h3>
             <div className="flex flex-row gap-2">
               <Image
                 src={theme == "light" ? call : calldark}
                 alt="phonenumber"
                 width={30}
                 height={30}
-                className="w-6 h-6 sm:w-8 sm:h-8"
+                className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF] "
               />
-              <span>+1 (407)-624-6389</span>
+              <span className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]">
+                +1 (407)-624-6389
+              </span>
             </div>
           </div>
           <div className="flex flex-col gap-5">
-            <h3 className="sm:text-2xl text-xl font-normal">Email Address</h3>
+            <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
+              Email Address
+            </h3>
             <div className="flex flex-row gap-2">
               <Image
                 src={theme == "light" ? message : messagedark}
                 alt="phonenumber"
                 width={30}
                 height={30}
-                className="w-6 h-6 sm:w-8 sm:h-8"
+                className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF]"
               />
-              <span>leungwoo@gmail.com</span>
+              <span className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]">
+                leungwoo@gmail.com
+              </span>
             </div>
           </div>
         </div>
@@ -219,7 +228,7 @@ const Contact = () => {
               onChange={handleChange}
               name="name"
               required
-              className=" p-2 mb-4 rounded-lg  bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
+              className=" p-2 mb-4 rounded-lg bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
             />
             <label
               htmlFor="email"
@@ -276,7 +285,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col gap-2 items-center justify-center max-h-[165px] text-[#778295] dark:text-[#F3F8FF] dark:bg-[#151E2C] w-screen max-w-[1440px] py-[52px] md:px-[85px] px-[50px]">
+      <div className=" flex md:flex-row flex-col gap-2 items-center justify-center max-h-[165px] text-[#778295] dark:text-[#F3F8FF] dark:bg-[#151E2C] w-screen max-w-[1440px] py-[52px] md:px-[85px] px-[50px]">
         <span>© 2023 Richard Leung Woo Gabriel.</span>
         <span>All rights reserved.</span>
       </div>
