@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -17,6 +18,10 @@ import {
   instagramdark,
   linkedindark,
   githubdark,
+  call,
+  calldark,
+  message,
+  messagedark,
 } from "@/assets/images";
 import { SocialMedia } from "@/components";
 
@@ -48,6 +53,7 @@ const socials = [
 ];
 
 const Contact = () => {
+  const { theme, setTheme } = useTheme();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -132,31 +138,73 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className=" flex flex-col items-center justify-between h-viewport-height pb-6 pt-[80px] "
+      className=" flex flex-col items-center justify-between  pt-[70px]  xl:max-w-[1440px] "
     >
-      <div className="flex md:flex-row flex-col gap-5 pb-10 ">
-        <div className="flex-1  ">
-          <div className="ml-10 flex flex-col gap-1">
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl font-normal">My Socials</h3>
-              <div>
-                {socials.map((social, index) => (
-                  <Link href={social.link} key={index} className="">
-                    <Image
-                      src={social.image}
-                      alt={social.alt}
-                      width={30}
-                      height={30}
-                      className="hover:opacity-75"
-                    />
-                  </Link>
-                ))}
-              </div>
+      <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
+        <div className="flex flex-col gap-5  py-12">
+          <div className="relative inline-block">
+            <h1 className="z-10  relative text-text-title font-bold xl:text-[#64px] text-[42px] dark:text-white">
+              Get in Touch
+            </h1>
+            <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[25px] h-[20px]"></div>
+          </div>
+          <span className="text-[#6F74A7] dark:text-[#F3F8FF]">
+            Let&apos;s Collaborate on Your Next Project
+          </span>
+        </div>
+      </div>
+      <div className="flex md:flex-row flex-col-reverse md:px-24 gap-5 pb-10 dark:bg-[#151E2C] max-w-[1440px] w-screen ">
+        <div className="flex-1  md:px-4 px-6 py-12 md:space-y-[80px] space-y-9">
+          <div className="flex flex-col gap-4">
+            <h3 className="sm:text-2xl text-xl font-normal">My Socials</h3>
+            <div className="flex flex-row gap-4">
+              {socials.map((social, index) => (
+                <Link
+                  href={social.link}
+                  key={index}
+                  className=""
+                  target="_blank"
+                >
+                  <Image
+                    src={theme === "light" ? social.image : social.imagedark}
+                    alt={social.alt}
+                    width={30}
+                    height={30}
+                    className="hover:opacity-75 w-6 h-6 sm:w-8 sm:h-8"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <h3 className="sm:text-2xl text-xl font-normal">Phone Number</h3>
+            <div className="flex flex-row gap-2">
+              <Image
+                src={theme == "light" ? call : calldark}
+                alt="phonenumber"
+                width={30}
+                height={30}
+                className="w-6 h-6 sm:w-8 sm:h-8"
+              />
+              <span>+1 (407)-624-6389</span>
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <h3 className="sm:text-2xl text-xl font-normal">Email Address</h3>
+            <div className="flex flex-row gap-2">
+              <Image
+                src={theme == "light" ? message : messagedark}
+                alt="phonenumber"
+                width={30}
+                height={30}
+                className="w-6 h-6 sm:w-8 sm:h-8"
+              />
+              <span>leungwoo@gmail.com</span>
             </div>
           </div>
         </div>
         {/*form*/}
-        <div className="flex  mx-auto items-center justify-center my-auto md:px-4 px-6 py-12">
+        <div className="flex-1  items-center justify-center my-auto md:px-4 px-6 py-12">
           <form onSubmit={sendEmail} ref={form} className="flex flex-col ">
             <label
               htmlFor="name"
@@ -216,17 +264,21 @@ const Contact = () => {
               required
               className="p-2 mb-4 rounded-lg  min-h-[60px]  bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
             ></textarea>
-            <button
-              type="submit"
-              className="bg-primary-accentBlue dark:bg-primary-darkmodeblue hover:bg-opacity-75 dark:hover:bg-opacity-75 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-            >
-              {!loading ? "Send" : "Sending...."}
-            </button>
+            <div className="flex md:justify-end">
+              <button
+                type="submit"
+                className=" bg-primary-accentBlue dark:bg-primary-darkmodeblue hover:bg-opacity-75 dark:hover:bg-opacity-75 text-white py-2 px-4 rounded-full hover:bg-blue-600 w-full md:w-[186px] md:h-[69px] md:px-[20px] md:py-[12px] md:rounded-full"
+              >
+                {!loading ? "Send" : "Sending...."}
+              </button>
+            </div>
             <ToastContainer />
           </form>
         </div>
       </div>
-      <SocialMedia />
+      <div className="flex items-center justify-center max-h-[165px] text-[#778295] dark:text-[#F3F8FF] dark:bg-[#151E2C] w-screen max-w-[1440px] py-[52px] px-[85px]">
+        © 2023 Richard Leung Woo Gabriel. All rights reserved.
+      </div>
     </motion.div>
   );
 };

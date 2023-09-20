@@ -19,8 +19,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.className}`}>
       <Theme>
         <body>
-          <Header />
-          <div className="flex-col mx-auto pb-5 md:pb-5">{children}</div>
+          <div className="flex justify-center mx-auto xl:max-w-[1440px] w-full">
+            <Header />
+            <div className="max-w-screen-xl mx-auto">{children}</div>
+          </div>
         </body>
       </Theme>
     </html>

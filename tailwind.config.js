@@ -23,7 +23,7 @@ module.exports = {
       },
       colors: {
         primary: {
-          Default: "#F6F6F6",
+          Default: "#F3F8FF",
           light: "#FFFFFF",
           darkDefault: "#15141C",
           highlight: "#FFBE62",

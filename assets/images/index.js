@@ -30,6 +30,10 @@ import github from "./github.png";
 import githubdark from "./githubdark.png";
 import linkedin from "./linkedin.png";
 import linkedindark from "./linkedindark.png";
+import call from "./Call.png";
+import calldark from "./Calldark.png";
+import message from "./Message.png";
+import messagedark from "./Messagedark.png";
 
 export {
   rlogo2,
@@ -64,4 +68,8 @@ export {
   githubdark,
   linkedin,
   linkedindark,
+  call,
+  calldark,
+  message,
+  messagedark,
 };

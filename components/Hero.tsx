@@ -19,7 +19,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: [0, 1] }}
-      className="pt-[80px] flex flex-col bg-primary-Default dark:bg-primary-darkDefault min-h-screen items-center justify-center"
+      className="pt-[80px] flex flex-col bg-primary-Default dark:bg-primary-darkDefault min-h-screen items-center justify-center xl:max-w-[1440px] w-full"
     >
       <div className="flex md:flex-row flex-col">
         <div className="flex-1 grow md:pl-20 px-4  space-y-5 items-center justify-center">

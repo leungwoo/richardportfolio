@@ -28,7 +28,7 @@ export default async function Homepage() {
   const { title, description, imgUrl } = heroData[0];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-center mx-auto xl:max-w-[1440px] w-full">
       <Suspense fallback={<Loading />}>
         <Hero title={title} description={description} imgUrl={imgUrl} />
       </Suspense>
