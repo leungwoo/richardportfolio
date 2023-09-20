@@ -153,8 +153,8 @@ const Contact = () => {
           </span>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col-reverse md:px-24 gap-5 pb-10 dark:bg-[#151E2C] max-w-[1440px] w-screen ">
-        <div className="flex-1  md:px-4 px-6 py-12 md:space-y-[80px] space-y-9">
+      <div className="flex md:flex-row md:gap-52 flex-col-reverse md:px-16  pb-10 dark:bg-[#151E2C] max-w-[1440px] w-screen ">
+        <div className="flex flex-col px-6 md:px-0 py-12 md:space-y-[80px] space-y-9">
           <div className="flex flex-col gap-4">
             <h3 className="sm:text-2xl text-xl font-normal">My Socials</h3>
             <div className="flex flex-row gap-4">
@@ -204,7 +204,7 @@ const Contact = () => {
           </div>
         </div>
         {/*form*/}
-        <div className="flex-1  items-center justify-center my-auto md:px-4 px-6 py-12">
+        <div className="flex-1  items-center justify-center md:px-0 px-6 py-12 ">
           <form onSubmit={sendEmail} ref={form} className="flex flex-col ">
             <label
               htmlFor="name"
@@ -276,8 +276,9 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="flex items-center justify-center max-h-[165px] text-[#778295] dark:text-[#F3F8FF] dark:bg-[#151E2C] w-screen max-w-[1440px] py-[52px] px-[85px]">
-        © 2023 Richard Leung Woo Gabriel. All rights reserved.
+      <div className="flex md:flex-row flex-col gap-2 items-center justify-center max-h-[165px] text-[#778295] dark:text-[#F3F8FF] dark:bg-[#151E2C] w-screen max-w-[1440px] py-[52px] md:px-[85px] px-[50px]">
+        <span>© 2023 Richard Leung Woo Gabriel.</span>
+        <span>All rights reserved.</span>
       </div>
     </motion.div>
   );
