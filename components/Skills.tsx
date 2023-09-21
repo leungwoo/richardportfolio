@@ -29,7 +29,7 @@ const Skills = ({ skillsData }: { skillsData: Skills }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: [0, 1] }}
       viewport={{ once: false, amount: 0.25 }}
-      className="flex flex-col justify-center items-center  md:py-[72px] md:px-[85px] py-12 px-6 bg-[#151E2C] w-screen max-w-[1440px]"
+      className="flex flex-col justify-center items-center  md:py-[72px] md:px-[85px] py-12 px-6 dark:bg-[#151E2C] w-screen max-w-[1440px]"
     >
       <div className="relative inline-block">
         <h1 className="z-10 relative text-text-title font-bold xl:text-4xl text-3xl dark:text-white">
