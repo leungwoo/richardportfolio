@@ -19,7 +19,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: [0, 1] }}
-      className="pt-[80px] flex flex-col bg-primary-Default dark:bg-primary-darkDefault min-h-screen items-center justify-center xl:max-w-[1440px] w-full"
+      className="pt-[80px] flex flex-col bg-primary-Default dark:bg-primary-darkDefault h-[794px] items-center justify-center  w-screen max-w-[1440px]"
     >
       <div className="flex md:flex-row flex-col">
         <div className="flex-1 grow md:pl-20 px-4  space-y-5 items-center justify-center">
@@ -40,7 +40,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
           <h4 className="text-text-default dark:text-text-dark leading-9 font-medium text-base">
             {description}
           </h4>
-          <div className="flex flex-row mt-4 items-center">
+          <div className="flex flex-row mt-4 items-center ">
             <Link href="/Contact">
               <button className="hover:opacity-75 border-none bg-text-accentBlue font-bold dark:bg-primary-darkmodeblue rounded-full md:w-[186px] w-[120px] md:h-[64px] h-[55px] py-4 px-3 text-white text-sm md:text-base hover:duration-500 transition">
                 Contact
@@ -62,9 +62,9 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
           />
         </div>
       </div>
-      <div>
+      {/* <div>
         <FaChevronDown className="dark:text-white text-primary-darkDefault text-4xl animate-pulse" />
-      </div>
+      </div> */}
     </motion.div>
   );
 }
