@@ -28,7 +28,7 @@ const socials = [
   {
     image: twitter,
     imagedark: twitterdark,
-    link: "https://twitter.com/leungwoo",
+    link: "https://twitter.com/Dariusleungwoo",
     alt: "twitter",
   },
   {
