@@ -14,15 +14,15 @@ interface Service {
 }
 const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
   return (
-    <div className="flex flex-wrap gap-5 justify-center pt-10">
+    <div className="flex flex-wrap gap-5 justify-center py-10 ">
       {servicesData.map((service: Service, index) => (
         <div
           key={index}
           className={`${
             index % 2 == 0 ? "xl:translate-y-0" : "xl:translate-y-[44px]"
-          } flex flex-col justify-between bg-primary-Default hover:bg-primary-accentBlue text-text-navbar dark:text-text-default hover:text-white
-           dark:hover:text-white dark:bg-primary-carddark dark:hover:bg-primary-darkmodeblue hover:shadow-lg hover:shadow-primary-accentBlue rounded-lg p-4 flex-1 w-[285px] min-h-[356px]
-           shadow-lg transition duration-500 ease-in-out transform  hover:scale-105`}
+          } flex flex-col justify-around bg-primary-Default hover:bg-primary-accentBlue text-text-navbar dark:text-text-default hover:text-white
+           dark:hover:text-white dark:bg-[#192333] dark:shadow-lg dark:shadow-[#1F2E48] dark:hover:bg-primary-darkmodeblue hover:shadow-lg hover:shadow-primary-accentBlue rounded-lg p-4 flex-1 min-w-[285px] h-[265px]
+           shadow-lg shadow-[#E0ECFF] transition duration-500 ease-in-out transform  hover:scale-105`}
         >
           <div>
             <Image
@@ -34,10 +34,10 @@ const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <h1 className="font-bold text-[24px] dark:text-white ">
+            <h1 className="font-semibold text-[24px] dark:text-white ">
               {service.title}
             </h1>
-            <p className="font-medium text-[12px] leading-7">
+            <p className="font-medium text-[12px] leading-5">
               {service.description}
             </p>
           </div>
