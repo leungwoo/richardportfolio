@@ -13,7 +13,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="fixed backdrop-blur-sm backdrop-filter dark:bg-primary-darkDefault flex flex-row justify-between py-4 md:pl-20 px-4  md:pr-40 w-full z-50  items-center ">
+    <div className="fixed bg-[#F3F8FF] dark:bg-[#192333] flex flex-row justify-between md:px-16 px-6 mx-auto py-4  w-full xl:max-w-[1440px]  items-center z-50   ">
       <div>
         <Link href="/">
           <Image
@@ -26,7 +26,7 @@ const Header = () => {
         </Link>
       </div>
       {/* Desktop view */}
-      <div className=" sm:flex hidden items-center justify-between gap-6 text-text-navbar dark:text-text-dark font-bold text-base">
+      <div className=" md:flex hidden items-center justify-between gap-6 text-text-navbar dark:text-text-dark font-normal text-sm">
         <Link
           href="/"
           className="hover:text-text-accentBlue hover:duration-500 transition"
