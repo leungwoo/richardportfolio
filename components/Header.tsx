@@ -13,7 +13,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="fixed bg-[#F3F8FF] dark:bg-[#192333] flex flex-row justify-between md:px-16 px-6 mx-auto py-4  w-full xl:max-w-[1440px]  items-center z-50   ">
+    <div className="fixed bg-[#F3F8FF] dark:bg-[#192333] flex flex-row justify-between md:pl-20 md:pr-20  px-6 mx-auto py-4  w-screen xl:max-w-[1440px]  items-center z-50   ">
       <div>
         <Link href="/">
           <Image

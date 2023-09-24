@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.className}`}>
       <Theme>
         <body>
-          <div className="flex justify-center mx-auto xl:max-w-[1440px] w-full">
+          <div className="flex justify-center mx-auto xl:max-w-[1440px] w-screen">
             <Header />
             <div className="max-w-screen-xl mx-auto">{children}</div>
           </div>

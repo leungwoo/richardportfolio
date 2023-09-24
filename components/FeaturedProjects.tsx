@@ -17,18 +17,18 @@ const FeaturedProjects = ({ projectsData }: Props) => {
   );
   const colors = ["#FF6934", "#56B0B9", "#5F9FFE"];
   return (
-    <div className="flex flex-col justify-center items-center mt-20 w-full  px-5 md:px-16">
+    <div className="flex flex-col justify-center items-center md:py-[72px] md:px-[85px] py-12 px-6 dark:bg-[#151E2C] w-screen max-w-[1440px]">
       {/* Title */}
       <div className="flex flex-row items-center gap-2">
+        <span className="text-text-title font-bold xl:text-4xl text-3xl dark:text-white">
+          Featured
+        </span>
         <div className="relative inline-block">
-          <span className="z-10 relative text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
-            Featured
+          <span className="z-10 relative text-text-title font-bold xl:text-4xl text-3xl  dark:text-white">
+            Projects
           </span>{" "}
           <div className="absolute z-0 inset-x-0 bottom-0 bg-primary-highlight md:h-[20px] h-[15px]"></div>
         </div>
-        <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
-          Projects
-        </span>
       </div>
 
       {/* Projects */}
@@ -42,7 +42,7 @@ const FeaturedProjects = ({ projectsData }: Props) => {
         >
           <div className="flex-1 flex-col md:flex-row p-4 space-y-5 text-white justify-center md:pt-15 mx-10">
             <div className="text-center md:text-left">
-              <h1 className="md:text-[40px] text-2xl font-bold md:leading-10">
+              <h1 className="md:text-[48px] text-[32px] font-bold md:leading-[55px] leading-[41px]">
                 {project.title}
               </h1>
             </div>
@@ -58,7 +58,7 @@ const FeaturedProjects = ({ projectsData }: Props) => {
             </div>
             <div className="flex justify-center md:justify-start items-center ">
               <Link href={`/project/${project.slug.current}`}>
-                <span className=" justify-between max-w-[220px] mt-10 text-center gap-4 flex flex-row items-center font-bold md:text-base text-xs hover:text-primary-highlight">
+                <span className=" justify-between max-w-[220px]  text-center gap-4 flex flex-row items-center font-bold md:text-base text-xs hover:text-primary-highlight">
                   See Project Details <BsArrowRight size={30} />
                 </span>
               </Link>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Suspense } from "react";
 
 import Loading from "../../components/Loading";
-import { Footer, CasestudyGallery } from "../../components";
+import { ContactCard, CasestudyGallery } from "../../components";
 import getProjects from "../libs/getProjects";
 
 export default async function CaseStudies() {
@@ -38,7 +38,7 @@ export default async function CaseStudies() {
       <Suspense fallback={<Loading />}>
         <CasestudyGallery projectsData={projectsData} />
       </Suspense>
-      <Footer />
+      <ContactCard />
     </div>
   );
 }
