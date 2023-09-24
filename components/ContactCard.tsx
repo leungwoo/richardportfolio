@@ -30,7 +30,7 @@ const ContactCard = () => {
             alt="footerbanner"
             width={1080}
             height={500}
-            className="flex min-w-[330px] min-h-[300px] w-full lg:max-h-[330px]  rounded-[20px] object-cover "
+            className="flex min-w-[340px] min-h-[300px] w-full lg:max-h-[330px]  rounded-[20px] object-cover "
           />
         </div>
       </div>

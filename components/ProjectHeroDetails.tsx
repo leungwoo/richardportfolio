@@ -12,8 +12,8 @@ interface Props {
 
 const ProjectHeroDetails = ({ projects }: Props) => {
   return (
-    <div className=" flex flex-col justify-center items-center md:px-10 px-1 gap-5 pb-5 max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333]">
-      <h1 className="font-bold sm:text-3xl xl:text-6xl text-lg md:text-4xl text-center text-text-accentBlue dark:text-text-projectdarkblue">
+    <div className=" flex flex-col xl:pt-[70px] pt-[40px] justify-center items-center md:px-10 px-1 gap-6 xl:gap-10 pb-5 max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333]">
+      <h1 className="font-bold leading-[41px] xl:text-[64px] text-[42px] md:text-4xl text-center text-text-accentBlue dark:text-text-projectdarkblue">
         {projects.title}
       </h1>
       <div className="md:px-40 max-w-[1220px]">

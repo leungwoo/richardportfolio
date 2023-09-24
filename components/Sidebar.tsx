@@ -3,11 +3,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { HiHome, HiOutlineMail, HiX } from "react-icons/hi";
 import Link from "next/link";
-import Image from "next/image";
 import { AiOutlineClose, AiOutlineCloudDownload } from "react-icons/ai";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
-import { downloadwhite, downloadblack } from "../assets/images/index";
 import { FaLaptopCode } from "react-icons/fa";
 
 const sidebarVariants = {
@@ -60,7 +58,7 @@ function Sidebar({ setToggle, toggle }: any) {
   return (
     <AnimatePresence>
       <motion.div
-        className="container rounded-tl-3xl z-20 top-0 bottom-0 right-0 p-4 w-[50%] h-screen flex flex-col
+        className="container rounded-tl-3xl z-20 top-0 bottom-0 right-0 p-4 w-[70%] h-screen flex flex-col
         justify-end items-end bg-cover bg-no-repeat bg-[#F3F8FF] dark:bg-[#192333] fixed "
         animate={toggle ? "open" : "closed"}
         initial="hidden"
@@ -73,7 +71,7 @@ function Sidebar({ setToggle, toggle }: any) {
         />
 
         <motion.ul
-          className=" h-screen w-full list-none m-0 p-0 flex flex-col justify-start items-start gap-8 text-base font-bold"
+          className=" h-screen w-full list-none m-0 px-5 pt-10 flex flex-col justify-start items-start gap-8 text-base font-bold"
           variants={listVariant}
         >
           <Link
@@ -81,8 +79,8 @@ function Sidebar({ setToggle, toggle }: any) {
             className="hover:text-text-accentBlue hover:duration-500 transition"
             onClick={() => setToggle(false)}
           >
-            <span className="flex flex-row gap-2">
-              <HiHome className="w-[20px] h-[20px] inline-block" /> Home
+            <span className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+              <HiHome className="w-[30px] h-[30px] inline-block" /> Home
             </span>
           </Link>
           <Link
@@ -90,8 +88,8 @@ function Sidebar({ setToggle, toggle }: any) {
             className="hover:text-text-accentBlue hover:duration-500 transition"
             onClick={() => setToggle(false)}
           >
-            <span className="flex flex-row gap-2">
-              <FaLaptopCode className="w-[20px] h-[20px] inline-block" /> Case
+            <span className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+              <FaLaptopCode className="w-[30px] h-[30px] inline-block" /> Case
               Studies
             </span>
           </Link>
@@ -100,8 +98,8 @@ function Sidebar({ setToggle, toggle }: any) {
             className="hover:text-text-accentBlue hover:duration-500 transition"
             onClick={() => setToggle(false)}
           >
-            <span className="flex flex-row gap-2">
-              <HiOutlineMail className="w-[20px] h-[20px] inline-block" />{" "}
+            <span className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+              <HiOutlineMail className="w-[30px] h-[30px] inline-block" />
               Contact
             </span>
           </Link>
@@ -109,8 +107,8 @@ function Sidebar({ setToggle, toggle }: any) {
             href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
             target="_blank"
           >
-            <div className="flex flex-row items-center gap-2 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
-              <AiOutlineCloudDownload className="w-[20px] h-[20px] inline-block" />{" "}
+            <div className="flex flex-row items-center text-xl gap-2 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
+              <AiOutlineCloudDownload className="w-[30px] h-[30px] inline-block" />{" "}
               Resume
             </div>
           </Link>
@@ -122,13 +120,13 @@ function Sidebar({ setToggle, toggle }: any) {
             }}
           >
             {theme === "dark" ? (
-              <div className="flex flex-row gap-2">
-                <FiSun size={25} />
+              <div className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+                <FiSun size={30} />
                 <span>Mode</span>
               </div>
             ) : (
-              <div className="flex flex-row gap-2">
-                <FiMoon size={25} />
+              <div className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+                <FiMoon size={30} />
                 <span>Mode</span>
               </div>
             )}
