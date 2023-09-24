@@ -2,10 +2,8 @@
 import Image from "next/image";
 import { urlForImage } from "../sanity/lib/image";
 import Link from "next/link";
-import { FaChevronDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-import { SocialMedia } from "./index";
 interface HeroCardProps {
   title: string;
   description: string;
@@ -46,9 +44,6 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
                 Contact
               </button>
             </Link>
-            <div className="pl-6">
-              <SocialMedia />
-            </div>
           </div>
         </div>
         <div className="flex-1  ">
@@ -62,9 +57,6 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
           />
         </div>
       </div>
-      {/* <div>
-        <FaChevronDown className="dark:text-white text-primary-darkDefault text-4xl animate-pulse" />
-      </div> */}
     </motion.div>
   );
 }

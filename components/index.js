@@ -1,6 +1,6 @@
 import Hero from "./Hero.tsx";
 import Header from "./Header.tsx";
-import Footer from "./Footer.tsx";
+import ContactCard from "./ContactCard.tsx";
 import Theme from "./Theme.tsx";
 import SocialMedia from "./SocialMedia.tsx";
 import Skills from "./Skills.tsx";
@@ -24,7 +24,7 @@ export {
   Services,
   WorkExperience,
   FeaturedProjects,
-  Footer,
+  ContactCard,
   ProjectHeroDetails,
   CasestudyGallery,
   Process,

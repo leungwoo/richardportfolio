@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import {
   FeaturedProjects,
-  Footer,
+  ContactCard,
   Hero,
   Recommendations,
   Services,
@@ -29,24 +29,20 @@ export default async function Homepage() {
 
   return (
     <div className="flex flex-col justify-center xl:max-w-[1440px] items-center ">
-      <Suspense fallback={<Loading />}>
-        <Hero title={title} description={description} imgUrl={imgUrl} />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        {skillsData.map((skill: Skill, index: number) => (
-          <Skills key={index} skillsData={skill as Skill} />
-        ))}
-      </Suspense>
+      <Hero title={title} description={description} imgUrl={imgUrl} />
+
+      {skillsData.map((skill: Skill, index: number) => (
+        <Skills key={index} skillsData={skill as Skill} />
+      ))}
+
       <Services servicesData={servicesData} />
       {/* <WorkExperience /> */}
-      <Suspense fallback={<Loading />}>
-        <FeaturedProjects projectsData={projectsData} />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <Recommendations recommendationsData={recommendationsData} />
-      </Suspense>
 
-      <Footer />
+      <FeaturedProjects projectsData={projectsData} />
+
+      <Recommendations recommendationsData={recommendationsData} />
+
+      <ContactCard />
     </div>
   );
 }

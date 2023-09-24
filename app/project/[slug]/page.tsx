@@ -6,7 +6,7 @@ import ProjectHeroDetails from "../../../components/ProjectHeroDetails";
 import { LearningsAndChallenges } from "@/config/interfaces";
 import { urlForImage } from "@/sanity/lib/image";
 import { bullseye, tick } from "../../../assets/images/index";
-import { Footer, Process } from "@/components";
+import { ContactCard, Process } from "@/components";
 import getProjects from "../../libs/getProjects";
 import CasestudyCard from "@/components/CasestudyCard";
 import Loading from "@/components/Loading";
@@ -250,7 +250,7 @@ const ProjectDetails = async ({ params }: Props) => {
           </div>
         </div>
       </section>
-      <Footer />
+      <ContactCard />
     </div>
   );
 };
