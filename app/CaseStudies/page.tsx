@@ -10,8 +10,8 @@ export default async function CaseStudies() {
   const projectsData = await getProjects();
 
   return (
-    <div className="h-viewport-height pt-[80px]">
-      <div className="relative bg-primary-Default dark:bg-primary-carddark  py-[10px] flex items-center justify-center">
+    <div className="flex flex-col items-center max-h-[1600px] pt-[70px]  xl:max-w-[1440px]">
+      <div className="relative max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333] py-[10px] flex items-center justify-center">
         <div className="absolute flex flex-col flex-wrap md:gap-2 gap-1 top-0 right-0 left-0 bottom-0 text-white items-center justify-center">
           <h1 className=" text-xl  sm:text-4xl  xl:text-5xl font-bold">
             Recent Case Studies
