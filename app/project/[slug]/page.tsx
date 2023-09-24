@@ -43,11 +43,11 @@ const ProjectDetails = async ({ params }: Props) => {
   );
 
   return (
-    <div className="pt-[80px] flex flex-col justify-center items-center w-full">
+    <div className="  pt-[70px]  xl:max-w-[1440px] flex flex-col justify-center items-center ">
       <ProjectHeroDetails projects={projects} />
       {/* project date section*/}
-      <section className="bg-primary-Default dark:bg-[#222330] w-full">
-        <div className="flex flex-row md:max-w-[1220px] mx-auto md:py-16 py-8 md:px-40 px-10 justify-between ">
+      <section className=" dark:bg-[#151E2C] max-w-[1440px] w-screen">
+        <div className="flex flex-row md:max-w-[1440px] mx-auto md:py-[52px] md:px-[280px] py-8  px-10 justify-between ">
           <div className="flex flex-col gap-1">
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               My Role
@@ -75,8 +75,8 @@ const ProjectDetails = async ({ params }: Props) => {
         </div>
       </section>
       {/* Tech Stack section*/}
-      <section className="w-full">
-        <div className="md:pt-24 md:pb-24 pt-12 pb-12 md:px-40 px-10 md:max-w-[1220px] mx-auto">
+      <section className="dark:bg-[#151E2C] max-w-[1440px] w-screen ">
+        <div className="md:py-[72px] md:px-[280px] pt-12 pb-12 px-10  mx-auto">
           <div className="flex flex-col gap-1">
             <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               TECHNOLOGIES USED
@@ -99,17 +99,15 @@ const ProjectDetails = async ({ params }: Props) => {
         </div>
       </section>
       {/* Description section*/}
-      <section className="bg-primary-Default dark:bg-[#222330] w-full ">
-        <div className="md:max-w-[1220px] mx-auto">
-          <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] leading-[30px] font-normal md:text-[22px] text-base md:px-40 px-10 py-10">
-            {projects.description}
-          </h1>
-        </div>
+      <section className=" max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333] md:py-[72px] md:px-[280px] px-10 py-10">
+        <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] leading-[30px] font-normal md:text-[22px] text-base  ">
+          {projects.description}
+        </h1>
       </section>
 
       {/* ProblemStatement section*/}
       <section>
-        <div className=" flex flex-col max-w-[1220px] mx-auto md:px-40 px-10 py-10 gap-4">
+        <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C] md:py-[72px] md:px-[280px] px-10 py-10 gap-4">
           <div className="flex flex-col gap-1">
             <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               PROBLEM
@@ -133,8 +131,8 @@ const ProjectDetails = async ({ params }: Props) => {
           </div>
         </div>
       </section>
-      <div className="w-full flex flex-col md:mt-10 mt-5">
-        <span className="w-full justify-center items-center text-center md:py-9 py-4 text-white  bg-primary-accentBlue dark:bg-primary-darkmodeblue md:text-3xl text-lg font-bold">
+      <div className="max-w-[1440px] flex flex-col ">
+        <span className="max-w-[1440px] w-screen justify-center items-center text-center md:py-9 py-4 text-white  bg-primary-accentBlue dark:bg-primary-darkmodeblue md:text-3xl text-lg font-bold">
           HIGH-FIDELITY FIGMA DESIGN
         </span>
         <Image
@@ -142,7 +140,7 @@ const ProjectDetails = async ({ params }: Props) => {
           alt={projects.shorttitle}
           width={1000}
           height={1000}
-          className="object-cover w-full max-h-[700px]"
+          className="object-cover w-screen max-h-[700px]"
         />
       </div>
       {/* My Process section*/}
@@ -154,7 +152,7 @@ const ProjectDetails = async ({ params }: Props) => {
 
       {/* Take aways section*/}
       <section>
-        <div className=" flex flex-col max-w-[1220px] md:mt-20  mx-auto md:px-40 px-10 py-10 gap-4">
+        <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C]  mx-auto md:py-[72px] md:px-[280px]  px-10 py-10 gap-4">
           <div className="flex flex-col gap-1">
             <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               LEARNINGS & CHALLENGES
@@ -162,7 +160,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <h1 className="md:text-4xl text-base font-bold">Takeaways</h1>
           </div>
           <section>
-            <div className="space-y-4 mt-4 dark:bg-[#222330] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
+            <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
               <h1 className="md:text-lg text-base font-bold text-[#47A34B]">
                 Learnings
               </h1>
@@ -193,7 +191,7 @@ const ProjectDetails = async ({ params }: Props) => {
           </section>
 
           <div>
-            <div className="space-y-4 mt-4 dark:bg-[#222330] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
+            <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
               <h1 className="md:text-lg text-base font-bold text-[#E15A46]">
                 Challenges
               </h1>
@@ -226,8 +224,8 @@ const ProjectDetails = async ({ params }: Props) => {
       </section>
       {/* Other CaseStudies section*/}
       <section>
-        <div className="bg-primary-Default dark:bg-primary-carddark w-screen">
-          <div className="flex flex-col mx-auto px-4 max-w-[1102px] md:px-10  justify-center h-[600px]">
+        <div className="bg-primary-Default dark:bg-[#192333] max-w-[1440px] w-screen md:py-[72px] md:px-[280px]">
+          <div className="flex flex-col mx-auto px-4 max-w-[1102px] md:px-10  justify-center h-[600px] ">
             <div className="flex flex-col gap-1 pt-5">
               <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
                 PROJECTS
