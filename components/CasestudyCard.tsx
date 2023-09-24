@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CasestudyCard = ({ casestudy }: any) => {
   return (
-    <div className="card flex shadow-lg dark:shadow-lg dark:shadow-[#3A3B4A99] shadow-[#DADAFF80] rounded-xl flex-col item-center justify-center w-[280px] mb-5">
+    <div className="card flex shadow-lg dark:shadow-lg dark:shadow-[#1F2C41] shadow-[#E0ECFF] rounded-xl flex-col item-center justify-center w-[280px] mb-5">
       <div className="">
         <Image
           src={urlForImage(casestudy.imgUrl[4].asset).url()}
@@ -15,7 +15,7 @@ const CasestudyCard = ({ casestudy }: any) => {
           loading="eager"
         />
       </div>
-      <div className="flex flex-col gap-2 p-5 dark:bg-[#303245] ">
+      <div className="flex flex-col gap-2 p-5 dark:bg-[#192333] ">
         <h1 className="text-xl font-bold text-text-accentBlue dark:text-text-projectdarkblue">
           {casestudy.shorttitle}
         </h1>
