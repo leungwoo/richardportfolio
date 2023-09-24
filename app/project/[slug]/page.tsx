@@ -47,7 +47,7 @@ const ProjectDetails = async ({ params }: Props) => {
       <ProjectHeroDetails projects={projects} />
       {/* project date section*/}
       <section className=" dark:bg-[#151E2C] max-w-[1440px] w-screen">
-        <div className="flex flex-row md:max-w-[1440px] mx-auto md:py-[52px] md:px-[280px] py-8  px-10 justify-between ">
+        <div className="flex flex-row md:max-w-[1440px] mx-auto lg:py-[52px] lg:px-[280px] px-[24px] py-[36px] justify-between ">
           <div className="flex flex-col gap-1">
             <label className="text-[#151E2C] dark:text-[#FFFFFF] font-bold md:text-base text-sm">
               My Role
@@ -76,7 +76,7 @@ const ProjectDetails = async ({ params }: Props) => {
       </section>
       {/* Tech Stack section*/}
       <section className="dark:bg-[#151E2C] max-w-[1440px] w-screen ">
-        <div className="md:py-[72px] md:px-[280px] pt-12 pb-12 px-10  mx-auto">
+        <div className="lg:py-[72px] lg:px-[280px] px-[24px] py-[36px]  mx-auto">
           <div className="flex flex-col gap-1">
             <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               TECHNOLOGIES USED
@@ -99,7 +99,7 @@ const ProjectDetails = async ({ params }: Props) => {
         </div>
       </section>
       {/* Description section*/}
-      <section className=" max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333] md:py-[72px] md:px-[280px] px-10 py-10">
+      <section className=" max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333] lg:py-[72px] lg:px-[280px] px-[24px] py-[36px]">
         <h1 className="text-[#6F74A7] dark:text-[#BEC1D5] leading-[30px] font-normal md:text-[22px] text-base  ">
           {projects.description}
         </h1>
@@ -107,7 +107,7 @@ const ProjectDetails = async ({ params }: Props) => {
 
       {/* ProblemStatement section*/}
       <section>
-        <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C] md:py-[72px] md:px-[280px] px-10 py-10 gap-4">
+        <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C] lg:py-[72px] lg:px-[280px] px-[24px] py-[36px] gap-4">
           <div className="flex flex-col gap-1">
             <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               PROBLEM
@@ -152,7 +152,7 @@ const ProjectDetails = async ({ params }: Props) => {
 
       {/* Take aways section*/}
       <section>
-        <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C]  mx-auto md:py-[72px] md:px-[280px]  px-10 py-10 gap-4">
+        <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C]  lg:py-[72px] lg:px-[280px] px-[24px] py-[36px] gap-4">
           <div className="flex flex-col gap-1">
             <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               LEARNINGS & CHALLENGES
@@ -160,7 +160,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <h1 className="md:text-4xl text-base font-bold">Takeaways</h1>
           </div>
           <section>
-            <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
+            <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default  md:px-[40px] px-[14px] md:py-[36px] py-[24px] rounded-xl ">
               <h1 className="md:text-lg text-base font-bold text-[#47A34B]">
                 Learnings
               </h1>
@@ -191,7 +191,7 @@ const ProjectDetails = async ({ params }: Props) => {
           </section>
 
           <div>
-            <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default md:px-40 px-10 md:py-16 py-10 rounded-xl ">
+            <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default md:px-[40px] px-[14px] md:py-[36px] py-[24px]  rounded-xl ">
               <h1 className="md:text-lg text-base font-bold text-[#E15A46]">
                 Challenges
               </h1>
@@ -224,7 +224,7 @@ const ProjectDetails = async ({ params }: Props) => {
       </section>
       {/* Other CaseStudies section*/}
       <section>
-        <div className="bg-primary-Default dark:bg-[#192333] max-w-[1440px] w-screen md:py-[72px] md:px-[280px]">
+        <div className="bg-primary-Default dark:bg-[#192333] max-w-[1440px] w-screen lg:py-[72px] lg:px-[280px]">
           <div className="flex flex-col mx-auto px-4 max-w-[1102px] md:px-10  justify-center h-[600px] ">
             <div className="flex flex-col gap-1 pt-5">
               <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
