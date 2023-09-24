@@ -133,12 +133,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className=" flex flex-col items-center justify-between max-h-[1600px] pt-[70px]  xl:max-w-[1440px] "
-    >
+    <div className=" flex flex-col items-center justify-between max-h-[1600px] pt-[70px]  xl:max-w-[1440px] ">
       <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
         <div className="flex flex-col gap-5  py-12">
           <div className="relative inline-block">
@@ -289,7 +284,7 @@ const Contact = () => {
         <span>© 2023 Richard Leung Woo Gabriel.</span>
         <span>All rights reserved.</span>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

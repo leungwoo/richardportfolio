@@ -1,29 +1,28 @@
-"use client";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 import { Project } from "../config/interfaces";
 import Link from "next/link";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 
 interface Props {
   projectsData: Project[];
 }
 
-const fadeIn = {
-  hidden: {
-    opacity: 0,
-    y: -100,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      duration: 2,
-      ease: "linear",
-    },
-  },
-};
+// const fadeIn = {
+//   hidden: {
+//     opacity: 0,
+//     y: 150,
+//   },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       type: "spring",
+//       duration: 2,
+//       ease: "linear",
+//     },
+//   },
+// };
 
 function CasestudyGallery({ projectsData }: Props) {
   const colors = [
@@ -35,12 +34,12 @@ function CasestudyGallery({ projectsData }: Props) {
     "#D4F1EB",
   ];
   return (
-    <motion.div variants={fadeIn} animate="show" initial="hidden">
-      <div className="flex flex-wrap gap-5 p-5 md:py-10 md:px-20 items-center max-w-[1120px] justify-center mx-auto">
+    <div className="dark:bg-[#151E2C] xl:max-w-[1440px]  w-screen">
+      <div className="flex flex-wrap  gap-10 p-5 md:pt-[72px] md:px-[85px] items-center max-w-[1136px] justify-center mx-auto">
         {projectsData.map((project: Project, index: number) => (
           <div
             key={index}
-            className="flex-1 flex-col items-center justify-center min-w-[350px] "
+            className="flex-1 flex-col items-center justify-center min-w-[345px] "
           >
             <Link href={`/project/${project.slug.current}`}>
               <div
@@ -68,7 +67,7 @@ function CasestudyGallery({ projectsData }: Props) {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
