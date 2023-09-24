@@ -230,7 +230,7 @@ const ProjectDetails = async ({ params }: Props) => {
               <h5 className="text-[12px] md:text-[14px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
                 PROJECTS
               </h5>
-              <h1 className="md:text-[32px] text-[28px]font-bold">
+              <h1 className="md:text-[32px] text-[28px] font-bold">
                 Other Case Studies
               </h1>
             </div>
