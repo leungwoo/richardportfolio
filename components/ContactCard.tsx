@@ -17,7 +17,7 @@ const ContactCard = () => {
           <div className="flex mx-auto">
             <Link
               href="/Contact"
-              className="flex flex-row items-center gap-5 lg:mt-16 xl:ml-2  hover:opacity-75 border-none bg-white font-bold text-text-title rounded-full md:w-[286px] w-[250px] md:h-[64px] h-[55px] py-4 px-6 text-center  text-sm md:text-base hover:duration-500 transition"
+              className="flex flex-row items-center gap-5 lg:mt-16 xl:ml-14  hover:opacity-75 border-none bg-white font-bold text-text-title rounded-full md:w-[286px] w-full md:h-[64px] h-[55px] py-4 px-5 text-center  text-sm md:text-base hover:duration-500 transition"
             >
               Get in touch with me <BsArrowRight size={30} />
             </Link>
