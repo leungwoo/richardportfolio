@@ -78,10 +78,10 @@ const ProjectDetails = async ({ params }: Props) => {
       <section className="dark:bg-[#151E2C] max-w-[1440px] w-screen ">
         <div className="lg:py-[72px] lg:px-[280px] px-[24px] py-[36px]  mx-auto">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[12px] md:text-[14px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               TECHNOLOGIES USED
             </h5>
-            <h1 className="md:text-4xl text-base font-bold">Tech Stack</h1>
+            <h1 className="md:text-[32px] text-[28px] font-bold">Tech Stack</h1>
           </div>
           <div className="flex flex-row flex-wrap justify-between items-center gap-10 pt-5 text-center ">
             {projects.techstack.map((tech, index) => (
@@ -109,10 +109,10 @@ const ProjectDetails = async ({ params }: Props) => {
       <section>
         <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C] lg:py-[72px] lg:px-[280px] px-[24px] py-[36px] gap-4">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[12px] md:text-[14px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               PROBLEM
             </h5>
-            <h1 className="md:text-4xl text-base font-bold">
+            <h1 className="md:text-[32px] text-[28px] font-bold">
               Problem Statement
             </h1>
           </div>
@@ -154,10 +154,10 @@ const ProjectDetails = async ({ params }: Props) => {
       <section>
         <div className=" flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C]  lg:py-[72px] lg:px-[280px] px-[24px] py-[36px] gap-4">
           <div className="flex flex-col gap-1">
-            <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+            <h5 className="text-[12px] md:text-[14px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
               LEARNINGS & CHALLENGES
             </h5>
-            <h1 className="md:text-4xl text-base font-bold">Takeaways</h1>
+            <h1 className="md:text-[32px] text-[28px] font-bold">Takeaways</h1>
           </div>
           <section>
             <div className="space-y-4 mt-4 dark:bg-[#192333] bg-primary-Default  md:px-[40px] px-[14px] md:py-[36px] py-[24px] rounded-xl ">
@@ -227,10 +227,10 @@ const ProjectDetails = async ({ params }: Props) => {
         <div className="bg-primary-Default dark:bg-[#192333] max-w-[1440px] w-screen lg:py-[72px] lg:px-[280px]">
           <div className="flex flex-col mx-auto px-4 max-w-[1102px] md:px-10  justify-center h-[600px] ">
             <div className="flex flex-col gap-1 pt-5">
-              <h5 className="text-[8px] md:text-[12px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
+              <h5 className="text-[12px] md:text-[14px] font-bold dark:text-text-projectdarkblue text-text-accentBlue">
                 PROJECTS
               </h5>
-              <h1 className="md:text-4xl text-base font-bold">
+              <h1 className="md:text-[32px] text-[28px]font-bold">
                 Other Case Studies
               </h1>
             </div>

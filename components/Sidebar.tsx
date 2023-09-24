@@ -13,11 +13,11 @@ import { FaLaptopCode } from "react-icons/fa";
 const sidebarVariants = {
   hidden: {
     opacity: 0,
-    y: "100%",
+    right: "-100%",
   },
   open: {
     opacity: 1,
-    y: 0,
+    right: 0,
     transition: {
       type: "tween",
       duration: 0.5,
@@ -28,7 +28,7 @@ const sidebarVariants = {
   },
   closed: {
     opacity: 0,
-    y: "100%",
+    right: "-100%",
     transition: {
       type: "tween",
       duration: 1.2,
@@ -38,7 +38,7 @@ const sidebarVariants = {
   },
   exit: {
     opacity: 0,
-    y: "100%",
+    right: "-100%",
   },
 };
 
@@ -61,7 +61,7 @@ function Sidebar({ setToggle, toggle }: any) {
     <AnimatePresence>
       <motion.div
         className="container rounded-tl-3xl z-20 top-0 bottom-0 right-0 p-4 w-[50%] h-screen flex flex-col
-        justify-end items-end bg-cover bg-no-repeat bg-primary-Default dark:bg-primary-carddark fixed "
+        justify-end items-end bg-cover bg-no-repeat bg-[#F3F8FF] dark:bg-[#192333] fixed "
         animate={toggle ? "open" : "closed"}
         initial="hidden"
         exit="exit"

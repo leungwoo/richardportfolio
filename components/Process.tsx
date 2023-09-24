@@ -23,7 +23,7 @@ const Process = () => {
   const { theme } = useTheme();
   return (
     <div className="flex flex-col max-w-[1440px] w-screen dark:bg-[#151E2C] md:py-[72px] md:px-[280px] px-[24px] py-[36px]  items-center justify-center">
-      <h1 className=" text-lg md:text-[38px] font-bold text-[#151E2C] dark:text-white">
+      <h1 className=" md:text-[32px] text-[28px] font-bold text-[#151E2C] dark:text-white">
         My Process
       </h1>
       <div className="flex flex-row items-center gap-6  md:gap-10 pt-10">
