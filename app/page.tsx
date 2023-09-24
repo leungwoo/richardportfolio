@@ -29,20 +29,22 @@ export default async function Homepage() {
 
   return (
     <div className="flex flex-col justify-center xl:max-w-[1440px] items-center ">
-      <Hero title={title} description={description} imgUrl={imgUrl} />
+      <Suspense fallback={<Loading />}>
+        <Hero title={title} description={description} imgUrl={imgUrl} />
 
-      {skillsData.map((skill: Skill, index: number) => (
-        <Skills key={index} skillsData={skill as Skill} />
-      ))}
+        {skillsData.map((skill: Skill, index: number) => (
+          <Skills key={index} skillsData={skill as Skill} />
+        ))}
 
-      <Services servicesData={servicesData} />
-      {/* <WorkExperience /> */}
+        <Services servicesData={servicesData} />
+        {/* <WorkExperience /> */}
 
-      <FeaturedProjects projectsData={projectsData} />
+        <FeaturedProjects projectsData={projectsData} />
 
-      <Recommendations recommendationsData={recommendationsData} />
+        <Recommendations recommendationsData={recommendationsData} />
 
-      <ContactCard />
+        <ContactCard />
+      </Suspense>
     </div>
   );
 }
