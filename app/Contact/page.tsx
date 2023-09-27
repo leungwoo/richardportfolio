@@ -19,8 +19,8 @@ import {
   githubdark,
   call,
   calldark,
-  message,
-  messagedark,
+  messageimg,
+  messageimgdark,
 } from "@/assets/images";
 
 const socials = [
@@ -194,7 +194,7 @@ const Contact = () => {
             </h3>
             <div className="flex flex-row gap-2">
               <Image
-                src={theme == "light" ? message : messagedark}
+                src={theme == "light" ? messageimg : messageimgdark}
                 alt="phonenumber"
                 width={30}
                 height={30}
@@ -246,8 +246,8 @@ const Contact = () => {
               Write something about your project goals and timeframe
             </label>
             <textarea
-              id="message1"
-              name="message1"
+              id="message"
+              name="message"
               value={message}
               onChange={handleChange}
               required

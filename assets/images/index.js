@@ -32,8 +32,8 @@ import linkedin from "./linkedin.png";
 import linkedindark from "./linkedindark.png";
 import call from "./Call.png";
 import calldark from "./Calldark.png";
-import message from "./Message.png";
-import messagedark from "./Messagedark.png";
+import messageimg from "./Message.png";
+import messageimgdark from "./Messagedark.png";
 
 export {
   rlogo2,
@@ -70,6 +70,6 @@ export {
   linkedindark,
   call,
   calldark,
-  message,
-  messagedark,
+  messageimg,
+  messageimgdark,
 };
