@@ -3,6 +3,9 @@ import Image from "next/image";
 import { urlForImage } from "../sanity/lib/image";
 import Link from "next/link";
 import { FiCopy } from "react-icons/fi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 interface HeroCardProps {
   title: string;
@@ -13,6 +16,51 @@ interface HeroCardProps {
 export default function Hero({ title, description, imgUrl }: HeroCardProps) {
   const titleWords = title.split(" ");
   const [first, second, third] = titleWords;
+  const [copied, setCopied] = useState(false);
+
+  const notify = (message: string, hasError = false) => {
+    if (hasError) {
+      toast.error(message, {
+        position: "top-center",
+        autoClose: 2500,
+        //@ts-ignore
+        hideProgressBar: "false",
+        //@ts-ignore
+        closeOnClick: "true",
+        //@ts-ignore
+        pauseOnHover: "true",
+        //@ts-ignore
+        draggable: "true",
+        progress: undefined,
+        className: "border-b-2 border-primary text-primary ",
+      });
+    } else {
+      toast.success(message, {
+        position: "top-center",
+        autoClose: 5000,
+        //@ts-ignore
+        hideProgressBar: "false",
+        //@ts-ignore
+        closeOnClick: "true",
+        //@ts-ignore
+        pauseOnHover: "true",
+        //@ts-ignore
+        draggable: "true",
+        progress: undefined,
+        className: "border-b-2 border-primary text-primary ",
+      });
+    }
+  };
+
+  const copyText = () => {
+    const text = "leungwoo@gmail.com";
+    navigator.clipboard.writeText(text);
+
+    setCopied(true);
+
+    notify("Copied to clipboard", false);
+  };
+
   return (
     <div className="flex lg:flex-row flex-col pt-[80px] bg-primary-Default dark:bg-primary-darkDefault xl:max-h-[794px] md:py-[72px]  py-12  items-center justify-center  w-screen max-w-[1440px]">
       <div className="flex flex-col lg:pl-20 px-4 max-h-[750px] md:pt-10">
@@ -46,10 +94,14 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
             </Link>
           </div>
           <div className="flex  ">
-            <button className="flex flex-row justify-between items-center px-4 bg-white hover:opacity-75 border-none rounded-full md:w-[305px]  md:h-[64px] w-[350px] h-[55px] py-[14px] font-semibold text-sm md:text-base hover:duration-500 transition">
-              <span className="text-[#6F74A7]">leungwoo@gmail.com</span>
-              <FiCopy size={25} color="#FFBE62" />
-            </button>
+            <div className="flex flex-row justify-between items-center px-4 bg-white border-none rounded-full md:w-[305px]  md:h-[64px] w-[350px] h-[55px] py-[14px] font-semibold text-sm md:text-base hover:duration-500 transition">
+              <h3 className="text-[#6F74A7]">leungwoo@gmail.com</h3>
+              <FiCopy
+                onClick={copyText}
+                size={25}
+                color={copied ? "#6F74A7" : "#FFBE62"}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -63,6 +115,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
           loading="eager"
         />
       </div>
+      <ToastContainer />
     </div>
   );
 }

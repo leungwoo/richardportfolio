@@ -4,7 +4,6 @@ import { useState, useRef, FormEvent, ChangeEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -56,11 +55,11 @@ const Contact = () => {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    message1: "",
-    message2: "",
+    message: "",
+    comment: "",
   });
 
-  const { name, email, message1, message2 } = formState;
+  const { name, email, message, comment } = formState;
 
   const form = useRef<HTMLFormElement | null>(null);
 
@@ -123,8 +122,8 @@ const Contact = () => {
         setFormState({
           name: "",
           email: "",
-          message1: "",
-          message2: "",
+          message: "",
+          comment: "",
         });
       })
       .catch(() => {
@@ -249,7 +248,7 @@ const Contact = () => {
             <textarea
               id="message1"
               name="message1"
-              value={message1}
+              value={message}
               onChange={handleChange}
               required
               className="p-2 mb-4 rounded-lg min-h-[190px] bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
@@ -261,9 +260,9 @@ const Contact = () => {
               <span className="text-[#778295]"> eg. phone number or email</span>
             </label>
             <textarea
-              id="message2"
-              name="message2"
-              value={message2}
+              id="comment"
+              name="comment"
+              value={comment}
               onChange={handleChange}
               required
               className="p-2 mb-4 rounded-lg  min-h-[60px]  bg-primary-inputdefaultnew dark:bg-primary-inputdefaultnewdark border border-[#CCE1FF] dark:border dark:border-[#2C3C56]"
