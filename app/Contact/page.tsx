@@ -128,6 +128,13 @@ const Contact = () => {
       })
       .catch(() => {
         notify("Error sending email", true);
+        setLoading(false);
+        setFormState({
+          name: "",
+          email: "",
+          message: "",
+          comment: "",
+        });
       });
   };
 
