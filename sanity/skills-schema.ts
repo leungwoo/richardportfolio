@@ -3,6 +3,7 @@ const skills ={
     title:'Skills',
     type: 'document',
     fields:[
+       
         
         {
             name:'imgUrl',
@@ -14,6 +15,8 @@ const skills ={
                     },
                 }]
         },
+       
+        
         
     ]
 }
