@@ -235,7 +235,7 @@ const ProjectDetails = async ({ params }: Props) => {
               </h1>
             </div>
             <Suspense fallback={<Loading />}>
-              <div className="flex mx-auto justify-start w-full gap-4 overflow-x-auto pt-10">
+              <div className="flex mx-auto justify-start w-full gap-4 overflow-scroll no-scrollbar pt-10">
                 {projectData.map((casestudy: any, index: number) => {
                   return (
                     <div key={index} className="flex-1 min-w-[280px]">

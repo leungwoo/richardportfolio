@@ -28,7 +28,7 @@ const Skills = ({ skillsData }: { skillsData: Skills }) => {
         <h1 className="z-10 relative text-text-title font-bold xl:text-4xl text-3xl dark:text-white">
           My skills
         </h1>
-        <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[20px] h-[15px]"></div>
+        <div className="absolute inset-x-0 -bottom-1 bg-primary-highlight h-[15px]"></div>
       </div>
       <div className="flex flex-row flex-wrap max-w-[1280px]  justify-center py-10  gap-8">
         {skillsData.imgUrl.map((image: any, index: number) => (
@@ -38,7 +38,7 @@ const Skills = ({ skillsData }: { skillsData: Skills }) => {
               alt="skill image"
               width={200}
               height={200}
-              className="hover:scale-105 transition-all ease-in-out duration-300 object-contain md:w-[80px] md:h-[80px] flex-1 min-w-[50px]"
+              className="hover:scale-105 transition-all ease-in-out duration-300 object-contain md:w-[80px] md:h-[80px] w-[50px] h-[50px] flex-1 min-w-[50px]"
             />
           </div>
         ))}

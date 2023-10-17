@@ -29,19 +29,19 @@ const Header = () => {
       <div className=" md:flex hidden items-center justify-between gap-6 text-text-navbar dark:text-text-dark font-normal text-sm">
         <Link
           href="/"
-          className="hover:text-text-accentBlue hover:duration-500 transition"
+          className="hover:text-text-accentBlue hover:duration-500 transition cursor-pointer"
         >
           Home
         </Link>
         <Link
           href="/CaseStudies"
-          className="hover:text-text-accentBlue hover:duration-500 transition"
+          className="hover:text-text-accentBlue hover:duration-500 transition cursor-pointer"
         >
           Case Studies
         </Link>
         <Link
           href="/Contact"
-          className="hover:text-text-accentBlue hover:duration-500 transition"
+          className="hover:text-text-accentBlue hover:duration-500 transition cursor-pointer"
         >
           Contact
         </Link>
@@ -49,7 +49,7 @@ const Header = () => {
           href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
           target="_blank"
         >
-          <div className="flex flex-row items-center gap-2 text-text-accentBlue dark:text-text-accentBlue dark:hover:text-text-projectdarkblue hover:text-text-projectdarkblue hover:duration-500 transition">
+          <div className="flex flex-row items-center gap-2 text-text-accentBlue dark:text-text-accentBlue dark:hover:text-text-projectdarkblue hover:text-text-projectdarkblue hover:duration-500 transition cursor-pointer">
             <AiOutlineCloudDownload className="w-[20px] h-[20px] inline-block" />{" "}
             Resume
           </div>
@@ -57,10 +57,10 @@ const Header = () => {
         <button
           type="button"
           onClick={() => {
-            setTheme(theme === "dark" ? "light" : "dark");
+            setTheme(theme === "light" ? "dark" : "light");
           }}
         >
-          {theme === "dark" ? (
+          {theme === "light" ? (
             <FiSun
               size={20}
               className="md:w-[25px] md:h-[25px] w-[20px] h-[20px] hover:text-primary-highlight"

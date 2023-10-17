@@ -94,8 +94,10 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
             </Link>
           </div>
           <div className="flex  ">
-            <div className="flex flex-row justify-between items-center px-5 bg-white border-none rounded-full md:w-[305px]  md:h-[64px] w-[350px] h-[55px] py-[14px] font-semibold text-sm md:text-base hover:opacity-75 hover:duration-500 transition">
-              <h3 className="text-[#6F74A7]">leungwoo@gmail.com</h3>
+            <div className="flex flex-row justify-between items-center px-5 bg-white dark:bg-[#151E2C] border-none rounded-full md:w-[305px]  md:h-[64px] w-[350px] h-[55px] py-[14px] font-semibold text-sm md:text-base hover:opacity-60 hover:duration-500 transition">
+              <h3 className="text-[#6F74A7] dark:text-white ">
+                leungwoo@gmail.com
+              </h3>
               <FiCopy
                 onClick={copyText}
                 size={25}
