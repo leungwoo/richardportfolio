@@ -52,6 +52,7 @@ const socials = [
 
 const Contact = () => {
   const { theme, setTheme } = useTheme();
+  const [copied, setCopied] = useState(false);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -138,6 +139,15 @@ const Contact = () => {
       });
   };
 
+  const copyText = () => {
+    const text = "leungwoo@gmail.com";
+    navigator.clipboard.writeText(text);
+
+    setCopied(true);
+
+    notify("Copied to clipboard", false);
+  };
+
   return (
     <div className=" flex flex-col items-center justify-between h-screen pt-[70px]  xl:max-w-[1440px] ">
       <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
@@ -182,7 +192,7 @@ const Contact = () => {
             <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
               Phone Number
             </h3>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 items-center">
               <Image
                 src={theme == "light" ? call : calldark}
                 alt="phonenumber"
@@ -199,7 +209,10 @@ const Contact = () => {
             <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
               Email Address
             </h3>
-            <div className="flex flex-row gap-2">
+            <div
+              className="flex flex-row gap-2 items-center cursor-pointer hover:opacity-75 group"
+              onClick={copyText}
+            >
               <Image
                 src={theme == "light" ? messageimg : messageimgdark}
                 alt="phonenumber"
@@ -207,7 +220,7 @@ const Contact = () => {
                 height={30}
                 className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF]"
               />
-              <span className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]">
+              <span className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF] ">
                 leungwoo@gmail.com
               </span>
             </div>
