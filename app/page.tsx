@@ -36,7 +36,7 @@ export default async function Homepage() {
           <Skills key={index} skillsData={skill as Skill} />
         ))}
 
-        <Services servicesData={servicesData} />
+        <Services />
         {/* <WorkExperience /> */}
 
         <FeaturedProjects projectsData={projectsData} />

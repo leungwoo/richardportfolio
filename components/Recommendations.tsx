@@ -18,7 +18,7 @@ const Recommendations = ({ recommendationsData }: Props) => {
             <span className="z-10 relative text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
               they say
             </span>{" "}
-            <div className="absolute z-0 inset-x-0 bottom-0 bg-primary-highlight md:h-[20px] h-[15px]"></div>
+            <div className="absolute z-0 inset-x-0 -bottom-1 bg-primary-highlight h-[15px]"></div>
           </div>
           <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
             about me
