@@ -139,9 +139,8 @@ const Contact = () => {
       });
   };
 
-  const copyText = () => {
-    const text = "leungwoo@gmail.com";
-    navigator.clipboard.writeText(text);
+  const copyText = (e: any) => {
+    navigator.clipboard.writeText(e.target.innerText);
 
     setCopied(true);
 
@@ -192,7 +191,7 @@ const Contact = () => {
             <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
               Phone Number
             </h3>
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row gap-2 items-center hover:opacity-75 group cursor-pointer">
               <Image
                 src={theme == "light" ? call : calldark}
                 alt="phonenumber"
@@ -200,7 +199,10 @@ const Contact = () => {
                 height={30}
                 className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF] "
               />
-              <span className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]">
+              <span
+                onClick={copyText}
+                className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]"
+              >
                 +1 (407)-624-6389
               </span>
             </div>
@@ -209,18 +211,18 @@ const Contact = () => {
             <h3 className="sm:text-2xl text-xl font-normal text-[#192333] dark:text-[#FFFFFF]">
               Email Address
             </h3>
-            <div
-              className="flex flex-row gap-2 items-center cursor-pointer hover:opacity-75 group"
-              onClick={copyText}
-            >
+            <div className="flex flex-row gap-2 items-center cursor-pointer hover:opacity-75 group">
               <Image
                 src={theme == "light" ? messageimg : messageimgdark}
-                alt="phonenumber"
+                alt="email"
                 width={30}
                 height={30}
                 className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF]"
               />
-              <span className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF] ">
+              <span
+                onClick={copyText}
+                className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF] "
+              >
                 leungwoo@gmail.com
               </span>
             </div>
