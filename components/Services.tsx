@@ -1,17 +1,6 @@
 import ServicesCard from "./ServicesCard";
-interface Service {
-  _id: string;
-  title: string;
-  icon: {
-    _type: string;
-    asset: {
-      url: string;
-    };
-  };
-  description: string;
-}
 
-const Services = ({ servicesData }: { servicesData: Service[] }) => {
+const Services = () => {
   return (
     <div className="flex flex-col justify-center items-center md:py-[72px] md:px-[85px] py-12 px-6 bg-[#F3F8FF] dark:bg-[#192333]  w-screen max-w-[1440px]">
       <div className="flex sm:flex-row flex-col items-center gap-2 ">
@@ -33,7 +22,7 @@ const Services = ({ servicesData }: { servicesData: Service[] }) => {
           </span>
         </div>
       </div>
-      <ServicesCard servicesData={servicesData} />
+      <ServicesCard />
     </div>
   );
 };

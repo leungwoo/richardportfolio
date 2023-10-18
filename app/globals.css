@@ -40,3 +40,15 @@ body {
 .carousel .control-dots .dot li{
     margin: 0 15px;
 }
+/* @layer utilities {
+    .hover:hover {
+      @apply bg-teal-500;
+    }
+    .hover:hover Image {
+      @apply bg-white;
+    }
+  } */
+  .serviceCard:hover .hoverBgChange {
+    background-color: #F3F8FF; 
+    
+  }

@@ -1,51 +1,31 @@
-"use client";
-import { urlForImage } from "@/sanity/lib/image";
-import Image from "next/image";
-import { useState } from "react";
-
+import { services } from "@/constants/services";
 interface Service {
-  _id: string;
+  Component: React.FC<React.SVGProps<SVGSVGElement>>;
   title: string;
-  icon: {
-    _type: string;
-    asset: {
-      url: string;
-    };
-  };
   description: string;
 }
-const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+const ServicesCard = () => {
   return (
     <div className="flex flex-wrap md:gap-8 gap-10 justify-center py-10 ">
-      {servicesData.map((service: Service, index) => (
+      {services.map((service: Service, index: number) => (
         <div
           key={index}
-          className={` flex flex-col justify-between text-[#151E2C] hover:text-white bg-[#F3F8FF] hover:bg-primary-accentBlue dark:text-text-default
-         dark:hover:text-white dark:bg-[#192333] dark:shadow-md dark:shadow-[#1F2E48] dark:hover:shadow-2xl dark:hover:shadow-[#0252CD47]
-         dark:hover:bg-primary-darkmodeblue hover:shadow-lg hover:shadow-primary-accentBlue rounded-lg p-5 flex-1 min-w-[285px] h-full gap-10
-         shadow-lg shadow-[#E0ECFF] hover:xl:translate-y-[44px] transition-all duration-1000 ease-in-out `}
+          className={`serviceCard group flex flex-col justify-between text-[#151E2C] hover:text-white bg-[#F3F8FF] hover:bg-primary-accentBlue dark:text-text-default
+   dark:hover:text-white dark:bg-[#192333] dark:shadow-md dark:shadow-[#1F2E48] dark:hover:shadow-2xl dark:hover:shadow-[#0252CD47]
+   dark:hover:bg-primary-darkmodeblue hover:shadow-lg hover:shadow-primary-accentBlue rounded-lg p-5 flex-1 min-w-[285px] h-full gap-10
+   shadow-lg shadow-[#E0ECFF] hover:xl:translate-y-[44px] transition-all duration-1000 ease-in-out `}
         >
-          <div>
-            <Image
-              key={index}
-              src={urlForImage(service.icon.asset).url()}
-              alt={service.title}
-              width={100}
-              height={100}
-              className={`left-0 object-contain md:w-[62px] md:h-[62px] w-[40px] h-[40px] rounded-lg p-2 bg-primary-accentBlue dark:bg-primary-darkmodeblue  shadow-primary-accentBlue
-           
-           `}
-            />
+          <div className="left-0 hoverBgChange items-center justify-center flex  md:w-[62px] md:h-[62px] w-[40px] h-[40px] rounded-lg bg-[#0252CD] dark:bg-[#428DFF]">
+            <service.Component className="text-white rounded-lg  group-hover:text-[#0252CD] dark:text-white dark:group-hover:text-[#428DFF]" />
           </div>
-          <div className="flex flex-col gap-2">
+          <span className="flex flex-col gap-2">
             <h1 className="font-semibold text-[24px]  dark:text-white">
               {service.title}
             </h1>
             <p className="font-medium text-[12px] leading-5 dark:text-white">
               {service.description}
             </p>
-          </div>
+          </span>
         </div>
       ))}
     </div>
@@ -53,24 +33,42 @@ const ServicesCard = ({ servicesData }: { servicesData: Service[] }) => {
 };
 
 export default ServicesCard;
+
+// className={`mt-2 md:mt-0 mb-4 md:mb-8 sm:w-[287.36px] sm:h-[265px] md:w-[62px] md:h-[62px] bg-[#0252CD] dark:bg-[#428DFF] rounded-lg hoverBgChange flex justify-center items-center`}
+
+// className={`group w-full md:w-[285px] h-[265px] rounded-lg shadow-lg border shadow-[#E0ECFF] dark:shadow-[#1F2E48] dark:border-[#1F2E48] dark:shadow-md p-4 flex flex-col items-start bg-[#F3F8FF] dark:bg-[#192333] text-black service-card transition-transform transform
+// hover:scale-105 hover:mt-4 hover:bg-[#0252CD] hover:text-[#F3F8FF] hover:shadow-lg hover:shadow-[#0252CD] dark:hover:shadow-lg dark:hover:shadow-[#428DFF] serviceCard`}
+
 {
-  /* <div className="group text-black">
-<svg
-  className="h-6 w-6 group-hover:fill-black"
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke="currentColor"
-  aria-hidden="true"
->
-  <path
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00- 
-7-7z"
-  />
-</svg>
-<p className="group-hover:text-amber-500">Hello color</p>
+  /* <div className="flex flex-wrap md:gap-8 gap-10 justify-center py-10 ">
+{servicesData.map((service: Service, index) => (
+  <div
+    key={index}
+    className="flex flex-col justify-between text-[#151E2C] hover:text-white bg-[#F3F8FF] hover:bg-primary-accentBlue dark:text-text-default
+   dark:hover:text-white dark:bg-[#192333] dark:shadow-md dark:shadow-[#1F2E48] dark:hover:shadow-2xl dark:hover:shadow-[#0252CD47]
+   dark:hover:bg-primary-darkmodeblue hover:shadow-lg hover:shadow-primary-accentBlue rounded-lg p-5 flex-1 min-w-[285px] h-full gap-10
+   shadow-lg shadow-[#E0ECFF] hover:xl:translate-y-[44px] transition-all duration-1000 ease-in-out "
+  >
+    <Image
+      key={index}
+      src={urlForImage(service.icon.asset).url()}
+      alt={service.title}
+      width={100}
+      height={100}
+      className={`left-0 object-contain md:w-[62px] md:h-[62px] w-[40px] h-[40px] rounded-lg p-2 bg-primary-accentBlue dark:bg-primary-darkmodeblue  shadow-primary-accentBlue
+     
+     `}
+    />
+
+    <span className="flex flex-col gap-2">
+      <h1 className="font-semibold text-[24px]  dark:text-white">
+        {service.title}
+      </h1>
+      <p className="font-medium text-[12px] leading-5 dark:text-white">
+        {service.description}
+      </p>
+    </span>
+  </div>
+))}
 </div> */
 }
