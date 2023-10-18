@@ -18,11 +18,11 @@ const ServicesCard = () => {
           <div className="left-0 hoverBgChange items-center justify-center flex  md:w-[62px] md:h-[62px] w-[40px] h-[40px] rounded-lg bg-[#0252CD] dark:bg-[#428DFF]">
             <service.Component className="text-white rounded-lg  group-hover:text-[#0252CD] dark:text-white dark:group-hover:text-[#428DFF]" />
           </div>
-          <span className="flex flex-col gap-2">
+          <span className="flex flex-col gap-2 group">
             <h1 className="font-semibold text-[24px]  dark:text-white">
               {service.title}
             </h1>
-            <p className="font-medium text-[12px] leading-5 dark:text-white">
+            <p className="font-medium text-[12px] text-[#6F74A7] group-hover:text-white leading-5 dark:text-white">
               {service.description}
             </p>
           </span>
