@@ -58,7 +58,7 @@ function Sidebar({ setToggle, toggle }: any) {
   return (
     <AnimatePresence>
       <motion.div
-        className="container rounded-tl-3xl z-20 top-0 bottom-0 right-0 p-4 w-[70%] h-screen flex flex-col
+        className="container rounded-bl-3xl z-20 top-0 bottom-80 right-0 p-4 w-[60%]  flex flex-col
         justify-end items-end bg-cover bg-no-repeat bg-[#F3F8FF] dark:bg-[#192333] fixed "
         animate={toggle ? "open" : "closed"}
         initial="hidden"
@@ -71,24 +71,20 @@ function Sidebar({ setToggle, toggle }: any) {
         />
 
         <motion.ul
-          className=" h-screen w-full list-none m-0 px-5 pt-10 flex flex-col justify-start items-start gap-8 text-base font-bold"
+          className=" h-full w-full list-none m-0 px-5 pt-10 flex flex-col justify-start items-start gap-10 text-base font-bold"
           variants={listVariant}
         >
-          <Link
-            href="/"
-            className="hover:text-text-accentBlue hover:duration-500 transition"
-            onClick={() => setToggle(false)}
-          >
-            <span className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+          <Link href="/" className=" " onClick={() => setToggle(false)}>
+            <span className="flex flex-row gap-4 items-center  text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
               <HiHome className="w-[30px] h-[30px] inline-block" /> Home
             </span>
           </Link>
           <Link
             href="/CaseStudies"
-            className="hover:text-text-accentBlue hover:duration-500 transition"
+            className=""
             onClick={() => setToggle(false)}
           >
-            <span className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+            <span className="flex flex-row gap-4 items-center  text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
               <FaLaptopCode className="w-[30px] h-[30px] inline-block" /> Case
               Studies
             </span>
@@ -98,7 +94,7 @@ function Sidebar({ setToggle, toggle }: any) {
             className="hover:text-text-accentBlue hover:duration-500 transition"
             onClick={() => setToggle(false)}
           >
-            <span className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+            <span className="flex flex-row gap-4 items-center  text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
               <HiOutlineMail className="w-[30px] h-[30px] inline-block" />
               Contact
             </span>
@@ -107,7 +103,7 @@ function Sidebar({ setToggle, toggle }: any) {
             href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
             target="_blank"
           >
-            <div className="flex flex-row items-center text-xl gap-2 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
+            <div className="flex flex-row items-center  gap-4 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
               <AiOutlineCloudDownload className="w-[30px] h-[30px] inline-block" />{" "}
               Resume
             </div>
@@ -116,16 +112,16 @@ function Sidebar({ setToggle, toggle }: any) {
           <button
             type="button"
             onClick={() => {
-              setTheme(theme === "dark" ? "light" : "dark");
+              setTheme(theme === "light" ? "dark" : "light");
             }}
           >
-            {theme === "dark" ? (
-              <div className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+            {theme === "light" ? (
+              <div className="flex flex-row gap-4 items-center  text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
                 <FiSun size={30} />
                 <span>Mode</span>
               </div>
             ) : (
-              <div className="flex flex-row gap-2 items-center text-xl text-text-title dark:text-white">
+              <div className="flex flex-row gap-4 items-center  text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
                 <FiMoon size={30} />
                 <span>Mode</span>
               </div>

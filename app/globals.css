@@ -27,8 +27,31 @@ body {
 } */
 
 
+/* .carousel .control-prev,
+.carousel .control-next {
+  display: block;
+  position: absolute;
+}
 
-  .carousel .control-dots {
+
+@media screen and (max-width: 767px) {
+  .carousel .control-prev {
+    top: 50%; 
+    left: 0;
+  }
+
+  .carousel .control-next {
+    top: 50%; 
+    right: 0;
+  }
+} */
+
+.carousel .control-dots .dot {
+    display: none !important;
+   
+    /* Adjust this value as needed */
+  }
+  /* .carousel .control-dots {
     position: absolute;
     bottom: 0;
     margin: -5px 0;
@@ -36,10 +59,11 @@ body {
     text-align: center;
     width: 100%;
     z-index: 1;
+
 }
 .carousel .control-dots .dot li{
     margin: 0 15px;
-}
+} */
 /* @layer utilities {
     .hover:hover {
       @apply bg-teal-500;

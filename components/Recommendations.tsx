@@ -8,23 +8,25 @@ import { CarouselPage } from "../components/index";
 
 const Recommendations = ({ recommendationsData }: Props) => {
   return (
-    <section className="flex items-center justify-center bg-recommendations dark:bg-recommendations-dark bg-cover bg-no-repeat w-full md:h-[700px] h-[500px] md:mt-20 mt-10 pb-4">
-      <div className="flex flex-col flex-wrap gap-5 max-w-[709px] items-center pt-32 md:pt-0 ">
-        <div className="flex flex-row items-center gap-2 ">
-          <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
-            What
-          </span>
-          <div className="relative inline-block">
-            <span className="z-10 relative text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
-              they say
-            </span>{" "}
-            <div className="absolute z-0 inset-x-0 -bottom-1 bg-primary-highlight h-[15px]"></div>
+    <section className="flex items-center justify-center bg-[#F3F8FF] dark:bg-[#192333] w-screen max-w-[1440px] md:px-[85px] md:py-[72px] py-[48px] px-[24px]  ">
+      <div className="flex flex-col flex-wrap gap-5  items-center  md:pt-0 ">
+        <div className="flex sm:flex-row flex-col items-center gap-2 ">
+          <div className="flex gap-2">
+            <span className="text-text-title font-bold xl:text-4xl text-3xl dark:text-white">
+              What{" "}
+            </span>
+            <div className="relative inline-block">
+              <span className="z-10 relative text-text-title font-bold xl:text-4xl text-3xl dark:text-white">
+                they say
+              </span>{" "}
+              <div className="absolute z-0 inset-x-0 -bottom-1 bg-primary-highlight h-[15px]"></div>
+            </div>
           </div>
-          <span className="text-text-title font-bold xl:text-4xl lg:text-3xl sm:text-xl text-lg dark:text-white">
+          <span className="text-text-title font-bold xl:text-4xl text-3xl  dark:text-white">
             about me
           </span>
         </div>
-        <div className=" md:pt-10 flex-wrap justify-center items-center  ">
+        <div className=" ">
           <CarouselPage recommendationsData={recommendationsData} />
         </div>
       </div>

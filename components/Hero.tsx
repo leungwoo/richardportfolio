@@ -80,7 +80,7 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
             </div>
           </div>
 
-          <h4 className="text-text-default dark:text-text-dark leading-9 font-medium text-base">
+          <h4 className="text-[#6F74A7] dark:text-[#F3F8FF] leading-9 font-medium text-base">
             {description}
           </h4>
         </div>
