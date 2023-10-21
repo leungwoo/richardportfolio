@@ -43,6 +43,10 @@ import weboptimizationdark from "./weboptimizationdark.svg";
 import cloudcomputing from "./cloudcomputing.svg";
 import cloudcomputingdark from "./cloudcomputingdark.svg";
 import stars from "./Stars.svg";
+import adrian from "./Adrian.jpeg";
+import aaron from "./aaron.jpeg";
+import daniel from "./Daniel.jpeg";
+import cyril from "./Cyril.jpeg";
 
 export {
   rlogo2,
@@ -90,4 +94,8 @@ export {
   cloudcomputing,
   cloudcomputingdark,
   stars,
+  adrian,
+  aaron,
+  daniel,
+  cyril,
 };
