@@ -34,15 +34,15 @@ import call from "./Call.png";
 import calldark from "./Calldark.png";
 import messageimg from "./Message.png";
 import messageimgdark from "./Messagedark.png";
-import webdesign from "./webdesign.svg"
-import webdesigndark from "./webdesigndark.svg"
-import frontenddev from "./frontenddev.svg"
-import frontenddevdark from "./frontenddevdark.svg"
-import weboptimization from "./weboptimization.svg"
-import weboptimizationdark from "./weboptimizationdark.svg"
-import cloudcomputing from "./cloudcomputing.svg"
-import cloudcomputingdark from "./cloudcomputingdark.svg"
-
+import webdesign from "./webdesign.svg";
+import webdesigndark from "./webdesigndark.svg";
+import frontenddev from "./frontenddev.svg";
+import frontenddevdark from "./frontenddevdark.svg";
+import weboptimization from "./weboptimization.svg";
+import weboptimizationdark from "./weboptimizationdark.svg";
+import cloudcomputing from "./cloudcomputing.svg";
+import cloudcomputingdark from "./cloudcomputingdark.svg";
+import stars from "./Stars.svg";
 
 export {
   rlogo2,
@@ -82,11 +82,12 @@ export {
   messageimg,
   messageimgdark,
   webdesign,
-webdesigndark,
-frontenddev,
-frontenddevdark,
-weboptimization,
-weboptimizationdark,
-cloudcomputing,
-cloudcomputingdark,
+  webdesigndark,
+  frontenddev,
+  frontenddevdark,
+  weboptimization,
+  weboptimizationdark,
+  cloudcomputing,
+  cloudcomputingdark,
+  stars,
 };
