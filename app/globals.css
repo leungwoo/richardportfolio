@@ -51,28 +51,17 @@ body {
    
     /* Adjust this value as needed */
   }
-  /* .carousel .control-dots {
-    position: absolute;
-    bottom: 0;
-    margin: -5px 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-
-}
-.carousel .control-dots .dot li{
-    margin: 0 15px;
-} */
-/* @layer utilities {
-    .hover:hover {
-      @apply bg-teal-500;
-    }
-    .hover:hover Image {
-      @apply bg-white;
-    }
-  } */
+  
   .serviceCard:hover .hoverBgChange {
     background-color: #F3F8FF; 
     
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* WebKit (Safari, Chrome, etc.) */
   }
