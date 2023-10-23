@@ -100,7 +100,7 @@ function Sidebar({ setToggle, toggle }: any) {
             </span>
           </Link>
           <Link
-            href="https://drive.google.com/file/d/11PPDLjSTC9rrzJ-1AXtKibJbWdl5LAiJ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1x2PajwHBV3J1BsiCIQNJeYQmeYs8CPdP/view?usp=sharing"
             target="_blank"
           >
             <div className="flex flex-row items-center  gap-4 text-text-title dark:text-white dark:hover:text-text-accentBlue hover:text-text-accentBlue hover:duration-500 transition">
