@@ -150,14 +150,14 @@ const Contact = () => {
   return (
     <div className=" flex flex-col items-center justify-between md:h-screen pt-[70px]  xl:max-w-[1440px] ">
       <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
-        <div className="flex flex-col gap-5  py-12">
+        <div className="flex flex-col gap-5  py-12 items-center">
           <div className="relative inline-block">
-            <h1 className="z-10  relative text-text-title font-bold xl:text-[#64px] text-[42px] dark:text-white">
+            <h1 className="z-10 relative text-text-title font-bold xl:text-[64px] text-[44px] dark:text-white">
               Get in Touch
             </h1>
-            <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[25px] h-[20px]"></div>
+            <div className="absolute inset-x-0 bottom-2 xl:bottom-3 bg-primary-highlight xl:h-[22px] h-[18px]"></div>
           </div>
-          <span className="text-[#6F74A7] dark:text-[#F3F8FF]">
+          <span className="text-[#6F74A7] dark:text-[#F3F8FF] text-[14px] xl:text-[20px]">
             Let&apos;s Collaborate on Your Next Project
           </span>
         </div>
