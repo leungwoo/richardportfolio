@@ -58,7 +58,7 @@ function Sidebar({ setToggle, toggle }: any) {
   return (
     <AnimatePresence>
       <motion.div
-        className="container rounded-bl-3xl z-20 top-0 bottom-96 right-0 p-4 w-[60%]  flex flex-col
+        className="container rounded-bl-3xl z-20 top-0  right-0 p-4 w-[60%]  flex flex-col
         justify-end items-end bg-cover bg-no-repeat bg-[#F3F8FF] dark:bg-[#192333] fixed "
         animate={toggle ? "open" : "closed"}
         initial="hidden"
