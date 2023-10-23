@@ -10,29 +10,25 @@ export default async function CaseStudies() {
   const projectsData = await getProjects();
 
   return (
-    <div className="flex flex-col items-center max-h-[1600px] pt-[70px]  xl:max-w-[1440px]">
-      <div className="relative max-w-[1440px] w-screen bg-primary-Default dark:bg-[#192333] py-[10px] flex items-center justify-center">
-        <div className="absolute flex flex-col flex-wrap md:gap-2 gap-1 top-0 right-0 left-0 bottom-0 text-white items-center justify-center">
-          <h1 className=" text-xl  sm:text-4xl  xl:text-5xl font-bold">
-            Recent Case Studies
-          </h1>
-          <div className="flex flex-col items-center justify-center max-w-[600px] flex-wrap text-center md:px-20 px-14">
-            {" "}
-            <h3 className="lg:text-2xl md:font-normal text-xs">
-              Diving Deep into Our Most Recent Projects: Insights, Challenges,
-              and Triumphs
-            </h3>
+    <div className="flex flex-col items-center justify-between md:h-screen pt-[70px]  xl:max-w-[1440px] ">
+      <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] min-w-[345px] items-center justify-center">
+        <div className="flex flex-col gap-5 py-12 px-[24px] items-center  ">
+          <div className="flex flex-col md:flex-row md:gap-4 text-center items-center leading-[48px]">
+            <h1 className=" text-text-title font-bold lg:text-[64px] text-[44px] dark:text-white ">
+              Recent{" "}
+            </h1>
+            <div className="relative inline-block">
+              <h1 className="z-10 relative text-text-title font-bold lg:text-[64px] text-[44px] dark:text-white ">
+                Case Studies
+              </h1>
+              <div className="absolute inset-x-0 -bottom-0.5 lg:-bottom-3 bg-primary-highlight xl:h-[22px] h-[18px]"></div>
+            </div>
           </div>
-        </div>
-        <div className="flex  md:pb-10 md:px-16 pt-10 pb-5 px-5 ">
-          <Image
-            src={CSbanner}
-            alt="casetstudiesbanner"
-            width={1000}
-            height={500}
-            loading="eager"
-            className="min-w-[286px] lg:max-h-[427px] rounded-[20px] object-cover"
-          />
+          <span className="items-center text-center max-w-[704px]  text-[#6F74A7] dark:text-[#F3F8FF] text-[14px] xl:text-[20px]">
+            Dive into my recent success stories and discover how I&apos;ve
+            helped clients overcome challenges, innovate, and achieve their
+            goals
+          </span>
         </div>
       </div>
       <Suspense fallback={<Loading />}>

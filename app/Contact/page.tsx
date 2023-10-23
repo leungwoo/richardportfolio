@@ -150,7 +150,7 @@ const Contact = () => {
   return (
     <div className=" flex flex-col items-center justify-between md:h-screen pt-[70px]  xl:max-w-[1440px] ">
       <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
-        <div className="flex flex-col gap-5  py-12 items-center">
+        <div className="flex flex-col gap-5  py-12 px-[24px] items-center">
           <div className="relative inline-block">
             <h1 className="z-10 relative text-text-title font-bold xl:text-[64px] text-[44px] dark:text-white">
               Get in Touch

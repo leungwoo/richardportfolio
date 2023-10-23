@@ -68,15 +68,15 @@ export default function Hero({ title, description, imgUrl }: HeroCardProps) {
           <h3 className="text-sm md:text-base text-text-accentBlue font-bold">
             HI, MY NAME IS RICHARD GABRIEL
           </h3>
-          <div className="flex flex-wrap gap-1">
-            <h1 className="text-text-title font-bold xl:text-6xl text-[35px]  dark:text-white leading-[48px]">
+          <div className="flex flex-wrap sm:gap-3 leading-[48px]">
+            <h1 className="text-text-title font-bold xl:text-[64px] text-[36px]  dark:text-white ">
               {first}{" "}
             </h1>
             <div className="relative inline-block">
-              <h1 className="z-10 relative text-text-title font-bold xl:text-6xl text-[35px] dark:text-white leading-[48px]">
+              <h1 className="z-10 relative text-text-title font-bold xl:text-[64px] text-[36px] dark:text-white ">
                 {second} {third}
               </h1>
-              <div className="absolute inset-x-0 -bottom-0.5 bg-primary-highlight md:h-[20px] h-[15px]"></div>
+              <div className="absolute inset-x-0 -bottom-0.5 xl:-bottom-3 bg-primary-highlight md:h-[20px] h-[15px]"></div>
             </div>
           </div>
 

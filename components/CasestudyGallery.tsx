@@ -26,12 +26,12 @@ interface Props {
 
 function CasestudyGallery({ projectsData }: Props) {
   const colors = [
-    "#FFEDFE",
-    "#FFE7E3",
-    "#DAE4FF",
-    "#FFE7CA",
-    "#FFD7E3",
-    "#D4F1EB",
+    "#5CAFFC",
+    "#0BAB7C",
+    "#FF6934",
+    "#DB202C",
+    "#4ACD8D",
+    "#316BFF",
   ];
   return (
     <div className="dark:bg-[#151E2C] xl:max-w-[1440px]  w-screen">
@@ -43,7 +43,7 @@ function CasestudyGallery({ projectsData }: Props) {
           >
             <Link href={`/project/${project.slug.current}`}>
               <div
-                className="rounded-2xl pt-10 px-4  hover:shadow-gray-400 hover:shadow-xl transition duration-300 ease-in-out cursor-pointer"
+                className="rounded-2xl pt-10 px-4   cursor-pointer"
                 style={{ backgroundColor: colors[index % colors.length] }}
               >
                 <Image
@@ -52,7 +52,7 @@ function CasestudyGallery({ projectsData }: Props) {
                   width={1750}
                   height={1080}
                   loading="eager"
-                  className="object-contain "
+                  className="object-contain hover:scale-105 transition duration-500 ease-in-out "
                 />
               </div>
             </Link>
