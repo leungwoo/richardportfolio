@@ -51,9 +51,16 @@ body {
    
     /* Adjust this value as needed */
   }
-  
+ 
+  .svg-container {
+    width: 25px;
+    height: 24px;
+    box-shadow: 10px 10px 10px rgba(2, 82, 205, 0.28);
+  }
+
   .serviceCard:hover .hoverBgChange {
     background-color: #F3F8FF; 
+    
     
   }
 
