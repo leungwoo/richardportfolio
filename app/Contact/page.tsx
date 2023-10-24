@@ -139,14 +139,6 @@ const Contact = () => {
       });
   };
 
-  const copyText = (e: any) => {
-    navigator.clipboard.writeText(e.target.innerText);
-
-    setCopied(true);
-
-    notify("Copied to clipboard", false);
-  };
-
   return (
     <div className=" flex flex-col items-center justify-between md:h-screen pt-[70px]  xl:max-w-[1440px] ">
       <div className=" flex dark:bg-[#192333] bg-[#F3F8FF] xl:max-h-[410px] w-screen max-w-[1440px] items-center justify-center">
@@ -201,7 +193,6 @@ const Contact = () => {
               />
               <Link
                 href="tel:+1 (407)-624-6389"
-                onClick={copyText}
                 className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]"
               >
                 +1 (407)-624-6389
