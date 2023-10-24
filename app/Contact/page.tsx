@@ -219,12 +219,12 @@ const Contact = () => {
                 height={30}
                 className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF]"
               />
-              <span
-                onClick={copyText}
+              <Link
+                href="mailto:leungwoo@gmail.com"
                 className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF] "
               >
                 leungwoo@gmail.com
-              </span>
+              </Link>
             </div>
           </div>
         </div>
