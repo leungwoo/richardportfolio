@@ -199,12 +199,13 @@ const Contact = () => {
                 height={30}
                 className="w-6 h-6 sm:w-8 sm:h-8 text-[#778295] dark:text-[#F3F8FF] "
               />
-              <span
+              <Link
+                href="tel:+1 (407)-624-6389"
                 onClick={copyText}
                 className="text-[#778295] md:text-base font-semibold dark:text-[#F3F8FF]"
               >
                 +1 (407)-624-6389
-              </span>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col gap-5">
